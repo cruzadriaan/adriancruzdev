@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
+
 const Hero = () => {
     return (
         <div className="flex flex-col w-95 gap-4 mt-28 mb-10 mx-5">
@@ -12,10 +15,12 @@ const Hero = () => {
                 <h1 className="text-white text-base font-light">I'm a web developer specializing in building exceptional digital experiences. Currently, I'm focused on building responsive full-stack web applications.</h1>
             </div>
             <div className="flex flex-row gap-4 mt-2 text-sm">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full cursor-pointer">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full cursor-pointer">
+                    <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
                     Explore My Work
                 </button>
-                <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full cursor-pointer">
+                <button className="bg-gray-500 hover:bg-gray-700 text-white font-semibold py-2 px-5 rounded-full cursor-pointer">
+                    <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
                     Get in Touch
                 </button>
             </div>
