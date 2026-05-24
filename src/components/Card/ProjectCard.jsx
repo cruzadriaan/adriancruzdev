@@ -1,8 +1,11 @@
 import { ProjectsData } from '../../data/ProjectsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const Card = () => {
+
+    const [openCardDetailsIndex, setOpenCardDetailsIndex] = useState(null);
 
     return (
         <>
@@ -21,39 +24,40 @@ const Card = () => {
 
                         {/* Button Details */}
                         <div className="flex flex-col items-center justify-center">
-                            <button className="text-white text-xs border border-gray-600 px-3 py-2 rounded-full cursor-pointer">
+                            <button className="text-white text-xs border border-gray-600 px-3 py-2 rounded-full cursor-pointer" 
+                            onClick={() => setOpenCardDetailsIndex(openCardDetailsIndex === index ? null : index)}>
                                 <span className="mr-1">DETAILS</span>
                                 <FontAwesomeIcon icon={faAngleDown} className="" />
                             </button>
                         </div>
+
                     </div>
                     <div>
                         <p className="text-gray-400 text-xs">{project.description}</p>
                     </div>
 
-                    <div>
-                        <p className="text-gray-400 text-xs">{project.fullDescription}</p>
-                    </div>
+                    {openCardDetailsIndex === index && (
+                        <>
+                            <div>
+                                <p className="text-gray-400 text-xs">{project.fullDescription}</p>
+                            </div>
 
 
-                    <div  className="flex flex-wrap gap-3 mt-2">
-                        {project.stackUsed.map((stack, index) => (
-                            <span key={index} className="text-gray-400 text-xs text-center border border-gray-600 px-2 py-1 rounded">
-                                {stack}
-                            </span>
-                        ))}
-                    </div>
+                            <div className="flex flex-wrap gap-3 mt-2">
+                                {project.stackUsed.map((stack, index) => (
+                                    <span key={index} className="text-gray-400 text-xs text-center border border-gray-600 px-2 py-1 rounded">
+                                        {stack}
+                                    </span>
+                                ))}
+                            </div>
 
-
-                    <div>
-                        <span></span>
-                    </div>
-
-                    <div className="mt-2">
-                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-sm hover:text-blue-400">
-                            Visit Website<FontAwesomeIcon icon={faSquareArrowUpRight} className="ml-1" />
-                        </a>
-                    </div>
+                            <div className="mt-2">
+                                <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-sm hover:text-blue-400">
+                                    Visit Website<FontAwesomeIcon icon={faSquareArrowUpRight} className="ml-1" />
+                                </a>
+                            </div>
+                        </>
+                    )}
                 </div>
             ))}
         </>
