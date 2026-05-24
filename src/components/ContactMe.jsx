@@ -9,7 +9,7 @@ const ContactMe = () => {
         <div className="mb-10">
             <SectionDivider section="CONTACT ME" />
             <h1 className="text-white text-xl text-center font-bold mb-3 mt-3">Let's Connect!</h1>
-            <div className="flex flex-col items-center justify-center gap-2 mb-5">
+            <div className="flex flex-col items-center justify-center gap-3 mb-5">
                 {ContactDetails.map((contact) => (
                     <span className="text-gray-300 w-90 bg-gray-800 px-4 py-2 rounded-lg cursor-pointer">{contact}</span>
                 ))}
