@@ -2,7 +2,7 @@ import Card from "../components/Card";
 
 const Projects = () => {
   return (
-    <div className="mb-10">
+    <div className="flex flex-col gap-5 mb-10">
         <Card />
     </div>
   )
