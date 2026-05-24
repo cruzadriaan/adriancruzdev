@@ -1,8 +1,10 @@
+import BeatJamPreview from '../assets/images/BeatJamPreview.png';
+
 const Card = () => {
     return (
         <div className="mx-5 p-5 flex flex-col gap-3 border border-gray-600 rounded-2xl">
             <div>
-                <img src="" alt="" />
+                <img src={BeatJamPreview} alt="Beat Jam Preview" />
             </div>
             <div className="flex flex-row justify-between  ">
                 <div>
