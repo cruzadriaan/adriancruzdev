@@ -4,7 +4,7 @@ import {faSquareLinkedin, faSquareGithub} from '@fortawesome/free-brands-svg-ico
 
 const Hero = () => {
     return (
-        <div className="flex flex-col sm:w-120 w-90 gap-5 mt-28 mb-10 lg:mx-11 md:mx-8 sm:mx-8 mx-5">
+        <div className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-10 lg:mx-11 md:mx-8 sm:mx-8 mx-5">
             <div className="items-left justify-center lg:text-6xl text-5xl">
                 <h1 className="text-white text-4xl font-bold">Hello, I'm</h1>
                 <h1 className="text-blue-400 font-bold">Adrian Cruz</h1>

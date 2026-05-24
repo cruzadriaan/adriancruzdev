@@ -9,7 +9,7 @@ const Card = () => {
             {ProjectsData.map((project, index) => (
                 <div className="mx-5 p-5 flex flex-col gap-3 border bg-gray-800/40 border-gray-600 rounded-2xl">
 
-                    <div key={index} className="w-full lg:h-50 md:h-40 sm:h-65 h-55 rounded-lg cursor-pointer overflow-hidden">
+                    <div key={index} className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
                         <img src={project.image} alt="Beat Jam Preview" className="h-full w-full object-fit" />
                     </div>
                     <div className="flex flex-row justify-between  ">
