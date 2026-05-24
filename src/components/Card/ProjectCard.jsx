@@ -1,4 +1,4 @@
-import { ProjectsData } from '../data/ProjectsData';
+import { ProjectsData } from '../../data/ProjectsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 
