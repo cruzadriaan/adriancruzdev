@@ -27,7 +27,7 @@ const Card = () => {
                             <button className="text-white text-xs border border-gray-600 px-3 py-2 rounded-full cursor-pointer" 
                             onClick={() => setOpenCardDetailsIndex(openCardDetailsIndex === index ? null : index)}>
                                 <span className="mr-1">DETAILS</span>
-                                <FontAwesomeIcon icon={faAngleDown} className="" />
+                                <FontAwesomeIcon icon={faAngleDown} className={`${openCardDetailsIndex === index ? 'rotate-180' : ''} transition-transform duration-200`} />
                             </button>
                         </div>
 
