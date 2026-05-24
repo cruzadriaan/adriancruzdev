@@ -1,10 +1,12 @@
-import AdrianAvatar from "../assets/images/AdrianDevAvatar.jpg"
+import AdrianAvatar from "../assets/images/AdrianDevAvatar.jpg";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     return (
-        <div className="fixed left-1/2 -translate-x-1/2 w-95 flex flex-row items-center justify-left gap-5 border bg-gray-800 border-gray-600  rounded-3xl px-5 py-6 ">
-            <div className="flex flex-row items-center justify-center gap-2">
-`               
+        <div className="fixed left-1/2 -translate-x-1/2 w-95 flex flex-row items-center justify-left gap-3 border bg-gray-800 border-gray-600  rounded-3xl px-5 py-6 ">
+            <div className="flex flex-row items-center justify-center gap-5">
+                <FontAwesomeIcon icon={faBars} className="text-gray-200 text-xl border border-gray-600 rounded-md p-2 cursor-pointer" />
                 <img src={AdrianAvatar} alt="Adrian Cruz" className="w-10 h-10  rounded-md" />
             </div>
             <div>
