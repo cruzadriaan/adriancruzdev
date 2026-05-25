@@ -47,7 +47,7 @@ const Navbar = () => {
                     <h1 className="text-gray-400 text-[11px]">NAVIGATION</h1>
                     <ul className="flex flex-col gap-3 mt-2">
                         {MenuData.map((item, index) => (
-                            <li key={index} className="text-gray-300 hover:text-blue-600 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[17px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                 <span>{item.name}</span>
                             </li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                     <h1 className="text-gray-400 text-[11px]">SOCIAL</h1>
                     <ul className="flex flex-col gap-3 mt-2">
                         {ContactDetails.social.map((item, index) => (
-                            <li key={index} className="text-gray-300 hover:text-blue-600 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[17px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                 <span>{item.name}</span>
                             </li>
@@ -73,7 +73,7 @@ const Navbar = () => {
                     <h1 className="text-gray-400 text-[11px]">OTHERS</h1>
                     <ul className="flex flex-col gap-3 mt-2">
                         {ContactDetails.others.map((item, index) => (
-                            <li key={index} className="text-gray-300 hover:text-blue-600 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[17px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                 <span>{item.name}</span>
                             </li>
