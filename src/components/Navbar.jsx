@@ -3,6 +3,7 @@ import AdrianAvatarEnhanced from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { MenuData } from "../data/MenuData";
+import { ContactDetails } from "../data/ContactDetails";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -24,13 +25,13 @@ const Navbar = () => {
                 </div>
             </div>
 
-            
+
             {/* Sidebar */}
             <div className={`fixed left-0 top-0 h-full w-60 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-700 bg-gray-900 shadow-lg py-4 z-50`}>
                 <div className="flex flex-row ml-3 gap-4">
                     <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-13 h-13 border border-blue-900 mb-5 rounded-full" />
                     <div className="flex flex-col mt-1">
-                        <h1 className="text-white text-sm font-semibold">Adrian Cruz</h1> 
+                        <h1 className="text-white text-sm font-semibold">Adrian Cruz</h1>
                         <h2 className="text-gray-400 text-[11px]">Front End Developer</h2>
                     </div>
                     <div className="ml-auto mr-2">
@@ -43,10 +44,36 @@ const Navbar = () => {
 
                 {/* Navigation Links */}
                 <div className="ml-3">
-                    <h1 className="text-gray-400 text-xs">Navigation</h1>
+                    <h1 className="text-gray-400 text-[11px]">NAVIGATION</h1>
                     <ul className="flex flex-col gap-3 mt-2">
                         {MenuData.map((item, index) => (
-                            <li key={index} className="text-gray-300 hover:text-blue-400 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 hover:text-blue-600 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                                <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                                <span>{item.name}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* Social Links */}
+                <div className="ml-3 mt-7">
+                    <h1 className="text-gray-400 text-[11px]">SOCIAL</h1>
+                    <ul className="flex flex-col gap-3 mt-2">
+                        {ContactDetails.social.map((item, index) => (
+                            <li key={index} className="text-gray-300 hover:text-blue-600 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                                <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                                <span>{item.name}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* Other Links */}
+                <div className="ml-3 mt-7">
+                    <h1 className="text-gray-400 text-[11px]">OTHERS</h1>
+                    <ul className="flex flex-col gap-3 mt-2">
+                        {ContactDetails.others.map((item, index) => (
+                            <li key={index} className="text-gray-300 hover:text-blue-600 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                 <span>{item.name}</span>
                             </li>
