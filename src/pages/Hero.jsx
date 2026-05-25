@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faSquareArrowUpRight, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {faSquareLinkedin, faSquareGithub} from '@fortawesome/free-brands-svg-icons';
+import { faSquareArrowUpRight, faEnvelope, faFileLines } from '@fortawesome/free-solid-svg-icons';
+import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Hero = () => {
     return (
@@ -10,7 +10,7 @@ const Hero = () => {
                 <h1 className="text-blue-400 font-bold">Adrian Cruz</h1>
             </div>
             <div>
-                <h1 className="text-gray-300 lg:text-lg text-[14px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br/> HIGH PERFORMANCE WEBSITES.</h1>
+                <h1 className="text-gray-300 lg:text-lg text-[14px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
             </div>
             <div>
                 <h1 className="text-white lg:text-base text-[14px] font-light">I build responsive, Full‑stack web applications that deliver exceptional digital experiences. My focus is on blending modern design with robust functionality, turning ideas into seamless, high‑performance solutions.</h1>
@@ -26,8 +26,10 @@ const Hero = () => {
                     <FontAwesomeIcon icon={faEnvelope} className="text-gray-200 text-2xl rounded-full hover:scale-110 cursor-pointer" />
                 </a>
             </div>
-            <div className="flex flex-row gap-4 mt-2 text-sm">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold lg:py-3 lg:px-5 py-2 px-4 rounded-full cursor-pointer">
+
+            {/* BUTTONS */}
+            <div className="flex flex-row flex-wrap w-100 gap-4 mt-2 text-sm">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold lg:py-3 lg:px-5 py-2 px-6 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
                     Explore My Work
                 </button>
@@ -35,6 +37,10 @@ const Hero = () => {
                     <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
                     Get in Touch
                 </button>
+                <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="border border-white hover:bg-gray-700 text-white font-semibold lg:py-3 lg:px-5 py-2 px-6 rounded-full cursor-pointer">
+                    <FontAwesomeIcon icon={faFileLines} className="mr-1" />
+                    View my Resume
+                </a>
             </div>
         </div>
     )
