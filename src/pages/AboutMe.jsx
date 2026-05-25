@@ -24,7 +24,7 @@ const AboutMe = () => {
                         I'm passionate about crafting engaging and user-friendly web experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating responsive and visually appealing websites. I thrive on turning complex ideas into intuitive interfaces, ensuring seamless user interactions. When I'm not coding, you can find me exploring the latest design trends or experimenting with new technologies to stay at the forefront of the ever-evolving web development landscape.
                     </p>
                 </div>
-                <div className="flex flex-row items-center justify-between mt-5">
+                <div className="flex flex-row items-center gap-3 justify-between mt-5">
                     {AboutMeData.map((item, index) => (
                     <div key={index} className="flex flex-col items-center my-auto border border-gray-600 rounded-lg bg-gray-800/40 p-3 h-30 w-30 cursor-pointer text-center">
                         <FontAwesomeIcon icon={item.icon} className="text-blue-500 text-2xl mb-2" />
