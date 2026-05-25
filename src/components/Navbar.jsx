@@ -27,12 +27,12 @@ const Navbar = () => {
             
             {/* Sidebar */}
             {isSidebarOpen && ( 
-            <div className="fixed left-0 top-0 h-full w-60 bg-gray-900 shadow-lg py-4 ">
+            <div className="fixed left-0 top-0 h-full w-60 bg-gray-900 shadow-lg py-4 z-50">
                 <div className="flex flex-row ml-3 gap-4">
                     <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-13 h-13 border border-blue-900 mb-5 rounded-full" />
                     <div className="flex flex-col mt-1">
-                        <h1 className="text-white text-xs font-semibold">Adrian Cruz</h1>
-                        <h2 className="text-gray-400 text-[11px]">Front End Developer</h2>
+                        <h1 className="text-white text-sm font-semibold">Adrian Cruz</h1>
+                        <h2 className="text-gray-400 text-[12px]">Front End Developer</h2>
                     </div>
                     <div className="ml-auto mr-2">
                         <button className="text-gray-200 hover:text-white/80 cursor-pointer"
@@ -56,6 +56,11 @@ const Navbar = () => {
                 </div>
             </div>
             )}
+
+            {/* Backdrop */}
+            <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                onClick={() => setIsSidebarOpen(false)}>
+            </div>
         </>
     )
 }
