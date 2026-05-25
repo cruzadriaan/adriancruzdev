@@ -10,9 +10,9 @@ const Card = () => {
     return (
         <>
             {ProjectsData.map((project, index) => (
-                <div className="mx-5 p-5 flex flex-col gap-3 border bg-gray-800/40 border-gray-600 rounded-2xl">
+                <div key={index} className="mx-5 p-5 flex flex-col gap-3 border bg-gray-800/40 border-gray-600 rounded-2xl">
 
-                    <div key={index} className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
+                    <div className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
                         <img src={project.image} alt="Beat Jam Preview" className="h-full w-full object-fit" />
                     </div>
                     <div className="flex flex-row justify-between  ">
@@ -24,39 +24,43 @@ const Card = () => {
 
                         {/* Button Details */}
                         <div className="flex flex-col items-center justify-center">
-                            <button className="text-white text-xs border border-gray-600 px-3 py-2 rounded-full cursor-pointer" 
-                            onClick={() => setOpenCardDetailsIndex(openCardDetailsIndex === index ? null : index)}>
+                            <button className="text-white text-xs border border-gray-600 px-3 py-2 rounded-full cursor-pointer"
+                                onClick={() => setOpenCardDetailsIndex(openCardDetailsIndex === index ? null : index)}>
                                 <span className="mr-1">DETAILS</span>
-                                <FontAwesomeIcon icon={faAngleDown} className={`${openCardDetailsIndex === index ? 'rotate-180' : ''} transition-transform duration-200`} />
+                                <FontAwesomeIcon icon={faAngleDown} className={`${openCardDetailsIndex === index ? 'rotate-180' : ''} transition-transform duration-300`} />
                             </button>
                         </div>
-
                     </div>
+
+                    {/* SHORT DESCRIPTION */}
                     <div>
                         <p className="text-gray-400 text-xs">{project.description}</p>
                     </div>
 
+                    {/* FULL DESCRIPTION */}
                     {openCardDetailsIndex === index && (
-                        <>
-                            <div>
-                                <p className="text-gray-400 text-xs">{project.fullDescription}</p>
-                            </div>
+                        <div>
+                            <p className="text-gray-400 text-xs">{project.fullDescription}</p>
+                        </div>
+                    )}
 
+                    {/* STACK USED */}
+                    <div className="flex flex-wrap gap-3 mt-2">
+                        {project.stackUsed.map((stack, index) => (
+                            <span key={index} className="text-gray-400 text-xs text-center border border-gray-600 px-2 py-1 rounded">
+                                {stack}
+                            </span>
+                        ))}
+                    </div>
 
-                            <div className="flex flex-wrap gap-3 mt-2">
-                                {project.stackUsed.map((stack, index) => (
-                                    <span key={index} className="text-gray-400 text-xs text-center border border-gray-600 px-2 py-1 rounded">
-                                        {stack}
-                                    </span>
-                                ))}
-                            </div>
+                    {/* WEBSITE HYPERLINK */}
+                    {openCardDetailsIndex === index && (
+                        <div className="mt-2">
+                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-sm hover:text-blue-400">
+                                Visit Website<FontAwesomeIcon icon={faSquareArrowUpRight} className="ml-1" />
+                            </a>
+                        </div>
 
-                            <div className="mt-2">
-                                <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-sm hover:text-blue-400">
-                                    Visit Website<FontAwesomeIcon icon={faSquareArrowUpRight} className="ml-1" />
-                                </a>
-                            </div>
-                        </>
                     )}
                 </div>
             ))}
