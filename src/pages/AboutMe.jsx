@@ -13,8 +13,8 @@ const AboutMe = () => {
                         <img src={AdrianDevAvatar} alt="Adrian Cruz" className=" w-full h-full object-cover " />
                     </div>
                     <div className="mt-1 w-90">
-                        <h1 className="text-white text-xl font-normal">
-                            I'm <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-500 font-bold">Adrian Cruz</span>, a Front End Developer based in Quezon City, Philippines.
+                        <h1 className="text-white text-lg font-normal">
+                            I'm <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-500 font-bold">Adrian Cruz</span>, a <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-purple-400 font-semibold">Front End Developer</span> based in Quezon City, Philippines.
                         </h1>
                     </div>
                 </div>
