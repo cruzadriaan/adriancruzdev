@@ -3,7 +3,7 @@ import AdrianDevAvatar from "../assets/images/AdrianDevAvatarEnhanced.png";
 
 const AboutMe = () => {
     return (
-        <>
+        <div className="mt-8">
             <SectionDivider section="ABOUT ME" />
             <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-5 mx-5 mb-10 ">
                 <div className="flex flex-row justify-center gap-4">
@@ -22,20 +22,20 @@ const AboutMe = () => {
                         I'm passionate about crafting engaging and user-friendly web experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating responsive and visually appealing websites. I thrive on turning complex ideas into intuitive interfaces, ensuring seamless user interactions. When I'm not coding, you can find me exploring the latest design trends or experimenting with new technologies to stay at the forefront of the ever-evolving web development landscape.
                     </p>
                 </div>
-                <div className="flex flex-row items-center justify-center gap-5 mt-5">
-                    <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-4 h-25 w-30 text-center">
+                <div className="flex flex-row items-center justify-between mt-5">
+                    <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-3 h-25 w-25 text-center">
                         <h1 className="text-white text-sm font-semibold">1+ year experience</h1>
                     </div>
-                    <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-4 h-25 w-30 text-center">
+                    <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-3 h-25 w-25 text-center">
                         <h1 className="text-white text-sm font-semibold">2+ Projects ongoing</h1>
                     </div>
-                    <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-4 h-25 w-30 text-center">
+                    <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-3 h-25 w-25 text-center">
                         <h1 className="text-white text-sm font-semibold">React, Tailwind, Javascript</h1>
                     </div>
                 </div>
 
             </div>
-        </>
+        </div>
     )
 }
 
