@@ -29,15 +29,15 @@ const Hero = () => {
 
             {/* BUTTONS */}
             <div className="flex flex-row items-center flex-wrap w-100 gap-4 mt-2 text-sm">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold lg:py-3 lg:px-5 w-45 py-2 px-6 rounded-full cursor-pointer">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold lg:py-3 lg:px-5 w-45 py-2 px-6 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
                     Explore My Work
                 </button>
-                <button className="bg-white hover:bg-gray-700 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-full cursor-pointer">
+                <button className="bg-white hover:bg-white/80 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
                     Get in Touch
                 </button>
-                <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="border border-white hover:bg-gray-700 text-white font-semibold lg:py-3 lg:px-5 w-45 py-2 px-6 rounded-full cursor-pointer">
+                <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="border border-white hover:bg-gray-800 text-white font-semibold lg:py-3 lg:px-5 w-45 py-2 px-6 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                     View my Resume
                 </a>
