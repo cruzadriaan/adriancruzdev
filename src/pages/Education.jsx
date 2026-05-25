@@ -5,7 +5,7 @@ const Education = () => {
     return (
         <div className="mb-15">
             <SectionDivider section="EDUCATION" />
-            <div className="relative flex flex-col bg-gray-800 border border-gray-600 rounded-lg py-5 px-4 mx-5 my-1">
+            <div className="relative flex flex-col bg-gray-800 border border-gray-600 rounded-lg pt-6 pb-4 px-4 mx-5 my-1">
                 {EducationData.map((education, index) => (
                     <div key={index} className="relative">
                         <div className="absolute left-2 top-1 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_1px_rgba(59,130,246,0.7)]" />
