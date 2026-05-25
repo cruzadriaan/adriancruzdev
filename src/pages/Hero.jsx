@@ -28,7 +28,7 @@ const Hero = () => {
             </div>
 
             {/* BUTTONS */}
-            <div className="flex flex-row items-center flex-wrap w-110 gap-4 mt-2 text-sm">
+            <div className="flex flex-row items-center flex-wrap w-95 gap-4 mt-2 text-sm">
                 <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
                     Explore My Work
