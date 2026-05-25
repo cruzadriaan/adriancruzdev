@@ -12,7 +12,7 @@ const ContactMe = () => {
 
             <div className="flex flex-col items-center justify-center text-center w-full gap-5 mb-5">
                 {ContactDetails.personal.map((contact, index) => (
-                    <div key={index} className="text-gray-300 bg-gray-800 w-90 px-4 py-2 rounded-lg cursor-pointer">
+                    <div key={index} className="text-gray-300 hover:text-blue-600 hover:scale-105 hover:font-bold bg-gray-800 w-75 px-4 py-2 rounded-lg cursor-pointer">
                         <FontAwesomeIcon icon={contact.icon} className="mr-2" />
                         <a href={contact.link} target="_blank" rel="noopener noreferrer">
                             {contact.title}
@@ -21,7 +21,7 @@ const ContactMe = () => {
                 ))}
                 
                 {ContactDetails.social.map((contact, index) => (
-                    <div key={index} className="text-gray-300 bg-gray-800 w-90 px-4 py-2 rounded-lg cursor-pointer">
+                    <div key={index} className="text-gray-300 hover:text-blue-600 hover:scale-105 hover:font-bold bg-gray-800 w-75 px-4 py-2 rounded-lg cursor-pointer">
                         <FontAwesomeIcon icon={contact.icon} className="mr-2" />
                         <a href={contact.link} target="_blank" rel="noopener noreferrer">
                             {contact.title}
