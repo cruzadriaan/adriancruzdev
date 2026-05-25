@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar';
+import AboutMe from './pages/AboutMe';
 import ContactMe from './components/ContactMe';
 import Hero from './pages/Hero';
 import Projects from './pages/Projects';
@@ -12,8 +13,9 @@ function App() {
 ">
       <Navbar />
       <main className="flex flex-col grow">
-              <Hero />
-              <Projects />
+        <Hero />
+        <AboutMe />
+        <Projects />
       </main>
       <ContactMe />
       <Footer />

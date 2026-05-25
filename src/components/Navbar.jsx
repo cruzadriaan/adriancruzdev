@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 border bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 border-blue-600  rounded-3xl px-5 py-6 ">
+            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 border bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 border-blue-600  rounded-3xl px-5 py-6 z-5">
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-xl border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
