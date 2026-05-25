@@ -3,7 +3,7 @@ import {faBriefcase, faCode, faLaptopCode} from "@fortawesome/free-solid-svg-ico
 export const AboutMeData = [
         {
             icon: faBriefcase,
-            title: "1+ year experience",
+            title: "2+ years experience",
         },
         {
             icon: faLaptopCode,
