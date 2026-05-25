@@ -12,10 +12,10 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 border bg-gray-800 border-blue-600  rounded-3xl px-5 py-6 ">
+            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 border bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 border-blue-600  rounded-3xl px-5 py-6 ">
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
-                        <FontAwesomeIcon icon={faBars} className="text-gray-200 text-xl border bg-gray-700 shadow-md border-gray-600 rounded-md p-2 cursor-pointer" />
+                        <FontAwesomeIcon icon={faBars} className="text-gray-200 text-xl border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
                     </button>
                     <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-10 h-10 border border-blue-800 rounded-md" />
                 </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
             {/* Sidebar */}
-            <div className={`fixed left-0 top-0 h-full w-60 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-700 bg-gray-900 shadow-lg py-4 z-50`}>
+            <div className={`fixed left-0 top-0 h-full w-60 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-700 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 shadow-lg py-4 z-50`}>
                 <div className="flex flex-row ml-3 gap-4">
                     <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-13 h-13 border border-blue-900 mb-5 rounded-full" />
                     <div className="flex flex-col mt-1">
