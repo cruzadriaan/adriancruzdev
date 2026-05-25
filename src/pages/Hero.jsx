@@ -4,16 +4,19 @@ import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-i
 
 const Hero = () => {
     return (
-        <div className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5">
+        <div className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
+        ">
             <div className="items-left justify-center lg:text-6xl text-5xl">
-                <h1 className="text-white text-3xl font-bold">Hello, I'm</h1>
-                <h1 className="text-blue-400 font-bold">Adrian Cruz</h1>
+                <h1 className="text-white text-4xl font-bold mb-1">Hello, I'm</h1>
+                <h1 className="text-5xl md:text-7xl font-extrabold
+      bg-linear-to-r from-blue-400 to-sky-300
+      bg-clip-text text-transparent">Adrian Cruz</h1>
             </div>
             <div>
                 <h1 className="text-gray-300 lg:text-lg text-[14px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
             </div>
             <div>
-                <h1 className="text-white lg:text-base text-[14px] font-light">I build responsive, Full‑stack web applications that deliver exceptional digital experiences. My focus is on blending modern design with robust functionality, turning ideas into seamless, high‑performance solutions.</h1>
+                <h1 className="mt-2 text-gray-300 text-base leading-relaxed">I build responsive, Full‑stack web applications that deliver exceptional digital experiences. My focus is on blending modern design with robust functionality, turning ideas into seamless, high‑performance solutions.</h1>
             </div>
             <div className="flex flex-row gap-4">
                 <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
