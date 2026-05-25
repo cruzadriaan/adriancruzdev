@@ -2,7 +2,7 @@
 import AdrianAvatarEnhanced from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { Menu } from "../data/Menu";
+import { MenuData } from "../data/MenuData";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
                     <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-13 h-13 border border-blue-900 mb-5 rounded-full" />
                     <div className="flex flex-col mt-1">
                         <h1 className="text-white text-sm font-semibold">Adrian Cruz</h1> 
-                        <h2 className="text-gray-400 text-[12px]">Front End Developer</h2>
+                        <h2 className="text-gray-400 text-[11px]">Front End Developer</h2>
                     </div>
                     <div className="ml-auto mr-2">
                         <button className="text-gray-200 hover:text-white/80 cursor-pointer"
@@ -45,7 +45,7 @@ const Navbar = () => {
                 <div className="ml-3">
                     <h1 className="text-gray-400 text-xs">Navigation</h1>
                     <ul className="flex flex-col gap-3 mt-2">
-                        {Menu.map((item, index) => (
+                        {MenuData.map((item, index) => (
                             <li key={index} className="text-gray-300 hover:text-blue-400 text-sm font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                 <span>{item.name}</span>
