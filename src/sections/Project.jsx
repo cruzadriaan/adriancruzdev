@@ -1,4 +1,4 @@
-import ProjectCard from "../components/Card/ProjectCard";
+import ProjectCard from "./project/ProjectCard";
 import SectionDivider from "../components/SectionDivider";
 
 const Projects = ({containerClass}) => {

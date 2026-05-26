@@ -3,7 +3,7 @@ import AdrianAvatarEnhanced from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { MenuData } from "../data/MenuData";
-import { ContactDetails } from "../data/ContactDetails";
+import { ContactDetails } from "../data/ContactData";
 import { useState } from "react";
 
 const Navbar = () => {

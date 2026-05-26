@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import ContactCard from "../components/Card/ContactCard";
-import { ContactDetails } from '../data/ContactDetails';
-import SectionDivider from "../components/SectionDivider";
+import ContactCard from "./ContactCard";
+import { ContactDetails } from '../../data/ContactData';
+import SectionDivider from "../../components/SectionDivider";
 
 const ContactMe = ({ containerClass }) => {
     return (
