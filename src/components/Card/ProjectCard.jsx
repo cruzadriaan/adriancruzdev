@@ -55,7 +55,7 @@ const ProjectCard = ({containerClass}) => {
 
                     {/* WEBSITE HYPERLINK */}
                     {openCardDetailsIndex === index && (
-                        <div className="mt-5 flex flex-col justify-center">
+                        <div className="mt-7 flex flex-col justify-center">
                             <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 font-semibold text-[12px] hover:text-blue-400">
                                 Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 text-[12px] font-extralight" />
                             </a>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const TechStack = ({ containerClass }) => {
   return (
-    <div className="mb-10">
+    <div className="relative mb-12">
 
       <SectionDivider section="TECH STACK" />
 
@@ -31,8 +31,10 @@ const TechStack = ({ containerClass }) => {
 
           </div>
         </div>
-
       ))}
+
+      <p className="text-white/40 text-[12px] text-center absolute -bottom-2 left-1/2 -translate-x-1/2 w-full">Note: Continuously improving and expanding skill set</p>
+    
     </div>
   )
 }
