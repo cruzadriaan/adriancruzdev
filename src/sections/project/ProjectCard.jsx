@@ -54,14 +54,11 @@ const ProjectCard = ({containerClass}) => {
                     </div>
 
                     {/* WEBSITE HYPERLINK */}
-                    {openCardDetailsIndex === index && (
-                        <div className="mt-7 flex flex-col justify-center">
-                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 font-semibold text-[12px] hover:text-blue-400">
+                        <div className={`${openCardDetailsIndex === index ? 'mt-7' : 'mt-5'} flex flex-col justify-center`}>
+                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 font-semibold text-[12px] hover:text-blue-400">
                                 Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 text-[12px] font-extralight" />
                             </a>
                         </div>
-
-                    )}
                 </div>
             ))}
         </>
