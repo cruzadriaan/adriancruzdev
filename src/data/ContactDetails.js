@@ -5,11 +5,13 @@ export const ContactDetails =
 {
         personal: [
                 {
+                        type: "Phone",
                         title: "09163629046",
                         link: "tel:+09163629046",
                         icon: faPhone
                 },
                 {
+                        type: "Location",
                         title: "Quezon City, Philippines",
                         icon: faLocationDot
                 }
@@ -17,19 +19,17 @@ export const ContactDetails =
         social:[
                         {
                                 title: "adriancruzemail@gmail.com",
-                                name: "Email",
+                                type: "Email",
                                 link: "mailto:adriancruzemail@gmail.com",
                                 icon: faEnvelope,
                         },
                         {
-                                title: "LinkedIn",
-                                name: "LinkedIn",
+                                type: "LinkedIn",
                                 link: "https://www.linkedin.com/in/adrian-cruzdev/",
                                 icon: faLinkedin
                         },
                         {
-                                title: "GitHub",
-                                name: "GitHub",
+                                type: "GitHub",
                                 link: "https://github.com/cruzadriaan",
                                 icon: faGithub
                         }

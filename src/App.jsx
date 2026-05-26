@@ -4,7 +4,7 @@ import AboutMe from './pages/AboutMe';
 import Education from './pages/Education';
 import Experience from './pages/Experience';
 import Certification from './pages/Certification';
-import ContactMe from './components/ContactMe';
+import ContactMe from './pages/ContactMe';
 import Hero from './pages/Hero';
 import Projects from './pages/Projects';
 import TechStack from './pages/TechStack';
@@ -26,8 +26,8 @@ function App() {
         <Experience containerClass={containerClass} />
         <Certification containerClass={containerClass} />
         <Education containerClass={containerClass} />
+        <ContactMe containerClass={containerClass}/>
       </main>
-      <ContactMe />
       <Footer />
     </div>
   )

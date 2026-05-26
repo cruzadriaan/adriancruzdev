@@ -62,7 +62,7 @@ const Navbar = () => {
                         {ContactDetails.social.map((item, index) => (
                             <li key={index} className="text-gray-300 hover:text-blue-400 text-[17px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
-                                <span>{item.name}</span>
+                                <span>{item.type}</span>
                             </li>
                         ))}
                     </ul>
