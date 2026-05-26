@@ -1,6 +1,6 @@
 import { ProjectsData } from '../../data/ProjectsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faSquareArrowUpRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const ProjectCard = ({containerClass}) => {
@@ -45,7 +45,7 @@ const ProjectCard = ({containerClass}) => {
                     )}
 
                     {/* STACK USED */}
-                    <div className="flex flex-wrap gap-3 mt-2">
+                    <div className="flex flex-wrap gap-3 mt-3">
                         {project.stackUsed.map((stack, index) => (
                             <span key={index} className="text-gray-400 text-xs text-center border bg-gray-900 border-gray-500 shadow-md px-2 py-1 rounded">
                                 {stack}
@@ -55,9 +55,9 @@ const ProjectCard = ({containerClass}) => {
 
                     {/* WEBSITE HYPERLINK */}
                     {openCardDetailsIndex === index && (
-                        <div className="mt-2">
-                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-sm hover:text-blue-400">
-                                Visit Website<FontAwesomeIcon icon={faSquareArrowUpRight} className="ml-1" />
+                        <div className="mt-5 flex flex-col justify-center">
+                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 font-semibold text-[12px] hover:text-blue-400">
+                                Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 text-[12px] font-extralight" />
                             </a>
                         </div>
 
