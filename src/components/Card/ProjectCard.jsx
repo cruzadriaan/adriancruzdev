@@ -15,7 +15,7 @@ const ProjectCard = ({containerClass}) => {
                     <div className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
                         <img src={project.image} alt="Beat Jam Preview" className="h-full w-full object-fit" />
                     </div>
-                    <div className="flex flex-row justify-between  ">
+                    <div className="flex flex-row justify-between ">
                         <div>
                             <h1 className="text-white text-sm font-light">{project.stack}</h1>
                             <h1 className="text-gray-400 text-sm font-light">{project.type}</h1>
@@ -23,8 +23,8 @@ const ProjectCard = ({containerClass}) => {
                         </div>
 
                         {/* Button Details */}
-                        <div className="flex flex-col items-center justify-center">
-                            <button className="text-white text-xs border hover:bg-gray-800 border-gray-600 px-3 py-2 rounded-full cursor-pointer"
+                        <div className="flex flex-col items-center m-2">
+                            <button className="text-white text-xs border hover:bg-gray-800 border-gray-600 px-2.5 py-1 rounded-full shadow-md cursor-pointer"
                                 onClick={() => setOpenCardDetailsIndex(openCardDetailsIndex === index ? null : index)}>
                                 <span className="mr-1">DETAILS</span>
                                 <FontAwesomeIcon icon={faAngleDown} className={`${openCardDetailsIndex === index ? 'rotate-180' : ''} transition-transform duration-300`} />
