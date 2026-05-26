@@ -21,7 +21,7 @@ const Experience = ({ containerClass }) => {
                         </div>
                         <div>
                             <button className="flex items-center justify-center w-7 h-7 border hover:bg-gray-800 border-gray-600 shadow-2xs shadow-blue-700 cursor-pointer rounded-full"
-                            onClick={() => setIsDetailsOpen(isDetailsOpen === null ? null : index)}>
+                            onClick={() => setIsDetailsOpen(index)}>
                                 <FontAwesomeIcon icon={faAngleDown} className="text-sm text-white/80"></FontAwesomeIcon>
                             </button>
                         </div>
