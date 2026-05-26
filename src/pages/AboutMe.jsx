@@ -26,9 +26,9 @@ const AboutMe = () => {
                 </div>
                 <div className="flex flex-row items-center gap-3 justify-between mt-5">
                     {AboutMeData.map((item, index) => (
-                    <div key={index} className="flex flex-col items-center my-auto border border-gray-600 rounded-lg bg-gray-900 py-3 h-30 w-30 cursor-pointer text-center">
-                        <FontAwesomeIcon icon={item.icon} className="text-green-600 shadow-2xl bg-blue-900/50 rounded-full p-2 text-2xl mb-2" />
-                        <h1 className="text-white text-sm font-semibold">{item.title}</h1>
+                    <div key={index} className="flex flex-col items-center gap-0.5 my-auto border border-gray-600 rounded-lg bg-gray-900 p-2 h-31 w-30 cursor-pointer text-center">
+                        <FontAwesomeIcon icon={item.icon} className="text-green-600 shadow-2xl bg-blue-900/50 rounded-full p-2 text-2xl " />
+                        <h1 className="text-white text-sm font-semibold w-20">{item.title}</h1>
                     </div>
                     ))}
                 </div>
