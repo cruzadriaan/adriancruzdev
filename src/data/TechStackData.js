@@ -9,27 +9,27 @@ export const TechStackData = [
         technologies: [
             {
                 name: "HTML5",
-                logo: "devicon-html5-plain",
+                logo: "devicon-html5-plain colored",
             },
             {
                 name: "CSS3",
-                logo: "devicon-css3-plain",
+                logo: "devicon-css3-plain colored",
             },
             {
                 name: "Javascript",
-                logo: "devicon-javascript-plain",
+                logo: "devicon-javascript-plain colored",
             },
             {
                 name: "React",
-                logo: "devicon-react-original",
+                logo: "devicon-react-original colored",
             },
             {
                 name: "Tailwind",
-                logo: "devicon-tailwindcss-plain",
+                logo: "devicon-tailwindcss-plain colored",
             },
             {
                 name: "Bootstrap",
-                logo: "devicon-bootstrap-plain",
+                logo: "devicon-bootstrap-plain colored",
             }
         ]
     },
@@ -41,7 +41,7 @@ export const TechStackData = [
         technologies: [
             {
                 name: "Python",
-                logo: "devicon-python-plain",
+                logo: "devicon-python-plain colored",
             },
         ]
     },
@@ -53,11 +53,11 @@ export const TechStackData = [
         technologies: [
             {
                 name: "MySQL",
-                logo: "devicon-mysql-plain",
+                logo: "devicon-mysql-plain colored",
             },
             {
                 name: "PostgreSQL",
-                logo: "devicon-postgresql-plain",
+                logo: "devicon-postgresql-plain colored",
             }
         ]
     },
@@ -69,11 +69,11 @@ export const TechStackData = [
         technologies: [
             {
                 name: "Git",
-                logo: "devicon-git-plain",
+                logo: "devicon-git-plain colored",
             },
             {
                 name: "GitHub",
-                logo: "devicon-github-original",
+                logo: "devicon-github-original text-white",
             },
         ]
     },
@@ -85,15 +85,15 @@ export const TechStackData = [
         technologies: [
             {
                 name: "AWS",
-                logo: "devicon-aws-plain",
+                logo: "devicon-amazonwebservices-plain-wordmark colored",
             },
             {
                 name: "Netlify",
-                logo: "devicon-netlify-plain",
+                logo: "devicon-netlify-plain text-blue-300",
             },
             {
                 name: "Vercel",
-                logo: "devicon-vercel-plain",
+                logo: "devicon-vercel-original text-white/80",
             },
         ]
     },
@@ -105,11 +105,11 @@ export const TechStackData = [
         technologies: [
             {
                 name: "VS Code",
-                logo: "devicon-vscode-plain",
+                logo: "devicon-vscode-plain colored",
             },
             {
                 name: "Photoshop",
-                logo: "devicon-photoshop-plain",
+                logo: "devicon-photoshop-plain text-blue-800",
             }
         ]
     }
