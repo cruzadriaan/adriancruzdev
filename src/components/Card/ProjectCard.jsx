@@ -1,6 +1,6 @@
 import { ProjectsData } from '../../data/ProjectsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faSquareArrowUpRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const ProjectCard = ({containerClass}) => {

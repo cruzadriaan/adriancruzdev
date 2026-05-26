@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquareArrowUpRight, faEnvelope, faFileLines } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import {faCommentDots} from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Hero = () => {
@@ -32,15 +33,15 @@ const Hero = () => {
 
             {/* BUTTONS */}
             <div className="flex flex-row items-center flex-wrap w-95 gap-4 mt-2 text-sm">
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
-                    <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
+                <button className="bg-blue-500 hover:bg-blue-500/90 text-white font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
+                    <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                     Explore My Work
                 </button>
-                <button className="bg-white hover:bg-white/80 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-full cursor-pointer">
-                    <FontAwesomeIcon icon={faSquareArrowUpRight} className="mr-1" />
+                <button className="bg-white hover:bg-white/90 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-full cursor-pointer">
+                    <FontAwesomeIcon icon={faCommentDots} className="mr-1 font-semibold" />
                     Get in Touch
                 </button>
-                <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="border border-white hover:bg-gray-800 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
+                <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="border border-white hover:bg-white/5 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                     View my Resume
                 </a>
