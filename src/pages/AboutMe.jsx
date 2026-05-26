@@ -21,7 +21,7 @@ const AboutMe = () => {
 
                 <div className="mt-5 text-gray-200 text-sm leading-relaxed">
                     <p>
-                        I'm passionate about crafting engaging and user-friendly web experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating responsive and visually appealing websites. I thrive on turning complex ideas into intuitive interfaces, ensuring seamless user interactions. When I'm not coding, you can find me exploring the latest design trends or experimenting with new technologies to stay at the forefront of the ever-evolving web development landscape.
+                        I’m a passionate Front-End Developer dedicated to crafting engaging, intuitive, and visually striking web experiences. With a solid foundation in HTML, CSS, and JavaScript, I specialize in building responsive interfaces that balance functionality and design. I love transforming complex ideas into seamless user journeys that feel effortless and natural.
                     </p>
                 </div>
                 <div className="flex flex-row items-center gap-3 justify-between mt-5">
