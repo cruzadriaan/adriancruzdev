@@ -21,7 +21,7 @@ const Navbar = () => {
                 </div>
                 <div>
                     <h1 className="text-white font-semibold cursor-pointer">Adrian Cruz</h1>
-                    <h1 className="text-gray-400 text-sm font-semibold">Front End Developer</h1>
+                    <h1 className="text-gray-200 text-[12px] font-semibold">Front End Developer</h1>
                 </div>
             </div>
 
