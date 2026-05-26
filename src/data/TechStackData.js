@@ -109,7 +109,7 @@ export const TechStackData = [
             },
             {
                 name: "Photoshop",
-                logo: "devicon-photoshop-plain text-blue-800",
+                logo: "devicon-photoshop-plain text-blue-600",
             }
         ]
     }
