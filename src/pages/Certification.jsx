@@ -8,10 +8,10 @@ const Certification = ({ containerClass }) => {
             <div className={`${containerClass} py-5 flex flex-col gap-2`}>
                 {CertificationData.map((certification, index) => (
                     <div key={index}>
-                        <div className=" mx-3 px-3 py-4 flex flex-row items-center  gap-4 mb-2 border bg-gray-800/40 border-gray-600 rounded-2xl">
+                        <div className="px-5 py-4 flex flex-row items-center  gap-4 mb-2 border bg-gray-800/40 border-gray-600 rounded-2xl">
                             <img src={certification.image} alt={certification.title} className={certification.imageSize} />
                             <div className="">
-                                <h1 className="text-sm font-bold text-blue-400 w-60">{certification.title}</h1>
+                                <h1 className="text-sm font-bold text-blue-400 w-50">{certification.title}</h1>
                                 <p className="text-gray-400 text-xs">Issued: {certification.issued}</p>
                             </div>
                         </div>
