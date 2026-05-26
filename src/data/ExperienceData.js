@@ -7,6 +7,6 @@ export const ExperienceData = [
     {
         company: "CONCENTRIX",
         position: "Technical Support Representative",
-        duration: "March 2021 - April 2022",
+        duration: "May 2021 - January 2022",
     },
 ]

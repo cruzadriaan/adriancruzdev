@@ -4,7 +4,7 @@ export const TechStackData = [
     {
         category: "Front End",
         borderColor: "border-gray-300",
-        categoryColor: "text-blue-500",
+        categoryColor: "text-blue-400",
         logo: faCode,
         technologies: [
             {
