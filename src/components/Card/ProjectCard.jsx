@@ -47,7 +47,7 @@ const Card = () => {
                     {/* STACK USED */}
                     <div className="flex flex-wrap gap-3 mt-2">
                         {project.stackUsed.map((stack, index) => (
-                            <span key={index} className="text-gray-400 text-xs text-center border border-gray-600 px-2 py-1 rounded">
+                            <span key={index} className="text-gray-400 text-xs text-center border bg-gray-900 border-gray-500 shadow-md px-2 py-1 rounded">
                                 {stack}
                             </span>
                         ))}
