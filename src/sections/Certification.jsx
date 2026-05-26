@@ -3,7 +3,7 @@ import { CertificationData } from '../data/CertificationData';
 
 const Certification = ({ containerClass }) => {
     return (
-        <div className="mb-10">
+        <div className="mb-16">
             <SectionDivider section="CERTIFICATION" />
             <div className={`${containerClass} py-5 flex flex-col gap-2`}>
                 {CertificationData.map((certification, index) => (

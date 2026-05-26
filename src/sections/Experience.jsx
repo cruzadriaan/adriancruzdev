@@ -14,7 +14,7 @@ const Experience = ({ containerClass }) => {
             {ExperienceData.map((experience, index) => (
                 <div key={index} className={`relative flex flex-col mb-4 ${containerClass}`}>
                     <div className="flex justify-between">
-                        <div className="flex flex-col mb-2">
+                        <div className="flex flex-col mb-2"> 
                             <h1 className="text-white font-bold">{experience.company}</h1>
                             <h1 className="text-blue-400  font-semibold">{experience.position}</h1>
                             <p className="text-gray-400 text-[12px] mt-1">{experience.duration}</p>

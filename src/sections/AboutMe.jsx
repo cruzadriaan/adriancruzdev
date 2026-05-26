@@ -5,7 +5,7 @@ import {AboutMeData} from "../data/AboutMeData";
 
 const AboutMe = ({containerClass}) => {
     return (
-        <div className="mt-8">
+        <div className="mt-8 mb-10">
             <SectionDivider section="ABOUT ME" />
             <div className={` ${containerClass} mb-10`}>
                 <div className="flex flex-row justify-center gap-4">

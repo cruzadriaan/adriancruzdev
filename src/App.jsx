@@ -6,7 +6,7 @@ import Experience from './sections/Experience';
 import Certification from './sections/Certification';
 import ContactMe from './sections/contact/ContactMe';
 import Hero from './sections/Hero';
-import Projects from './sections/Project';
+import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
 import Footer from './components/Footer';
 

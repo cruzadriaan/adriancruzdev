@@ -1,13 +1,13 @@
-const ContactCard = () => {
+const ContactCard = ({containerClass}) => {
     return (
-        <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mx-5 my-1">
-
+        <div className={`${containerClass}`}>
+            <h1 className="text-white">Send me a message</h1>
             <form>
-                <input type="text" placeholder="Name" className="w-full p-2 mt-4 bg-gray-600 text-white border border-gray-600 rounded" />
-                <input type="email" placeholder="Email" className="w-full p-2 mt-4 bg-gray-600 text-white border border-gray-600 rounded" />
-                <textarea placeholder="Let's talk" className="w-full p-2 mt-4 bg-gray-600 text-white border border-gray-600 rounded h-32 resize-none"></textarea>
+                <input type="text" placeholder="Name" className="w-full p-2 mt-4 bg-gray-800 text-white text-sm border border-gray-600 rounded" />
+                <input type="email" placeholder="Email" className="w-full p-2 mt-4 bg-gray-800 text-white border text-sm border-gray-600 rounded" />
+                <textarea placeholder="Let's talk" className="w-full p-2 mt-4 bg-gray-800 text-white border text-sm border-gray-600 rounded h-32 resize-none"></textarea>
                 <div className="flex justify-center">
-                    <button type="submit" className="mt-4 px-3 py-2 hover:bg-blue-700 bg-blue-600 text-white text-sm rounded cursor-pointer">Send Message</button>
+                    <button type="submit" className="mt-4 px-3 py-2 w-full  bg-linear-to-r hover:from-blue-700 from-blue-800 hover:to-purple-700 to-purple-800 text-white text-sm rounded cursor-pointer">Send Message</button>
                 </div>
             </form>
         </div>
