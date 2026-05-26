@@ -1,13 +1,13 @@
 import './App.css'
 import Navbar from './components/Navbar';
-import AboutMe from './pages/AboutMe';
-import Education from './pages/Education';
-import Experience from './pages/Experience';
-import Certification from './pages/Certification';
-import ContactMe from './pages/ContactMe';
-import Hero from './pages/Hero';
-import Projects from './pages/Projects';
-import TechStack from './pages/TechStack';
+import AboutMe from './sections/AboutMe';
+import Education from './sections/Education';
+import Experience from './sections/Experience';
+import Certification from './sections/Certification';
+import ContactMe from './sections/ContactMe';
+import Hero from './sections/Hero';
+import Projects from './sections/Projects';
+import TechStack from './sections/TechStack';
 import Footer from './components/Footer';
 
 function App() {

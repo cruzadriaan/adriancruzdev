@@ -1,4 +1,4 @@
-import { faHouse, faUser, faBriefcase, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faUser, faBriefcase, faPhone, faHistory, faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const MenuData = [
     {
@@ -17,8 +17,19 @@ export const MenuData = [
         icon: faBriefcase
     },
     {
+        name: "Experience",
+        link: "#experience",
+        icon: faHistory
+    },
+    {
+        name: "Skills",
+        link: "#skills",
+        icon: faCode
+    },
+
+    {
         name: "Contact",
         link: "#contact",
         icon: faEnvelope
-    }
+    },
 ]
