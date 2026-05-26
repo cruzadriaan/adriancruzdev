@@ -3,15 +3,13 @@ import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-so
 import {faCommentDots} from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
-const Hero = () => {
+const Hero = ({textGradientClass}) => {
     return (
         <div className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
         ">
             <div className="items-left justify-center lg:text-6xl text-5xl">
                 <h1 className="text-white text-4xl font-bold mb-1">Hello, I'm</h1>
-                <h1 className="text-5xl md:text-7xl font-extrabold
-      bg-linear-to-r from-blue-400 to-sky-300
-      bg-clip-text text-transparent">Adrian Cruz</h1>
+                <h1 className={`${textGradientClass} text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
             </div>
             <div>
                 <h1 className="text-gray-300 lg:text-lg text-[14px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>

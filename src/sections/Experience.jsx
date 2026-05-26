@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 
-const Experience = ({ containerClass }) => {
+const Experience = ({ containerClass, textGradientClass }) => {
 
     const [isDetailsOpen, setIsDetailsOpen] = useState(null);
 
@@ -16,11 +16,11 @@ const Experience = ({ containerClass }) => {
                     <div className="flex justify-between">
                         <div className="flex flex-col mb-2"> 
                             <h1 className="text-white font-bold">{experience.company}</h1>
-                            <h1 className="text-blue-400  font-semibold">{experience.position}</h1>
+                            <h1 className={`${textGradientClass} font-semibold`}>{experience.position}</h1>
                             <p className="text-gray-400 text-[12px] mt-1">{experience.duration}</p>
                         </div>
                         <div>
-                            <button className="flex items-center justify-center w-7 h-7 border hover:bg-gray-800 border-gray-600 shadow-2xs shadow-blue-700 cursor-pointer rounded-full"
+                            <button className="flex items-center justify-center w-7 h-7 border hover:bg-gray-800 border-gray-600 shadow-xs shadow-blue-700 cursor-pointer rounded-full"
                             onClick={() => setIsDetailsOpen(isDetailsOpen === index ? null : index)}>
                                 <FontAwesomeIcon icon={faAngleDown} className={`${isDetailsOpen === index ? 'rotate-180' : ''} transition-transform duration-500 text-sm text-white/80`}></FontAwesomeIcon>
                             </button>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
-const ProjectCard = ({containerClass}) => {
+const ProjectCard = ({containerClass, textGradientClass}) => {
 
     const [openCardDetailsIndex, setOpenCardDetailsIndex] = useState(null);
 
@@ -55,8 +55,8 @@ const ProjectCard = ({containerClass}) => {
 
                     {/* WEBSITE HYPERLINK */}
                         <div className={`${openCardDetailsIndex === index ? 'mt-7' : 'mt-5'} flex flex-col justify-center`}>
-                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 font-semibold text-[12px] hover:text-blue-400">
-                                Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 text-[12px] font-extralight" />
+                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className={`${textGradientClass} font-semibold text-[12px] hover:text-blue-400`}>
+                                Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className={`text-blue-600 ml-1 text-[12px] font-extralight`} />
                             </a>
                         </div>
                 </div>
