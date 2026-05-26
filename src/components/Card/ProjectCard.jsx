@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
-const Card = () => {
+const ProjectCard = ({containerClass}) => {
 
     const [openCardDetailsIndex, setOpenCardDetailsIndex] = useState(null);
 
     return (
         <>
             {ProjectsData.map((project, index) => (
-                <div key={index} className="mx-5 p-5 flex flex-col gap-3 mb-3 border bg-gray-800/40 border-gray-600 rounded-2xl">
+                <div key={index} className={`flex flex-col ${containerClass} gap-2 mb-3 cursor-pointer`}>
 
                     <div className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
                         <img src={project.image} alt="Beat Jam Preview" className="h-full w-full object-fit" />
@@ -68,4 +68,4 @@ const Card = () => {
     )
 }
 
-export default Card
+export default ProjectCard

@@ -1,11 +1,11 @@
 import SectionDivider from '../components/SectionDivider';
 import { CertificationData } from '../data/CertificationData';
 
-const Certification = () => {
+const Certification = ({ containerClass }) => {
     return (
         <div className="mb-10">
             <SectionDivider section="CERTIFICATION" />
-            <div className="mx-5 py-5 flex flex-col gap-2 border bg-gray-800/40 border-gray-600 rounded-2xl">
+            <div className={`${containerClass} py-5 flex flex-col gap-2`}>
                 {CertificationData.map((certification, index) => (
                     <div key={index}>
                         <div className=" mx-3 px-5 py-4 flex flex-row items-center  gap-4 mb-2 border bg-gray-800/40 border-gray-600 rounded-2xl">

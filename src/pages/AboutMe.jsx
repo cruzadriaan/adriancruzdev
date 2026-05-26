@@ -3,11 +3,11 @@ import AdrianDevAvatar from "../assets/images/AdrianDevAvatarEnhanced.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {AboutMeData} from "../data/AboutMeData";
 
-const AboutMe = () => {
+const AboutMe = ({containerClass}) => {
     return (
         <div className="mt-8">
             <SectionDivider section="ABOUT ME" />
-            <div className="border border-gray-600 rounded-lg bg-gray-800/40 p-5 mx-5 mb-10 ">
+            <div className={` ${containerClass} mb-10`}>
                 <div className="flex flex-row justify-center gap-4">
                     <div className="w-75 h-40 rounded-xl relative overflow-hidden mx-auto">
                         <img src={AdrianDevAvatar} alt="Adrian Cruz" className=" w-full h-full object-cover " />
