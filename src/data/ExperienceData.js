@@ -4,7 +4,7 @@ export const ExperienceData = [
         position: "Application Systems Engineer",
         duration: "April 2022 - Present",
         achieve:[
-            "Executed a 2‑year modernization migration project using SDLC (Waterfall).",
+            "Executed modernization migration project using SDLC (Waterfall).",
             "Managed multi-platform databases (MySQL, SQL Server).",
             "Built responsive web apps with React + Tailwind CSS.",
             "Streamlined workflows with Git, Azure DevOps, and ServiceNow.",
