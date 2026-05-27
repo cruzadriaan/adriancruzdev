@@ -3,6 +3,7 @@ import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-so
 import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
+import {Link} from 'react-scroll';
 
 const Hero = ({ textGradientClass }) => {
 
@@ -13,13 +14,13 @@ const Hero = ({ textGradientClass }) => {
 
     return (
         <div
-            className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
+            className="relative flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
         ">
             <motion.div
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 1 }}
                 className="items-left justify-center lg:text-6xl">
                 <h1 className="text-white text-3xl font-bold mb-1">Hello, I'm</h1>
                 <h1 className={`${textGradientClass} text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
@@ -55,14 +56,14 @@ const Hero = ({ textGradientClass }) => {
 
             {/* BUTTONS */}
             <div className="flex flex-row items-center flex-wrap w-95 gap-4 mt-2 text-sm">
-                <button className="bg-blue-500 hover:bg-blue-500/90 text-white font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
+                <Link to='project' smooth={true} duration={800} offset={-100} className="bg-blue-500 hover:bg-blue-500/90 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                     Explore My Work
-                </button>
-                <button className="bg-white hover:bg-white/90 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-full cursor-pointer">
+                </Link>
+                <Link to="contact" smooth={true} duration={800} offset={-100} className="bg-white hover:bg-white/90 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faCommentDots} className="mr-1 font-semibold" />
                     Get in Touch
-                </button>
+                </Link>
                 <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="border border-white hover:bg-white/5 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                     View my Resume
