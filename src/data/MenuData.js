@@ -3,33 +3,33 @@ import { faHouse, faUser, faBriefcase, faPhone, faHistory, faCode, faEnvelope } 
 export const MenuData = [
     {
         name: "Home",
-        link: "#home",
+        link: "home",
         icon: faHouse
     },
     {
         name: "About",
-        link: "#about",
+        link: "aboutme",
         icon: faUser
     },
     {
         name: "Projects",
-        link: "#projects",
+        link: "project",
         icon: faBriefcase
     },
     {
         name: "Experience",
-        link: "#experience",
+        link: "experience",
         icon: faHistory
     },
     {
         name: "Skills",
-        link: "#skills",
+        link: "techstack",
         icon: faCode
     },
 
     {
         name: "Contact",
-        link: "#contact",
+        link: "contact",
         icon: faEnvelope
     },
 ]

@@ -9,6 +9,7 @@ import Hero from './sections/Hero';
 import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
 import Footer from './components/Footer';
+import { Element } from 'react-scroll';
 
 function App() {
 
@@ -20,14 +21,14 @@ function App() {
 ">
       <Navbar />
       <main className="flex flex-col grow">
-        <Hero  textGradientClass={textGradientClass} />
-        <AboutMe containerClass={containerClass} textGradientClass={textGradientClass} />
-        <Projects containerClass={containerClass} textGradientClass={textGradientClass} />
-        <TechStack containerClass={containerClass}  />
-        <Experience containerClass={containerClass} textGradientClass={textGradientClass} />
-        <Certification containerClass={containerClass} textGradientClass={textGradientClass} />
-        <Education containerClass={containerClass} textGradientClass={textGradientClass} />
-        <ContactMe containerClass={containerClass} textGradientClass={textGradientClass}/>
+        <Element name="hero"><Hero  textGradientClass={textGradientClass} /></Element>
+        <Element name="aboutme"><AboutMe containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="project"><Projects containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="techstack"><TechStack containerClass={containerClass}  /></Element>
+        <Element name="experience"><Experience containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="certification"><Certification containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="education"><Education id="education" containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="contact"><ContactMe containerClass={containerClass} textGradientClass={textGradientClass}/></Element>
       </main>
       <Footer />
     </div>

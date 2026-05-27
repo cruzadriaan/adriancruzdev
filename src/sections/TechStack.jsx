@@ -33,7 +33,7 @@ const TechStack = ({ containerClass }) => {
         </div>
       ))}
 
-      <p className="text-white/40 text-[11px] text-center absolute -bottom-2 left-1/2 -translate-x-1/2 w-full">Note: Continuously improving and expanding skill set</p>
+      <p className="text-white/40 text-[11px] text-center absolute -bottom-5 left-1/2 -translate-x-1/2 w-full">Note: Continuously improving and expanding skill set</p>
     
     </div>
   )
