@@ -1,11 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import {faCommentDots} from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
+import { motion } from 'framer-motion';
 
-const Hero = ({textGradientClass}) => {
+const Hero = ({ textGradientClass }) => {
     return (
-        <div className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
+        <motion.div
+            initial={{ y: 70, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
         ">
             <div className="items-left justify-center lg:text-6xl text-5xl">
                 <h1 className="text-white text-4xl font-bold mb-1">Hello, I'm</h1>
@@ -44,7 +49,7 @@ const Hero = ({textGradientClass}) => {
                     View my Resume
                 </a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

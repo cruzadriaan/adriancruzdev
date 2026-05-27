@@ -10,8 +10,21 @@ import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
 import Footer from './components/Footer';
 import { Element } from 'react-scroll';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "auto"
+    });
+  }, []);
 
   const containerClass = "mx-5 p-5 shadow-sm border border-gray-800 backdrop-blur-lg bg-gray-700/10 rounded-2xl";
   const textGradientClass = "bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-500";
@@ -21,14 +34,14 @@ function App() {
 ">
       <Navbar />
       <main className="flex flex-col grow">
-        <Element name="hero"><Hero  textGradientClass={textGradientClass} /></Element>
+        <Element name="hero"><Hero textGradientClass={textGradientClass} /></Element>
         <Element name="aboutme"><AboutMe containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
         <Element name="project"><Projects containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
-        <Element name="techstack"><TechStack containerClass={containerClass}  /></Element>
+        <Element name="techstack"><TechStack containerClass={containerClass} /></Element>
         <Element name="experience"><Experience containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
         <Element name="certification"><Certification containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
         <Element name="education"><Education id="education" containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
-        <Element name="contact"><ContactMe containerClass={containerClass} textGradientClass={textGradientClass}/></Element>
+        <Element name="contact"><ContactMe containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
       </main>
       <Footer />
     </div>

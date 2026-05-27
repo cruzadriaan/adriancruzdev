@@ -2,15 +2,20 @@ import { ProjectsData } from '../../data/ProjectsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
-const ProjectCard = ({containerClass, textGradientClass}) => {
+const ProjectCard = ({ containerClass, textGradientClass }) => {
 
     const [openCardDetailsIndex, setOpenCardDetailsIndex] = useState(null);
 
     return (
         <>
             {ProjectsData.map((project, index) => (
-                <div key={index} className={`flex flex-col ${containerClass} gap-2 mb-3 cursor-pointer`}>
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    key={index} className={`flex flex-col ${containerClass} gap-2 mb-3 cursor-pointer`}>
 
                     <div className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
                         <img src={project.image} alt="Beat Jam Preview" className="h-full w-full object-fit" />
@@ -54,12 +59,12 @@ const ProjectCard = ({containerClass, textGradientClass}) => {
                     </div>
 
                     {/* WEBSITE HYPERLINK */}
-                        <div className={`${openCardDetailsIndex === index ? 'mt-7' : 'mt-5'} flex flex-col justify-center`}>
-                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className={`${textGradientClass} font-semibold text-[12px] hover:text-blue-400`}>
-                                Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className={`text-blue-600 ml-1 text-[12px] font-extralight`} />
-                            </a>
-                        </div>
-                </div>
+                    <div className={`${openCardDetailsIndex === index ? 'mt-7' : 'mt-5'} flex flex-col justify-center`}>
+                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className={`${textGradientClass} font-semibold text-[12px] hover:text-blue-400`}>
+                            Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className={`text-blue-600 ml-1 text-[12px] font-extralight`} />
+                        </a>
+                    </div>
+                </motion.div>
             ))}
         </>
     )
