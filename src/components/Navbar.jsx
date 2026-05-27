@@ -72,7 +72,7 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-3 mt-2">
                         {ContactData.social.map((item, index) => (
                             <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
-                                <a  href={item.link} target="_blank" rel="noopener noreferrer">
+                                <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.type}</span>
                                 </a>
@@ -87,8 +87,10 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-3 mt-2">
                         {ContactData.others.map((item, index) => (
                             <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
-                                <FontAwesomeIcon icon={item.icon} className="mr-2" />
-                                <span>{item.name}</span>
+                                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                                    <span>{item.name}</span>
+                                </a>
                             </li>
                         ))}
                     </ul>
