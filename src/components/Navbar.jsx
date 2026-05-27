@@ -14,10 +14,10 @@ const Navbar = () => {
     return (
         <>
             {/* Top backdrop of navbar */}
-            <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-1" />
+            <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-5" />
 
             {/* Navbar */}
-            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 p-6 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg px-5 py-6 z-5">
+            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 p-6 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg px-5 py-6 z-10">
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-xl border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
@@ -98,8 +98,7 @@ const Navbar = () => {
             </div >
 
             {/* Backdrop */}
-            < div className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`
-            }
+            < div className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 '}`}
                 onClick={() => setIsSidebarOpen(false)}>
             </div >
         </>
