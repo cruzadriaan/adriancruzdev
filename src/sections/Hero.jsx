@@ -6,23 +6,34 @@ import { motion } from 'framer-motion';
 
 const Hero = ({ textGradientClass }) => {
     return (
-        <motion.div
-            initial={{ y: 70, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
+        <div
             className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
         ">
-            <div className="items-left justify-center lg:text-6xl text-5xl">
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="items-left justify-center lg:text-6xl text-5xl">
                 <h1 className="text-white text-4xl font-bold mb-1">Hello, I'm</h1>
                 <h1 className={`${textGradientClass} text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}>
                 <h1 className="text-gray-300 lg:text-lg text-[14px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}>
                 <h1 className="mt-2 text-gray-300 text-base leading-relaxed">I build responsive, Full‑stack web applications that deliver exceptional digital experiences. My focus is on blending modern design with robust functionality, turning ideas into seamless, high‑performance solutions.</h1>
-            </div>
-            <div className="flex flex-row gap-4">
+            </motion.div>
+            <motion.div
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+            className="flex flex-row gap-4">
                 <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-200 text-2xl rounded-full hover:scale-110 cursor-pointer" />
                 </a>
@@ -32,7 +43,7 @@ const Hero = ({ textGradientClass }) => {
                 <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faEnvelope} className="text-gray-200 text-2xl rounded-full hover:scale-110 cursor-pointer" />
                 </a>
-            </div>
+            </motion.div>
 
             {/* BUTTONS */}
             <div className="flex flex-row items-center flex-wrap w-95 gap-4 mt-2 text-sm">
@@ -49,7 +60,7 @@ const Hero = ({ textGradientClass }) => {
                     View my Resume
                 </a>
             </div>
-        </motion.div>
+        </div>
     )
 }
 

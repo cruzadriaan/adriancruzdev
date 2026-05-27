@@ -2,15 +2,10 @@ import SectionDivider from "../components/SectionDivider";
 import AdrianDevAvatar from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AboutMeData } from "../data/AboutMeData";
-import { motion } from "framer-motion";
 
 const AboutMe = ({ containerClass, textGradientClass }) => {
     return (
-        <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="mt-8 mb-10">
+        <div>
             <SectionDivider section="ABOUT ME" />
             <div className={` ${containerClass} mb-10`}>
                 <div className="flex flex-row justify-center gap-4">
@@ -39,7 +34,7 @@ const AboutMe = ({ containerClass, textGradientClass }) => {
                 </div>
 
             </div>
-        </motion.div>
+        </div>
     )
 }
 
