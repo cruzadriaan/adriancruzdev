@@ -5,21 +5,29 @@ import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-i
 import { motion } from 'framer-motion';
 
 const Hero = ({ textGradientClass }) => {
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+    }
+
     return (
         <div
             className="flex flex-col sm:w-120 w-85 gap-5 mt-28 mb-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5
         ">
             <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="items-left justify-center lg:text-6xl text-5xl">
-                <h1 className="text-white text-4xl font-bold mb-1">Hello, I'm</h1>
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1.5 }}
+                className="items-left justify-center lg:text-6xl">
+                <h1 className="text-white text-3xl font-bold mb-1">Hello, I'm</h1>
                 <h1 className={`${textGradientClass} text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
             </motion.div>
             <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
                 transition={{ duration: 1 }}>
                 <h1 className="text-gray-300 lg:text-lg text-[14px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
             </motion.div>

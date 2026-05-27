@@ -13,8 +13,8 @@ const ContactMe = ({ containerClass }) => {
             <div className='flex flex-col items-center justify-center text-center w-90 mx-auto p-5'>
                 <h1 className='text-[15px] font-semibold bg-clip-text text-transparent bg-linear-to-r from-blue-300 to-purple-500'>LET'S WORK TOGETHER</h1>
                 <h1 className='text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-800'>Let's Connect!</h1>
-                <p className='mt-1 text-[12px] text-white/80 leading-relaxed'>Have a project in mind or just want to say hi?
-                    Feel free to reachout. I'd love to hear from you!
+                <p className='mt-1 text-[12px] text-white/80 leading-relaxed'>Have a project you’d like to discuss? 
+                I welcome your message and look forward to hearing from you.
                 </p>
             </div>
 
