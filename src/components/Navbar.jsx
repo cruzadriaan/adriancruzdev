@@ -3,7 +3,7 @@ import AdrianAvatarEnhanced from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { MenuData } from "../data/MenuData";
-import { ContactDetails } from "../data/ContactData";
+import { ContactData } from "../data/ContactData";
 import { useState } from "react";
 import { Link } from "react-scroll";
 
@@ -15,18 +15,22 @@ const Navbar = () => {
         <>
             {/* Top backdrop of navbar */}
             <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-1" />
-            
+
             {/* Navbar */}
             <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 p-6 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg px-5 py-6 z-5">
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-xl border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
                     </button>
-                    <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-10 h-10 border border-blue-800 rounded-md" />
+                    <Link to="hero" smooth={true} duration={800} offset={-100} className="cursor-pointer">
+                        <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-10 h-10 border border-blue-800 rounded-md" />
+                    </Link>
                 </div>
                 <div>
-                    <h1 className="text-white font-semibold cursor-pointer">Adrian Cruz</h1>
-                    <h1 className="text-gray-200 text-[12px] font-semibold">Front End Developer</h1>
+                    <Link to="hero" smooth={true} duration={800} offset={-100} className="cursor-pointer">
+                        <h1 className="text-white font-semibold">Adrian Cruz</h1>
+                        <h1 className="text-gray-200 text-[12px] font-semibold">Front End Developer</h1>
+                    </Link>
                 </div>
             </div>
 
@@ -66,10 +70,12 @@ const Navbar = () => {
                 <div className="ml-3 mt-9">
                     <h1 className="text-gray-500 text-[10px]">SOCIAL</h1>
                     <ul className="flex flex-col gap-3 mt-2">
-                        {ContactDetails.social.map((item, index) => (
-                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
-                                <FontAwesomeIcon icon={item.icon} className="mr-2" />
-                                <span>{item.type}</span>
+                        {ContactData.social.map((item, index) => (
+                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                                <a  href={item.link} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                                    <span>{item.type}</span>
+                                </a>
                             </li>
                         ))}
                     </ul>
@@ -79,7 +85,7 @@ const Navbar = () => {
                 <div className="ml-3 mt-9">
                     <h1 className="text-gray-500 text-[10px]">OTHERS</h1>
                     <ul className="flex flex-col gap-3 mt-2">
-                        {ContactDetails.others.map((item, index) => (
+                        {ContactData.others.map((item, index) => (
                             <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                 <span>{item.name}</span>
@@ -87,12 +93,13 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-            </div>
+            </div >
 
             {/* Backdrop */}
-            <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+            < div className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`
+            }
                 onClick={() => setIsSidebarOpen(false)}>
-            </div>
+            </div >
         </>
     )
 }
