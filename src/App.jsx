@@ -32,7 +32,7 @@ function App() {
   const softTextGradient = "bg-clip-text text-transparent bg-linear-to-r from-blue-300 to-purple-300";
 
   return (
-    <div className="relative z-0 flex flex-col min-h-screen pt-3 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900
+    <div className="relative z-0 flex flex-col min-h-screen bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900
 ">
       <Navbar />
       <main className="flex flex-col grow">
