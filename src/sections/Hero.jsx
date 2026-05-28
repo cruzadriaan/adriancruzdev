@@ -25,7 +25,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* Content */}
-            <div className="relative pt-26 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
+            <div className="relative pt-29 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
 
                 {/* Name introduction */}
                 <motion.div
@@ -67,7 +67,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         View Resume
                     </a>
-                    <Link to="contact" smooth={true} duration={800} offset={-100} className="text-blue-400 mt-3">
+                    <Link to="contact" smooth={true} duration={800} offset={-100} className="text-blue-400 mt-4">
                         <span className="mr-1">Get in Touch</span>
                         <FontAwesomeIcon icon={faArrowRight} className="" />
                     </Link>
@@ -79,7 +79,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
-                    className="mt-3 flex flex-row gap-4">
+                    className="mt-4 flex flex-row gap-4">
                     <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
                     </a>
