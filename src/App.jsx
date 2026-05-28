@@ -36,7 +36,7 @@ function App() {
 ">
       <Navbar />
       <main className="flex flex-col grow">
-        <Element name="hero"><Hero hardTextGradient={hardTextGradient} softTextGradient={softTextGradient} /></Element>
+        <Element name="hero"><Hero hardTextGradient={hardTextGradient} mediumTextGradient={mediumTextGradient} /></Element>
         <Element name="aboutme"><AboutMe containerClass={containerClass} mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>
         <Element name="project"><Projects containerClass={containerClass}  mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>
         <Element name="techstack"><TechStack containerClass={containerClass} /></Element>
