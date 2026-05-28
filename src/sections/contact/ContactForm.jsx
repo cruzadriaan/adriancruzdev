@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faViber } from '@fortawesome/free-brands-svg-icons';
 import ContactInfo from "./ContactInfo";
 import { ContactData } from '../../data/ContactData';
 // import SectionDivider from "../../components/SectionDivider";
@@ -56,9 +56,10 @@ const ContactForm = ({ containerClass }) => {
 
             <ContactInfo containerClass={containerClass} />
 
+            {/* Viber Button */}
             <div className="fixed bottom-0 right-0">
-                <a href="tel:+09163629046">
-                    <FontAwesomeIcon icon={faPhone} className="text-gray-200 bg-green-700 text-sm rounded-full p-3 m-2 hover:scale-110 cursor-pointer" />
+                <a href="viber://chat?number=+639163629046" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faViber} className="text-gray-200 bg-purple-600 text-xl rounded-full p-2.5 m-2 hover:scale-110 cursor-pointer" />
                 </a>
             </div>
         </div>
