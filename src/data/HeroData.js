@@ -22,3 +22,18 @@ export const HeroData = [
             icon: faClock,
         }
     ]
+
+    export const HeroStack = [
+        {
+            name: "Javascript", 
+        },
+        {
+            name: "React",
+        },
+        {
+            name: "Tailwind",
+        },
+        {
+            name: "Python",
+        },
+    ]
