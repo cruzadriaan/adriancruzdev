@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { HeroData } from '../data/HeroData';
 
-const Hero = ({  hardTextGradient, mediumTextGradient }) => {
+const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
     const heroVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -50,7 +50,7 @@ const Hero = ({  hardTextGradient, mediumTextGradient }) => {
                 {/* Paragraph */}
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
+                    animate={{ y: 0, opacity: 2 }}
                     transition={{ duration: 1 }}>
                     <h1 className="mt-3 text-gray-300 text-base w-70">
                         Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
@@ -78,7 +78,7 @@ const Hero = ({  hardTextGradient, mediumTextGradient }) => {
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 2 }}
                     className="mt-3 flex flex-row gap-4">
                     <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
@@ -92,11 +92,11 @@ const Hero = ({  hardTextGradient, mediumTextGradient }) => {
                 </motion.div>
 
                 {/* Code Snippet */}
-                <motion.div 
+                <motion.div
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 2 }}
-                className="relative mt-2 bg-black/50 h-40 w-90 rounded-lg shadow-lg">
+                    transition={{ duration: 2.5 }}
+                    className="relative mt-2 bg-black/50 h-40 w-90 rounded-lg shadow-lg">
                     <div className="py-5 px-7 flex flex-col gap-1 text-sm text-white">
                         <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer</span>  = {`{`}</p>
                         <div className="ml-5 flex flex-col text-gray-300 gap-1">
