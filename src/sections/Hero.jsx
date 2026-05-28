@@ -14,7 +14,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
     }
 
     return (
-        <div className="relative h-200 mb-12">
+        <div className="relative h-200 mb-25">
 
             {/* Background Base */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 -z-30" />
@@ -58,7 +58,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 </motion.div>
 
                 {/* BUTTONS */}
-                <div className="mt-1 flex flex-row items-center flex-wrap w-85 gap-4 text-sm">
+                <div className="mt-2 flex flex-row items-center flex-wrap w-85 gap-4 text-sm">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:from-blue-700 hover:to-purple-700 from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work
@@ -79,7 +79,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
-                    className="mt-1 flex flex-row gap-4">
+                    className="mt-3 flex flex-row gap-4">
                     <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
                     </a>
@@ -92,7 +92,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 </motion.div>
 
                 {/* Hero Stats */}
-                <div className="mt-2 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="mt-8 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
                     {HeroData.map((stat, index) => (
                         <motion.div
                             key={index}
