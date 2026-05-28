@@ -1,9 +1,17 @@
 import SectionDivider from '../components/SectionDivider';
 import { CertificationData } from '../data/CertificationData';
+import { motion } from 'framer-motion';
+import { cardVariants } from '../utils/cardVariants';
 
 const Certification = ({ containerClass, mediumTextGradient }) => {
     return (
-        <div className="mb-16">
+        <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8 }}
+        >
             <SectionDivider section="CERTIFICATION" />
             <div className={`${containerClass} py-5 flex flex-col gap-2`}>
                 {CertificationData.map((certification, index) => (
@@ -18,7 +26,7 @@ const Certification = ({ containerClass, mediumTextGradient }) => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     )
 }
 
