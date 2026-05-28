@@ -10,7 +10,7 @@ const Projects = ({ containerClass, mediumTextGradient, softTextGradient }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
         >
             <SectionDivider section="PROJECTS" />
             <div className="flex flex-col gap-5 mb-10 md:grid md:grid-cols-2 lg:mx-5 md:mx-2 sm:mx-12">

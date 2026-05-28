@@ -10,7 +10,7 @@ const TechStack = ({ containerClass }) => {
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8 }}
       className="relative mb-18">
 
