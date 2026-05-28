@@ -54,7 +54,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="mt-1 text-gray-300 text-base w-70">
+                    <h1 className="mt-1 text-gray-300 text-[14px] w-70">
                         Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
                     </h1>
 
