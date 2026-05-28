@@ -4,7 +4,7 @@ import AboutMe from './sections/AboutMe';
 import Education from './sections/Education';
 import Experience from './sections/Experience';
 import Certification from './sections/Certification';
-import ContactMe from './sections/contact/ContactMe';
+import ContactForm from './sections/contact/ContactForm';
 import Hero from './sections/Hero';
 import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
@@ -41,7 +41,7 @@ function App() {
         <Element name="experience"><Experience containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
         <Element name="certification"><Certification containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
         <Element name="education"><Education id="education" containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
-        <Element name="contact"><ContactMe containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="contact"><ContactForm containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
       </main>
       <Footer />
     </div>

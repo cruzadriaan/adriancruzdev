@@ -1,4 +1,4 @@
-const ContactCard = ({containerClass}) => {
+const ContactInfo = ({containerClass}) => {
     return (
         <div className={`${containerClass}`}>
             <h1 className="text-white">Send me a message</h1>
@@ -14,4 +14,4 @@ const ContactCard = ({containerClass}) => {
     )
 }
 
-export default ContactCard
+export default ContactInfo

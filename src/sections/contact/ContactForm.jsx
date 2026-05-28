@@ -1,18 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import ContactCard from "./ContactCard";
+import ContactInfo from "./ContactInfo";
 import { ContactData } from '../../data/ContactData';
 // import SectionDivider from "../../components/SectionDivider";
 
-const ContactMe = ({ containerClass }) => {
+const ContactForm = ({ containerClass }) => {
     return (
         <div className="mb-12">
             {/* <SectionDivider section="CONTACT ME" /> */}
 
             {/* Header Greetings */}
             <div className='flex flex-col items-center justify-center text-center w-90 mx-auto p-5'>
-                <h1 className='text-[15px] font-semibold bg-clip-text text-transparent bg-linear-to-r from-blue-300 to-purple-500'>LET'S WORK TOGETHER</h1>
-                <h1 className='text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-800'>Let's Connect!</h1>
+                <h1 className='text-[13px] font-semibold bg-clip-text text-transparent bg-linear-to-r from-blue-100 to-purple-100'>LET'S WORK TOGETHER</h1>
+                <h1 className='text-4xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-800'>Let's Connect!</h1>
                 <p className='mt-1 text-[12px] text-white/80 leading-relaxed'>Have a project you’d like to discuss? 
                 I welcome your message and look forward to hearing from you.
                 </p>
@@ -54,7 +54,7 @@ const ContactMe = ({ containerClass }) => {
                 </>
             </div>
 
-            <ContactCard containerClass={containerClass} />
+            <ContactInfo containerClass={containerClass} />
 
             <div className="fixed bottom-0 right-0">
                 <a href="tel:+09163629046">
@@ -65,4 +65,4 @@ const ContactMe = ({ containerClass }) => {
     )
 }
 
-export default ContactMe
+export default ContactForm
