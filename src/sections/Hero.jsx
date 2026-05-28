@@ -14,7 +14,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
     return (
         <div
-            className="relative flex flex-col sm:w-120 w-85 gap-5 mt-35 lg:mx-11 md:mx-8 sm:mx-8 mx-5 mb-25
+            className="relative flex flex-col sm:w-120 w-90 gap-5 mt-35 lg:mx-11 md:mx-8 sm:mx-8 mx-5 mb-25
         ">
             <motion.div
                 variants={cardVariants}
@@ -36,7 +36,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}>
-                <h1 className="mt-2 text-gray-300 text-base w-75 leading-relaxed"><span className={mediumTextGradient}>I build modern, responsive web interfaces</span> that deliver exceptional digital experiences — blending design expertise with <span className={mediumTextGradient}>Frontend development</span>, and growing toward <span className={mediumTextGradient}>Full‑stack</span>.</h1>
+                <h1 className="mt-2 text-gray-300 text-base w-70 leading-relaxed"><span className={mediumTextGradient}>I build modern, responsive web interfaces</span> that deliver exceptional digital experiences — blending design expertise with <span className={mediumTextGradient}>Frontend development</span>, and growing toward <span className={mediumTextGradient}>Full‑stack</span>.</h1>
             </motion.div>
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
@@ -55,7 +55,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
             </motion.div>
 
             {/* BUTTONS */}
-            <div className="flex flex-row  items-center flex-wrap w-85 gap-4 mt-2 text-sm">
+            <div className="flex flex-row  items-center flex-wrap w-85 gap-4 mt-1 text-sm">
                 <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:from-blue-600 hover:to-purple-600 from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-xl cursor-pointer">
                     <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                     Explore My Work
