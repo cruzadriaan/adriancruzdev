@@ -5,7 +5,7 @@ import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-i
 import { motion } from 'framer-motion';
 import {Link} from 'react-scroll';
 
-const Hero = ({ textGradientClass }) => {
+const Hero = ({ hardTextGradient, softTextGradient }) => {
 
     const cardVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -23,7 +23,7 @@ const Hero = ({ textGradientClass }) => {
                 transition={{ duration: 1 }}
                 className="items-left justify-center lg:text-6xl">
                 <h1 className="text-white text-3xl font-bold mb-1">Hello, I'm</h1>
-                <h1 className={`${textGradientClass} text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
+                <h1 className={`${hardTextGradient} text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
             </motion.div>
             <motion.div
                 variants={cardVariants}
@@ -36,7 +36,7 @@ const Hero = ({ textGradientClass }) => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}>
-                <h1 className="mt-2 text-gray-300 text-base leading-relaxed">I build responsive, Full‑stack web applications that deliver exceptional digital experiences. My focus is on blending modern design with robust functionality, turning ideas into seamless, high‑performance solutions.</h1>
+                <h1 className="mt-2 text-gray-300 text-base w-90 leading-relaxed">I <span className={softTextGradient}>build modern, responsive web interfaces</span> that deliver exceptional digital experiences — blending design expertise with <span className={softTextGradient}>Frontend development</span>, and growing toward <span className={softTextGradient}>Full‑stack</span>.</h1>
             </motion.div>
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
@@ -56,7 +56,7 @@ const Hero = ({ textGradientClass }) => {
 
             {/* BUTTONS */}
             <div className="flex flex-row items-center flex-wrap w-95 gap-4 mt-2 text-sm">
-                <Link to='project' smooth={true} duration={800} offset={-100} className="bg-blue-500 hover:bg-blue-500/90 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
+                <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-full cursor-pointer">
                     <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                     Explore My Work
                 </Link>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 
-const Experience = ({ containerClass, textGradientClass }) => {
+const Experience = ({ containerClass, mediumTextGradient }) => {
 
     const [isDetailsOpen, setIsDetailsOpen] = useState(null);
 
@@ -16,7 +16,7 @@ const Experience = ({ containerClass, textGradientClass }) => {
                     <div className="flex justify-between">
                         <div className="flex flex-col mb-2"> 
                             <h1 className="text-white font-bold">{experience.company}</h1>
-                            <h1 className={`${textGradientClass} font-semibold`}>{experience.position}</h1>
+                            <h1 className={`${mediumTextGradient} font-semibold`}>{experience.position}</h1>
                             <p className="text-gray-400 text-[12px] mt-1">{experience.duration}</p>
                         </div>
                         <div>

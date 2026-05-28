@@ -27,21 +27,23 @@ function App() {
   }, []);
 
   const containerClass = "mx-5 p-5 shadow-sm border border-gray-800 backdrop-blur-lg bg-gray-700/10 rounded-2xl";
-  const textGradientClass = "bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-500";
+  const hardTextGradient = "bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-500";
+  const mediumTextGradient = "bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-purple-400";
+  const softTextGradient = "bg-clip-text text-transparent bg-linear-to-r from-blue-300 to-purple-300";
 
   return (
     <div className="flex flex-col min-h-screen pt-3 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900
 ">
       <Navbar />
       <main className="flex flex-col grow">
-        <Element name="hero"><Hero textGradientClass={textGradientClass} /></Element>
-        <Element name="aboutme"><AboutMe containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
-        <Element name="project"><Projects containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="hero"><Hero hardTextGradient={hardTextGradient} softTextGradient={softTextGradient} /></Element>
+        <Element name="aboutme"><AboutMe containerClass={containerClass} hardTextGradient={hardTextGradient} mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>
+        <Element name="project"><Projects containerClass={containerClass}  mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>
         <Element name="techstack"><TechStack containerClass={containerClass} /></Element>
-        <Element name="experience"><Experience containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
-        <Element name="certification"><Certification containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
-        <Element name="education"><Education id="education" containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
-        <Element name="contact"><ContactForm containerClass={containerClass} textGradientClass={textGradientClass} /></Element>
+        <Element name="experience"><Experience containerClass={containerClass} mediumTextGradient={mediumTextGradient} /></Element>
+        <Element name="certification"><Certification containerClass={containerClass} mediumTextGradient={mediumTextGradient} /></Element>
+        <Element name="education"><Education id="education" containerClass={containerClass} /></Element>
+        <Element name="contact"><ContactForm containerClass={containerClass} hardTextGradient={hardTextGradient} /></Element>
       </main>
       <Footer />
     </div>
