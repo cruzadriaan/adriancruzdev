@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { HeroData } from '../data/HeroData';
 
-const Hero = ({ hardTextGradient, mediumTextGradient }) => {
+const Hero = ({  hardTextGradient, mediumTextGradient }) => {
 
     const heroVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -14,7 +14,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
     }
 
     return (
-        <div className="relative h-200 mb-35">
+        <div className="relative h-250 mb-35">
 
             {/* Background Base */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 -z-30" />
@@ -90,6 +90,21 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                         <FontAwesomeIcon icon={faEnvelope} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
                     </a>
                 </motion.div>
+
+                {/* Code Snippet */}
+                <div className="relative mt-4 bg-black/50 h-45 w-95 rounded-lg shadow-lg">
+                    <div className="p-8 flex flex-col gap-1 text-sm text-white">
+                        <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer</span>  = {`{`}</p>
+                        <div className="ml-5 flex flex-col text-gray-300 gap-1">
+                            <p>name: <span className="text-green-300">"Adrian Cruz"</span></p>
+                            <p>role: <span className="text-green-300">"Frontend Developer"</span></p>
+                            <p>passion: <span className="text-green-300">"Building modern UI"</span></p>
+                        </div>
+                        <p className='text-white'>{`}`}
+                            {/* <span className="animate-blink">|</span> */}
+                        </p>
+                    </div>
+                </div>
 
                 {/* Hero Stats */}
                 <div className="mt-8 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
