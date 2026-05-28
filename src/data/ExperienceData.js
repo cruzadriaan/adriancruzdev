@@ -8,15 +8,15 @@ export const ExperienceData = [
             "Managed multi-platform databases (MySQL, SQL Server).",
             "Built responsive web apps with React + Tailwind CSS.",
             "Streamlined workflows with Git, Azure DevOps, and ServiceNow.",
-            "Practiced Agile/Scrum with sprints for better collaboration."
+            "Practiced Agile/Scrum with sprints using Asana to drive collaboration, streamline workflows, and improve team productivity."
         ]
     },
     {
         company: "CONCENTRIX",
-        position: "Technical Support Representative",
+        position: "Web Hosting Support Specialist",
         duration: "May 2021 - January 2022",
         achieve:[
-            "Provided hosting and domain support, including purchases and renewals.",
+            "Provided hosting and domain support through Bluehost, including purchases and renewals.",
             "Maintained server security and performance.",
             "Advised clients on hosting solutions (shared, VPS, dedicated, WordPress)."
         ]

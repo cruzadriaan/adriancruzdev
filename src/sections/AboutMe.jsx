@@ -3,7 +3,7 @@ import AdrianDevAvatar from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AboutMeData } from "../data/AboutMeData";
 
-const AboutMe = ({ containerClass, hardTextGradient, mediumTextGradient, softTextGradient }) => {
+const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
         <div>
             <SectionDivider section="ABOUT ME" />
@@ -14,7 +14,7 @@ const AboutMe = ({ containerClass, hardTextGradient, mediumTextGradient, softTex
                     </div>
                     <div className="mt-1 w-90">
                         <h1 className="text-white text-lg font-normal">
-                            I'm <span className={`${hardTextGradient} font-bold`}>Adrian Cruz</span>, a <span className={`${mediumTextGradient} font-semibold`}>Front End Developer</span> based in Quezon City, Philippines.
+                            I'm <span className={`${mediumTextGradient} font-bold`}>Adrian Cruz</span>, a <span className={`${mediumTextGradient} font-semibold`}>Front End Developer</span> based in Quezon City, Philippines.
                         </h1>
                     </div>
                 </div>
