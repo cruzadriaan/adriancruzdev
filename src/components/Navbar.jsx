@@ -24,7 +24,7 @@ const Navbar = () => {
                     </button>
 
                     <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
-                        <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-9 h-9 border border-blue-800 rounded-md" />
+                        <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-9.5 h-9.5 border border-blue-800 rounded-md" />
                     </Link>
                 </div>
                 <div>
