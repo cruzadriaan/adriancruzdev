@@ -92,7 +92,7 @@ const Hero = ({  hardTextGradient, mediumTextGradient }) => {
                 </motion.div>
 
                 {/* Code Snippet */}
-                <div className="relative mt-4 bg-black/50 h-40 w-90 rounded-lg shadow-lg">
+                <div className="relative mt-2 bg-black/50 h-40 w-90 rounded-lg shadow-lg">
                     <div className="py-5 px-7 flex flex-col gap-1 text-sm text-white">
                         <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer</span>  = {`{`}</p>
                         <div className="ml-5 flex flex-col text-gray-300 gap-1">
