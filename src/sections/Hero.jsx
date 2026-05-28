@@ -17,10 +17,10 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
         <div className="relative h-230 mb-12">
 
             {/* Background Base */}
-            <div className="absolute inset-0  -z-30" />
+            <div className="absolute inset-0 bg-black -z-30" />
 
             {/* Background Image */}
-            <div className="absolute inset-0 bg-contain -z-20  bg-[url('assets/waveEffect.svg')]" />
+            <div className="absolute inset-0 bg-cover opacity-20 -z-20  bg-[url('assets/waveEffect.svg')]" />
 
             {/* Content */}
             <div className="relative pt-28 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
