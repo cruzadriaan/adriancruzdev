@@ -12,6 +12,7 @@ const ProjectCard = ({ containerClass, mediumTextGradient }) => {
     return (
         <>
             {ProjectsData.map((project, index) => (
+                
                 <motion.div
                     variants={cardVariants}
                     initial="hidden"
