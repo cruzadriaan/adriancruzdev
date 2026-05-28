@@ -14,7 +14,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
     return (
         <div
-            className="relative flex flex-col sm:w-120 w-90 gap-5 mt-35 lg:mx-11 md:mx-8 sm:mx-8 mx-5 mb-25
+            className="mt-32 relative flex flex-col sm:w-120 w-90 gap-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5 mb-25
         ">
             {/* Name introduction */}
             <motion.div
@@ -41,7 +41,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}>
-                <h1 className="mt-4 text-gray-300 text-base w-70"><span className={mediumTextGradient}>I build modern, responsive web interfaces</span> that deliver exceptional digital experiences — blending design expertise with <span className={mediumTextGradient}>Frontend development</span>, and growing toward <span className={mediumTextGradient}>Full‑stack</span>.</h1>
+                <h1 className="mt-3 text-gray-300 text-base w-70"><span className={mediumTextGradient}>I build modern, responsive web interfaces</span> that deliver exceptional digital experiences — blending design expertise with <span className={mediumTextGradient}>Frontend development</span>, and growing toward <span className={mediumTextGradient}>Full‑stack</span>.</h1>
             </motion.div>
 
             {/* Social Icons */}
