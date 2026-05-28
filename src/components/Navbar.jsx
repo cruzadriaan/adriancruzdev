@@ -23,7 +23,7 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-lg border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
                     </button>
 
-                    <Link to="hero" smooth={true} duration={800} offset={-100} className="cursor-pointer">
+                    <Link to="hero" smooth={true} duration={800} offset={-110} className="cursor-pointer">
                         <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-9 h-9 border border-blue-800 rounded-md" />
                     </Link>
                 </div>
