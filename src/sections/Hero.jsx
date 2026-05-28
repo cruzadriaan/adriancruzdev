@@ -14,7 +14,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
     }
 
     return (
-        <div className="relative h-230 mb-12">
+        <div className="relative h-230 mt-6 mb-12">
 
             {/* Background Base */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 -z-30" />
