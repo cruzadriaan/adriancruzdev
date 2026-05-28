@@ -79,7 +79,7 @@ const Hero = ({  hardTextGradient, mediumTextGradient }) => {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
-                    className="mt-4 flex flex-row gap-4">
+                    className="mt-3 flex flex-row gap-4">
                     <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
                     </a>
@@ -92,8 +92,8 @@ const Hero = ({  hardTextGradient, mediumTextGradient }) => {
                 </motion.div>
 
                 {/* Code Snippet */}
-                <div className="relative mt-4 bg-black/50 h-45 w-95 rounded-lg shadow-lg">
-                    <div className="p-8 flex flex-col gap-1 text-sm text-white">
+                <div className="relative mt-4 bg-black/50 h-40 w-90 rounded-lg shadow-lg">
+                    <div className="py-5 px-7 flex flex-col gap-1 text-sm text-white">
                         <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer</span>  = {`{`}</p>
                         <div className="ml-5 flex flex-col text-gray-300 gap-1">
                             <p>name: <span className="text-green-300">"Adrian Cruz"</span></p>
