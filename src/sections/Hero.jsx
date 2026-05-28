@@ -36,7 +36,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}>
-                <h1 className="mt-2 text-gray-300 text-base w-85 leading-relaxed"><span className={mediumTextGradient}>I build modern, responsive web interfaces</span> that deliver exceptional digital experiences — blending design expertise with <span className={mediumTextGradient}>Frontend development</span>, and growing toward <span className={mediumTextGradient}>Full‑stack</span>.</h1>
+                <h1 className="mt-2 text-gray-300 text-base w-75 leading-relaxed"><span className={mediumTextGradient}>I build modern, responsive web interfaces</span> that deliver exceptional digital experiences — blending design expertise with <span className={mediumTextGradient}>Frontend development</span>, and growing toward <span className={mediumTextGradient}>Full‑stack</span>.</h1>
             </motion.div>
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
