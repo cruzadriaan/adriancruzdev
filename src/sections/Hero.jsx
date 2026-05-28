@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFileLines, faExternalLinkAlt, faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
@@ -78,17 +78,19 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="relative mt-20" >
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-5">
-                    <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-start justify-center p-1">
-                        <motion.div
-                            animate={{ y: [0, 10, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity }}
-                            className="w-2 h-2 bg-gray-400 rounded-full"
-                        />
-                    </div>
-                </div>
+            <div className="flex flex-row items-center justify-center mt-10" >
+                <motion.div
+                    animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="flex flex-col items-center justify-center gap-2 cursor-pointer"
+                >
+                    <Link to="aboutme" smooth={true} duration={800} offset={-100}>
+                        <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
+                        <span className="text-gray-300 text-[10px]">Explore for more</span>
+                    </Link>
+                </motion.div>
             </div>
+
         </div>
     )
 }
