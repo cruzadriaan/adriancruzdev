@@ -11,7 +11,7 @@ const Education = ({ containerClass }) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 1 }}
-            className="mb-15"
+            className="mb-14"
         >
             <SectionDivider section="EDUCATION" />
             <div className={`relative flex flex-col ${containerClass} rounded-lg pt-6 pb-4 px-4 my-1`} >

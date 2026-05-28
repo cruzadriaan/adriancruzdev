@@ -13,7 +13,8 @@ const Projects = ({ containerClass, mediumTextGradient, softTextGradient }) => {
             transition={{ duration: 0.8 }}
         >
             <SectionDivider section="PROJECTS" />
-            <div className="flex flex-col gap-5 mb-10 md:grid md:grid-cols-2 lg:mx-5 md:mx-2 sm:mx-12">
+
+            <div className="flex flex-col gap-5 mb-12 md:grid md:grid-cols-2 lg:mx-5 md:mx-2 sm:mx-12">
                 <ProjectCard containerClass={containerClass} mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} />
             </div>
         </motion.div>

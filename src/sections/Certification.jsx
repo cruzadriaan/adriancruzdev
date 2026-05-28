@@ -11,6 +11,7 @@ const Certification = ({ containerClass, mediumTextGradient }) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
+            className="mb-12"
         >
             <SectionDivider section="CERTIFICATION" />
             <div className={`${containerClass} py-5 flex flex-col gap-2`}>

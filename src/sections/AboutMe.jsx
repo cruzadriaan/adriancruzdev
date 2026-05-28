@@ -14,10 +14,11 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 1 }}
         >
+
             <SectionDivider section="ABOUT ME" />
 
             <div
-                className={` ${containerClass} mb-10`}>
+                className={` ${containerClass} mb-12`}>
 
                 <div className="flex flex-row justify-center gap-4">
                     <div className="w-75 h-40 rounded-xl relative overflow-hidden mx-auto">
