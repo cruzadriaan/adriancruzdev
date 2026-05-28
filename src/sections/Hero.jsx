@@ -14,7 +14,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
     return (
         <div
-            className="relative flex flex-col sm:w-120 w-85 gap-5 mt-35 lg:mx-11 md:mx-8 sm:mx-8 mx-5 min-h-screen
+            className="relative flex flex-col sm:w-120 w-85 gap-5 mt-35 lg:mx-11 md:mx-8 sm:mx-8 mx-5 mb-25
         ">
             <motion.div
                 variants={cardVariants}
