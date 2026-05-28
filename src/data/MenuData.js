@@ -4,32 +4,38 @@ export const MenuData = [
     {
         name: "Home",
         link: "hero",
-        icon: faHouse
+        icon: faHouse,
+        offset: -90
     },
     {
         name: "About",
         link: "aboutme",
-        icon: faUser
+        icon: faUser,
+        offset: -110
     },
     {
         name: "Projects",
         link: "project",
-        icon: faBriefcase
+        icon: faBriefcase,
+        offset: -110
     },
     {
         name: "Experience",
         link: "experience",
-        icon: faHistory
+        icon: faHistory,
+        offset: -110
     },
     {
         name: "Skills",
         link: "techstack",
-        icon: faCode
+        icon: faCode,
+        offset: -110
     },
 
     {
         name: "Contact",
         link: "contact",
-        icon: faEnvelope
+        icon: faEnvelope,
+        offset: -110
     },
 ]
