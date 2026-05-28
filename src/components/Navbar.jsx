@@ -60,7 +60,7 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-3 mt-2">
                         {MenuData.map((item, index) => (
                             <Link to={item.link} smooth={true} duration={800} offset={-110} onClick={() => setIsSidebarOpen(false)}>
-                                <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                                <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
                                 </li>
@@ -74,7 +74,7 @@ const Navbar = () => {
                     <h1 className="text-gray-500 text-[10px]">SOCIAL</h1>
                     <ul className="flex flex-col gap-3 mt-2">
                         {ContactData.social.map((item, index) => (
-                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[16px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.type}</span>
@@ -89,7 +89,7 @@ const Navbar = () => {
                     <h1 className="text-gray-500 text-[10px]">OTHERS</h1>
                     <ul className="flex flex-col gap-3 mt-2">
                         {ContactData.others.map((item, index) => (
-                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
