@@ -23,12 +23,12 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-lg border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
                     </button>
 
-                    <Link to="hero" smooth={true} duration={800} offset={-120} className="cursor-pointer">
+                    <Link to="hero" smooth={true} duration={800} offset={-130} className="cursor-pointer">
                         <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-9 h-9 border border-blue-800 rounded-md" />
                     </Link>
                 </div>
                 <div>
-                    <Link to="hero" smooth={true} duration={800} offset={-120} className="cursor-pointer">
+                    <Link to="hero" smooth={true} duration={800} offset={-130} className="cursor-pointer">
                         <h1 className="text-white font-semibold">Adrian Cruz</h1>
                         <div className="flex flex-row items-center justify-center">
                             <div className="mr-2 w-1.5 h-1.5 rounded-full bg-linear-to-r from-blue-500 to-purple-500" />
@@ -60,7 +60,7 @@ const Navbar = () => {
                     <h1 className="text-gray-500 text-[10px]">NAVIGATION</h1>
                     <ul className="flex flex-col gap-3 mt-2">
                         {MenuData.map((item, index) => (
-                            <Link to={item.link} smooth={true} duration={800} offset={-120} onClick={() => setIsSidebarOpen(false)}>
+                            <Link to={item.link} smooth={true} duration={800} offset={-110} onClick={() => setIsSidebarOpen(false)}>
                                 <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
