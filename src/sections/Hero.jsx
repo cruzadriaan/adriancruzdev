@@ -4,6 +4,7 @@ import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import { HeroData } from '../data/HeroData';
 
 const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
@@ -14,7 +15,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
     return (
         <div
-            className="mt-32 relative flex flex-col sm:w-120 w-90 gap-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5 mb-25
+            className="mt-28 relative flex flex-col sm:w-120 w-90 gap-5 lg:mx-11 md:mx-8 sm:mx-8 mx-5 mb-25
         ">
             {/* Name introduction */}
             <motion.div
@@ -77,8 +78,24 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 </a>
             </div>
 
+            {/* Hero Stats */}
+            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+                {HeroData.map((stat, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1, delay: index * 0.2 }}
+                        className="bg-gray-800/40 backdrop-blur-md py-6 px-4 rounded-xl border border-gray-700"
+                    >
+                        <h2 className={`${mediumTextGradient} text-2xl font-bold`}>{stat.count}</h2>
+                        <p className="text-gray-400 text-[13px]">{stat.title}</p>
+                    </motion.div>
+                ))}
+            </div>
+
             {/* Scroll Indicator */}
-            <div className="flex flex-row items-center justify-center mt-7" >
+            {/* <div className="flex flex-row items-center justify-center mt-7" >
                 <motion.div
                     animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
@@ -89,7 +106,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                         <span className="text-gray-300 text-[10px]">Explore for more</span>
                     </Link>
                 </motion.div>
-            </div>
+            </div> */}
 
         </div>
     )
