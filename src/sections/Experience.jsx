@@ -17,7 +17,7 @@ const Experience = ({ containerClass, mediumTextGradient }) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 1 }}
-            className="mb-12">
+            className="mb-18">
             <SectionDivider section="EXPERIENCE" />
             {ExperienceData.map((experience, index) => (
                 <div key={index} className={`relative flex flex-col mb-4 ${containerClass}`}>

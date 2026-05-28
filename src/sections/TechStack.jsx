@@ -12,7 +12,7 @@ const TechStack = ({ containerClass }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8 }}
-      className="relative mb-18">
+      className="relative mb-20">
 
       <SectionDivider section="TECH STACK" />
 
