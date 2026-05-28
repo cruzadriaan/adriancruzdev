@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
@@ -14,15 +14,15 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
     }
 
     return (
-        <div className="relative h-230 mt-6 mb-12">
+        <div className="relative h-200 mb-12">
 
             {/* Background Base */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 -z-30" />
 
             {/* Background Image */}
-            <div 
-            style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
-            className="absolute inset-0 bg-cover opacity-2 -z-20" />
+            <div
+                style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
+                className="absolute inset-0 bg-cover opacity-2 -z-20" />
 
             {/* Content */}
             <div className="relative pt-28 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
@@ -52,8 +52,27 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}>
-                    <h1 className="mt-3 text-gray-300 text-base w-70"><span className={mediumTextGradient}>I build modern, responsive web <span className={mediumTextGradient}>interfaces</span></span> that deliver exceptional digital experiences — blending design expertise with <span className={mediumTextGradient}>Frontend development</span>, and growing toward <span className={mediumTextGradient}>Full‑stack</span>.</h1>
+                    <h1 className="mt-3 text-gray-300 text-base w-70">
+                        Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
+                    </h1>
                 </motion.div>
+
+                {/* BUTTONS */}
+                <div className="mt-1 flex flex-row items-center flex-wrap w-85 gap-4 text-sm">
+                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:from-blue-700 hover:to-purple-700 from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-xl cursor-pointer">
+                        <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
+                        Explore My Work
+                    </Link>
+                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-white/90 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-xl cursor-pointer">
+                        <FontAwesomeIcon icon={faFileLines} className="mr-1" />
+                        View Resume
+                    </a>
+                    <Link to="contact" smooth={true} duration={800} offset={-100} className="text-blue-400 mt-4">
+                        <span className="mr-1">Get in Touch</span>
+                        <FontAwesomeIcon icon={faArrowRight} className="" />
+                    </Link>
+
+                </div>
 
                 {/* Social Icons */}
                 <motion.div
@@ -71,22 +90,6 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                         <FontAwesomeIcon icon={faEnvelope} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
                     </a>
                 </motion.div>
-
-                {/* BUTTONS */}
-                <div className="mt-1 flex flex-row items-center flex-wrap w-85 gap-4 text-sm">
-                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:from-blue-700 hover:to-purple-700 from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-xl cursor-pointer">
-                        <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
-                        Explore My Work
-                    </Link>
-                    <Link to="contact" smooth={true} duration={800} offset={-100} className="bg-white hover:bg-white/90 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-xl cursor-pointer">
-                        <FontAwesomeIcon icon={faCommentDots} className="mr-1 font-semibold" />
-                        Get in Touch
-                    </Link>
-                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="border border-gray-400 hover:bg-white/5 text-white text-center font-semibold lg:py-3 lg:px-5 w-82 py-3 mt-1 px-3 rounded-xl cursor-pointer">
-                        <FontAwesomeIcon icon={faFileLines} className="mr-1" />
-                        View my Resume
-                    </a>
-                </div>
 
                 {/* Hero Stats */}
                 <div className="mt-8 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
