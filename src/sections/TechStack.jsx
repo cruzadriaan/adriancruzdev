@@ -1,10 +1,18 @@
 import SectionDivider from "../components/SectionDivider"
 import { TechStackData } from "../data/TechStackData"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { motion } from 'framer-motion';
+import { cardVariants } from "../utils/cardVariants";
 
 const TechStack = ({ containerClass }) => {
   return (
-    <div className="relative mb-18">
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.1 }}
+      transition={{ duration: 0.8 }}
+      className="relative mb-18">
 
       <SectionDivider section="TECH STACK" />
 
@@ -34,8 +42,8 @@ const TechStack = ({ containerClass }) => {
       ))}
 
       <p className="text-white/40 text-[11px] text-center absolute -bottom-5 left-1/2 -translate-x-1/2 w-full">Note: Continuously improving and expanding skill set</p>
-    
-    </div>
+
+    </motion.div>
   )
 }
 

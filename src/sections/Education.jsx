@@ -1,9 +1,18 @@
 import SectionDivider from "../components/SectionDivider";
 import { EducationData } from "../data/EducationData";
+import { motion } from 'framer-motion';
+import { cardVariants } from "../utils/cardVariants";
 
 const Education = ({ containerClass }) => {
     return (
-        <div className="mb-15">
+        <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 1 }}
+            className="mb-15"
+        >
             <SectionDivider section="EDUCATION" />
             <div className={`relative flex flex-col ${containerClass} rounded-lg pt-6 pb-4 px-4 my-1`} >
                 {EducationData.map((education, index) => (
@@ -23,7 +32,7 @@ const Education = ({ containerClass }) => {
                 ))}
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

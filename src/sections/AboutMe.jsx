@@ -2,12 +2,23 @@ import SectionDivider from "../components/SectionDivider";
 import AdrianDevAvatar from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AboutMeData } from "../data/AboutMeData";
+import { motion } from 'framer-motion';
+import { cardVariants } from "../utils/cardVariants";
 
 const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
-        <div>
+        <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 1 }}
+        >
             <SectionDivider section="ABOUT ME" />
-            <div className={` ${containerClass} mb-10`}>
+
+            <div
+                className={` ${containerClass} mb-10`}>
+
                 <div className="flex flex-row justify-center gap-4">
                     <div className="w-75 h-40 rounded-xl relative overflow-hidden mx-auto">
                         <img src={AdrianDevAvatar} alt="Adrian Cruz" className=" w-full h-full object-cover " />
@@ -34,7 +45,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

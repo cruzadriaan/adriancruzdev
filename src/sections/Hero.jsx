@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 
 const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
-    const cardVariants = {
+    const heroVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
     }
@@ -18,7 +18,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
         ">
             {/* Name introduction */}
             <motion.div
-                variants={cardVariants}
+                variants={heroVariants}
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 1 }}
@@ -29,7 +29,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
             {/* Tagline */}
             <motion.div
-                variants={cardVariants}
+                variants={heroVariants}
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 1 }}>
@@ -78,12 +78,13 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="flex flex-row items-center justify-center mt-10" >
+            <div className="flex flex-row items-center justify-center mt-7" >
                 <motion.div
                     animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                    <Link to="aboutme" smooth={true} duration={800} offset={-100}                     className="flex flex-col items-center justify-center gap-2 cursor-pointer">
+                    <Link to="aboutme" smooth={true} duration={800} offset={-100}
+                      className="flex flex-col items-center justify-center gap-2 cursor-pointer">
                         <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
                         <span className="text-gray-300 text-[10px]">Explore for more</span>
                     </Link>

@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { cardVariants } from "../../utils/cardVariants";
 
-const ProjectCard = ({ containerClass, mediumTextGradient, softTextGradient }) => {
+const ProjectCard = ({ containerClass, mediumTextGradient }) => {
 
     const [openCardDetailsIndex, setOpenCardDetailsIndex] = useState(null);
 
@@ -12,8 +13,10 @@ const ProjectCard = ({ containerClass, mediumTextGradient, softTextGradient }) =
         <>
             {ProjectsData.map((project, index) => (
                 <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
+                    variants={cardVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
                     key={index} className={`flex flex-col ${containerClass} gap-2 mb-3 cursor-pointer`}>
 
