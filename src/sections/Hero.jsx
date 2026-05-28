@@ -22,10 +22,10 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
             {/* Background Image */}
             <div
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
-                className="absolute inset-0 bg-cover opacity-2 -z-20" />
+                className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* Content */}
-            <div className="relative pt-28 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
+            <div className="relative pt-26 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
 
                 {/* Name introduction */}
                 <motion.div
@@ -44,7 +44,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}>
-                    <h1 className="mt-1 text-gray-300 lg:text-lg text-[14px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
+                    <h1 className="mt-1 text-gray-300 lg:text-lg tracking-wide text-[13px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
                 </motion.div>
 
                 {/* Paragraph */}
@@ -67,7 +67,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         View Resume
                     </a>
-                    <Link to="contact" smooth={true} duration={800} offset={-100} className="text-blue-400 mt-4">
+                    <Link to="contact" smooth={true} duration={800} offset={-100} className="text-blue-400 mt-3">
                         <span className="mr-1">Get in Touch</span>
                         <FontAwesomeIcon icon={faArrowRight} className="" />
                     </Link>
@@ -92,15 +92,17 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                 </motion.div>
 
                 {/* Hero Stats */}
-                <div className="mt-8 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="mt-2 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
                     {HeroData.map((stat, index) => (
                         <motion.div
                             key={index}
                             initial={{ y: 30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 1, delay: index * 0.2 }}
-                            className="bg-gray-800/40 backdrop-blur-md py-6 px-4 rounded-xl border border-gray-700"
+                            className="bg-gray-800/40 backdrop-blur-md py-4 px-4 rounded-xl border border-gray-700 cursor-pointer
+                            hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                         >
+                            <FontAwesomeIcon icon={stat.icon} className="text-gray-400 text-base mb-2" />
                             <h2 className={`${mediumTextGradient} text-2xl font-bold`}>{stat.count}</h2>
                             <p className="text-gray-400 text-[13px]">{stat.title}</p>
                         </motion.div>
