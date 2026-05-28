@@ -112,8 +112,9 @@ const Hero = ({  hardTextGradient, mediumTextGradient }) => {
                         <motion.div
                             key={index}
                             initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: index * 0.2 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7, delay: index * 0.1 }}
                             className="bg-gray-800/40 backdrop-blur-md py-4 px-4 rounded-xl border border-gray-700 cursor-pointer
                             hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                         >
