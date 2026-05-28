@@ -23,12 +23,12 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-lg border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
                     </button>
 
-                    <Link to="hero" smooth={true} duration={800} offset={-130} className="cursor-pointer">
+                    <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
                         <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-9 h-9 border border-blue-800 rounded-md" />
                     </Link>
                 </div>
                 <div>
-                    <Link to="hero" smooth={true} duration={800} offset={-130} className="cursor-pointer">
+                    <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
                         <h1 className="text-white font-semibold">Adrian Cruz</h1>
                         <div className="flex flex-row items-center justify-center">
                             <div className="mr-2 w-1.5 h-1.5 rounded-full bg-linear-to-r from-blue-500 to-purple-500" />
