@@ -19,7 +19,10 @@ const Education = ({ containerClass }) => {
                     <div key={index} className="relative">
 
                         {/* Timeline Dot */}
-                        <div className="absolute left-2 top-1 w-4 h-4 rounded-full bg-linear-to-r from-blue-500 to-purple-500 shadow-[0_0_10px_1px_rgba(59,130,246,0.7)]" />
+                        <div className="absolute left-2 top-1 w-4 h-4 rounded-full bg-linear-to-r from-blue-500 to-purple-500 shadow-[0_0_10px_1px_rgba(59,130,246,0.7)]">
+                            <div className="absolute w-4 h-4 rounded-full bg-linear-to-r from-blue-500 to-purple-500 animate-ping-slow" />
+                            <div className="absolute w-4 h-4 rounded-full bg-linear-to-r from-blue-500 to-purple-500 animate-ping-slower" />
+                        </div>
                         <div className="absolute left-4 top-5 border-l bottom-0 border-gray-600 " />
 
                         {/* Education Details */}

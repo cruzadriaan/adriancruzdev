@@ -14,8 +14,18 @@ export default {
         blink: "blink 1s step-start infinite",
         typewriter: "typewriter 9s steps(21, end) infinite",
         glow: 'glow 2s ease-in-out infinite',
+      'ping-slow': 'ping 2s linear infinite',
+      'ping-slower': 'ping 3s linear infinite',
       },
       keyframes: {
+        'ping-slow': {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '100%': { transform: 'scale(3)', opacity: '0' },
+        },
+        'ping-slower': {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '100%': { transform: 'scale(4)', opacity: '0' },
+        },
         glow: {
           '0%, 100%': { textShadow: '4px -1px 10px rgba(151,10,202,1)' },
           '50%': { textShadow: '0 0 20px rgba(59,130,246,1)' },
