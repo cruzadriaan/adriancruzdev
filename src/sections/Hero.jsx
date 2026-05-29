@@ -25,7 +25,7 @@ const Hero = () => {
                 className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
             {/* Content */}
-            <div className="relative pt-30 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
+            <div className="relative pt-29 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 {/* Name introduction */}
                 {/* <motion.div
@@ -86,7 +86,7 @@ const Hero = () => {
                 </motion.div>
 
                 {/* BUTTONS */}
-                <div className="mt-5 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
+                <div className="mt-2 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-2 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work
@@ -105,15 +105,15 @@ const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="flex flex-row items-center justify-center mt-7" >
+            <div className="flex flex-row items-center justify-center mt-10" >
                 <motion.div
                     animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
                     <Link to="aboutme" smooth={true} duration={800} offset={-100}
                         className="flex flex-col items-center justify-center gap-2 cursor-pointer">
-                        <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
-                        <span className="text-gray-300 text-[10px]">Explore for more</span>
+                        <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-lg" />
+                        <span className="text-gray-300 text-[9px]">Explore for more</span>
                     </Link>
                 </motion.div>
             </div>
