@@ -60,7 +60,7 @@ const Navbar = () => {
                     <h1 className="text-gray-500 text-[10px]">NAVIGATION</h1>
                     <ul className="">
                         {MenuData.map((item, index) => (
-                            <li key={index} className="flex flex-col gap-4 mt-2">
+                            <li key={index} className="flex flex-col gap-4 mt-3">
                                 <Link to={item.link} smooth={true} duration={800} offset={item.offset} spy={true} activeClass="active-nav"
                                  className="text-gray-300 active:bg-gray-800/80 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3" onClick={() => setIsSidebarOpen(false)}>
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
@@ -74,7 +74,7 @@ const Navbar = () => {
                 {/* Social Links */}
                 <div className="ml-3 mt-7">
                     <h1 className="text-gray-500 text-[10px]">SOCIAL</h1>
-                    <ul className="flex flex-col gap-4 mt-2">
+                    <ul className="flex flex-col gap-4 mt-3">
                         {ContactData.social.map((item, index) => (
                             <li key={index} className="text-gray-300 active:bg-gray-800/80 hover:text-blue-400 text-[14px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -89,7 +89,7 @@ const Navbar = () => {
                 {/* Other Links */}
                 <div className="ml-3 mt-7">
                     <h1 className="text-gray-500 text-[10px]">OTHERS</h1>
-                    <ul className="flex flex-col gap-4 mt-2">
+                    <ul className="flex flex-col gap-4 mt-3">
                         {ContactData.others.map((item, index) => (
                             <li key={index} className="text-gray-300 active:bg-gray-800/80 hover:text-blue-400 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
