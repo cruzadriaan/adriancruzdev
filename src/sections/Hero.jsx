@@ -38,6 +38,8 @@ const Hero = ({ mediumTextGradient }) => {
                     <h1 className={`bg-clip-text text-transparent bg-linear-to-r from-blue-500 via-blue-400 to-violet-500 text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
                 </motion.div>
 
+
+
                 {/* Tagline */}
                 <motion.div
                     variants={heroVariants}
@@ -67,6 +69,7 @@ const Hero = ({ mediumTextGradient }) => {
                         ))}
                     </div>
                 </motion.div>
+                
 
                 {/* BUTTONS */}
                 <div className="mt-2 flex flex-row items-center flex-wrap w-85 gap-4 text-sm">
@@ -84,36 +87,18 @@ const Hero = ({ mediumTextGradient }) => {
                     </Link>
 
                 </div>
-
-                {/* Social Icons */}
-                <motion.div
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 2 }}
-                    className="mt-2 flex flex-row gap-4">
-                    <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                    </a>
-                    <a href="https://github.com/cruzadriaan" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faSquareGithub} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                    </a>
-                    <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faEnvelope} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                    </a>
-                </motion.div>
-
-                {/* Code Snippet */}
+{/* Code Snippet */}
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2.5 }}
-                    className="relative mt-1 bg-gray-800/40 backdrop-blur-lg shadow-[0_0_12px_2px_rgba(173,51,255,1)] h-39 w-90 rounded-xl">
+                    className="relative mt-1 bg-gray-800/40 backdrop-blur-lg shadow-[0_0_12px_2px_rgba(173,51,255,1)] h-39 w-90 rounded-2xl">
 
                     <div className="">
 
                         {/* Console IDE */}
                         <div>
-                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-xl p-3 cursor-pointer">
+                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-3 cursor-pointer">
                                 <span className="w-2 h-2 rounded-full bg-orange-500"></span>
                                 <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
                                 <span className="w-2 h-2 rounded-full bg-green-400"></span>
@@ -146,6 +131,24 @@ const Hero = ({ mediumTextGradient }) => {
 
                         </div>
                     </div>
+                </motion.div>
+                
+
+                {/* Social Icons */}
+                <motion.div
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 2 }}
+                    className="mt-2 flex flex-row gap-4">
+                    <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                    </a>
+                    <a href="https://github.com/cruzadriaan" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faSquareGithub} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                    </a>
+                    <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faEnvelope} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                    </a>
                 </motion.div>
 
                 {/* Hero Stats */}
