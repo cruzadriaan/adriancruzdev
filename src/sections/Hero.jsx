@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { HeroData, HeroStack } from '../data/HeroData';
 
-const Hero = ({  mediumTextGradient }) => {
+const Hero = ({ mediumTextGradient }) => {
 
     const heroVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -25,7 +25,7 @@ const Hero = ({  mediumTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
             {/* Content */}
-            <div className="relative pt-27 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
+            <div className="relative pt-26 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
 
                 {/* Name introduction */}
                 <motion.div
@@ -108,7 +108,7 @@ const Hero = ({  mediumTextGradient }) => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2.5 }}
                     className="relative mt-1 bg-black/50 h-40 w-90 rounded-lg shadow-lg">
-                    
+
                     <div className="">
 
                         {/* Console IDE */}
@@ -120,17 +120,24 @@ const Hero = ({  mediumTextGradient }) => {
 
                         {/* Syntax */}
                         <div className="py-2 px-7 flex flex-col gap-1 text-sm text-white font-mono">
-                            <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>  
-                            = <span className="text-yellow-300">{`{`}</span></p>
+                            <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
+                                = <span className="text-yellow-300">{`{`}</span></p>
+
+                            {/* Typewriter Effect */}
                             <div className="ml-5 flex flex-col text-gray-300 text-sm">
-                                <p>name: <span  className="text-green-400">"Adrian Cruz"</span></p>
-                                <p>role: <span className="text-green-400">"Frontend Developer"</span></p>
+                                <div className="flex w-40">
+                                    <p className="animate-typewriter overflow-hidden whitespace-nowrap">
+                                        <span>name: </span>
+                                        <span className=" text-green-400">"Adrian Cruz"</span>
+                                    </p>
+                                    <span className="animate-blink border-l"></span>
+                                </div>
+
+                                {/* No typewriter Effect */}
+                                <p>role: <span className="text-green-400">"Frontend Developer"</span>
+                                </p>
                                 <p>passion: <span className="text-green-400  ">"Building modern UI"</span></p>
                             </div>
-
-                            <p className='text-yellow-300'>{`}`}
-                                {/* <span className="animate-blink">|</span> */}
-                            </p>
 
                         </div>
                     </div>

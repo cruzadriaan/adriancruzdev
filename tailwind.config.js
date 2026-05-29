@@ -12,8 +12,13 @@ export default {
       animation: {
         float: "float 8s ease-in-out infinite",
         blink: "blink 1s step-start infinite",
+        typewriter: "typewriter 9s steps(21, end) infinite",
       },
       keyframes: {
+        typewriter: {
+          "0%, 100%": { width: "0" },
+          "65%, 90%": { width: "100%" },
+        },
         blink: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0" },
