@@ -3,7 +3,7 @@ import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-so
 import { faArrowRight, faAnglesDown } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
-import {  HeroStack } from '../data/HeroData';
+import { HeroStack } from '../data/HeroData';
 import { Link } from 'react-scroll';
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
                 className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
             {/* Content */}
-            <div className="relative pt-32 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
+            <div className="relative pt-30 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
 
                 {/* Name introduction */}
                 {/* <motion.div
@@ -44,7 +44,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}>
-                    <h1 className="mt-2 text-gray-300 lg:text-lg tracking-wide text-3xl font-bold">TURNING <span className="text-blue-400">IDEAS</span> INTO <span className="text-purple-400">INTERACTIVE</span> AND <span className="text-violet-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
+                    <h1 className=" text-gray-300 lg:text-lg tracking-wide text-4xl font-bold">TURNING <span className="text-blue-400">IDEAS</span> INTO <span className="text-purple-400">INTERACTIVE</span> AND <span className="text-violet-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
                 </motion.div>
 
 
@@ -68,24 +68,6 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-
-                {/* BUTTONS */}
-                <div className="mt-5 flex flex-row items-center flex-wrap w-85 gap-4 text-sm">
-                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-xl cursor-pointer">
-                        <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
-                        Explore My Work
-                    </Link>
-                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-700/90 bg-zinc-700/70 shadow-md backdrop-blur-md text-gray-100 font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-xl cursor-pointer">
-                        <FontAwesomeIcon icon={faFileLines} className="mr-1" />
-                        View Resume
-                    </a>
-                    <Link to="contact" smooth={true} duration={800} offset={-100} className="hover:text-blue-300 text-blue-400 mt-4 cursor-pointer">
-                        <span className="mr-1">Get in Touch</span>
-                        <FontAwesomeIcon icon={faArrowRight} className="" />
-                    </Link>
-
-                </div>
-
                 {/* Social Icons */}
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
@@ -103,6 +85,23 @@ const Hero = () => {
                     </a>
                 </motion.div>
 
+                {/* BUTTONS */}
+                <div className="mt-5 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
+                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-2 px-3 rounded-xl cursor-pointer">
+                        <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
+                        Explore My Work
+                    </Link>
+                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-700/90 bg-zinc-700/70 shadow-md backdrop-blur-md text-gray-100 text-center font-semibold lg:py-3 lg:px-5 py-2 px-3 w-full rounded-xl cursor-pointer">
+                        <FontAwesomeIcon icon={faFileLines} className="mr-1" />
+                        View Resume
+                    </a>
+                    <Link to="contact" smooth={true} duration={800} offset={-100} className="hover:text-blue-300 text-blue-400 mt-4 cursor-pointer">
+                        <span className="mr-1">Get in Touch</span>
+                        <FontAwesomeIcon icon={faArrowRight} className="" />
+                    </Link>
+
+                </div>
+
             </div>
 
             {/* Scroll Indicator */}
@@ -112,7 +111,7 @@ const Hero = () => {
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
                     <Link to="aboutme" smooth={true} duration={800} offset={-100}
-                      className="flex flex-col items-center justify-center gap-2 cursor-pointer">
+                        className="flex flex-col items-center justify-center gap-2 cursor-pointer">
                         <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
                         <span className="text-gray-300 text-[10px]">Explore for more</span>
                     </Link>
