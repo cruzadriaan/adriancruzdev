@@ -70,7 +70,7 @@ const Hero = () => {
                 </motion.div>
 
                 {/* BUTTONS */}
-                <div className="mt-2 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
+                <div className="mt-6 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-3 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work
@@ -112,7 +112,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2 }}
-                className="flex flex-col items-center  ml-5 mt-7 opacity-60" >
+                className="flex flex-col items-center  ml-5 mt-12 opacity-60" >
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
