@@ -5,48 +5,48 @@ export const MenuData = [
         name: "Home",
         link: "hero",
         icon: faHouse,
-        offset: -90
+        offset: -70
     },
     {
         name: "About",
         link: "aboutme",
         icon: faUser,
-        offset: -110
+        offset: -70
     },
     {
         name: "Projects",
         link: "project",
         icon: faBriefcase,
-        offset: -110
+        offset: -70
     },
         {
         name: "Tech Stack",
         link: "techstack",
         icon: faCode,
-        offset: -110
+        offset: -70
     },
     {
         name: "Experience",
         link: "experience",
         icon: faHistory,
-        offset: -110
+        offset: -70
     },
     {
         name: "Certification",
         link: "certification",
         icon: faCertificate,
-        offset: -110
+        offset: -70
     },
     {
         name: "Education",
         link: "education",
         icon: faUserGraduate,
-        offset: -110
+        offset: -70
     },
     {
         name: "Contact",
         link: "contact",
         icon: faEnvelope,
-        offset: -60
+        offset: -70
     },
 ]

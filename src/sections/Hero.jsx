@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faArrowRight, faAnglesDown, faHandPointer } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { HeroStack } from '../data/HeroData';
@@ -14,7 +14,7 @@ const Hero = () => {
     }
 
     return (
-        <div className="relative h-180 mb-35">
+        <div className="relative mb-20">
 
             {/* Background Base */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 -z-30" />
