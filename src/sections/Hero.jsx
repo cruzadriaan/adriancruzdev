@@ -105,8 +105,13 @@ const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="flex flex-row items-center justify-center mt-7 opacity-60" >
+            <motion.div 
+            initial={{  opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2 }}
+            className="flex flex-row items-center justify-center mt-7 opacity-60" >
                 <motion.div
+                    initial={{ y: 20, opacity: 0 }}
                     animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
@@ -116,7 +121,7 @@ const Hero = () => {
                         {/* <span className="text-gray-300 text-[9px]">Explore for more</span> */}
                     </Link>
                 </motion.div>
-            </div>
+            </motion.div>
 
         </div>
     )
