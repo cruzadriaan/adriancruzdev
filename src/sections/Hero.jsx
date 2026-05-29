@@ -107,7 +107,7 @@ const Hero = ({ mediumTextGradient }) => {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2.5 }}
-                    className="relative mt-1 bg-gray-800/90 backdrop-blur-xs h-40 w-90 rounded-xl shadow-xs">
+                    className="relative mt-1 bg-gray-800/90 backdrop-blur-xs h-39 w-90 rounded-xl shadow-xs">
 
                     <div className="">
 
