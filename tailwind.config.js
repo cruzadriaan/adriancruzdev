@@ -7,7 +7,7 @@ export default {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        jetbrains: ['JetBrains Mono', 'monospace'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       animation: {
         float: "float 8s ease-in-out infinite",

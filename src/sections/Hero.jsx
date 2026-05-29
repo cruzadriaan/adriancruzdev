@@ -112,20 +112,20 @@ const Hero = ({  mediumTextGradient }) => {
                     <div className="">
 
                         {/* Console IDE */}
-                        <div className="flex flex-row items-center gap-3 border shadow-lg rounded-t-md bg-gray-900 border-gray-800/40 p-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                        <div className="flex flex-row items-center gap-2.5 border shadow-2xl rounded-t-md  p-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
                         </div>
 
                         {/* Syntax */}
-                        <div className="py-2 px-7 flex flex-col gap-1 text-sm text-white">
+                        <div className="py-2 px-7 flex flex-col gap-1 text-sm text-white font-mono">
                             <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>  
                             = <span className="text-yellow-300">{`{`}</span></p>
-                            <div className="ml-5 flex flex-col text-gray-300 ">
-                                <p>name: <span className="text-green-300">"Adrian Cruz"</span></p>
-                                <p>role: <span className="text-green-300">"Frontend Developer"</span></p>
-                                <p>passion: <span className="text-green-300">"Building modern UI"</span></p>
+                            <div className="ml-5 flex flex-col text-gray-300 text-sm">
+                                <p>name: <span  className="text-green-400">"Adrian Cruz"</span></p>
+                                <p>role: <span className="text-green-400">"Frontend Developer"</span></p>
+                                <p>passion: <span className="text-green-400  ">"Building modern UI"</span></p>
                             </div>
 
                             <p className='text-yellow-300'>{`}`}
