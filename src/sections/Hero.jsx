@@ -118,8 +118,8 @@ const Hero = () => {
                 >
                     <Link to="aboutme" smooth={true} duration={800} offset={-100}
                         className="flex flex-row items-center justify-center gap-2 cursor-pointer">
-                        <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-lg" />
-                        <span className="text-gray-300 text-[9px]">Explore for more</span>
+                        <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
+                        <span className="text-gray-300 text-[10px]">Explore for more</span>
                     </Link>
                 </motion.div>
             </motion.div>
