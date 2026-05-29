@@ -112,14 +112,15 @@ const Hero = ({ mediumTextGradient }) => {
                     <div className="">
 
                         {/* Console IDE */}
-                        <div className="flex flex-row items-center gap-2.5 border shadow-2xl rounded-t-md  p-3">
+                        <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-md  p-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
                             <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
                             <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
                         </div>
 
                         {/* Syntax */}
-                        <div className="py-2 px-7 flex flex-col gap-1 text-sm text-white font-mono">
+                        <div className="py-1.5 px-7 flex flex-col text-sm text-white font-mono">
+                            <p className="text-gray-500">//About Me</p>
                             <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
                                 = <span className="text-yellow-300">{`{`}</span></p>
 
