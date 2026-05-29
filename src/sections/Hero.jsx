@@ -59,11 +59,11 @@ const Hero = () => {
                     </h1>
 
                     {/* Technologies */}
-                    <div className="mt-4 flex flex-row items-center  gap-4">
+                    <div className="mt-4 flex flex-row items-center gap-4">
                         {HeroStack.map((tech, index) => (
                             <div key={index} className="flex flex-row justify-center gap-2 items-center shadow-md border border-zinc-600 py-1 px-3 rounded-md  text-zinc-400 text-[12px]">
-                                <i className={tech.logo}></i>
-                                <span className="">{tech.name}</span>
+                                <i className={`${tech.logo} text-xs`}></i>
+                                <span className="text-xs">{tech.name}</span>
                             </div>
                         ))}
                     </div>

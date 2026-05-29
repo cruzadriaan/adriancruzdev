@@ -11,8 +11,4 @@
             name: "Tailwind",
             logo: "devicon-tailwindcss-plain colored",
         },
-        {
-            name: "Python",
-            logo: "devicon-python-plain colored",
-        },
     ]
