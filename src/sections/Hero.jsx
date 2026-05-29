@@ -44,7 +44,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}>
-                    <h1 className="font-poppins text-gray-300 lg:text-lg tracking-wide text-4xl font-bold">TURNING <span className="text-blue-400">IDEAS</span> INTO <span className="text-purple-400">INTERACTIVE</span> AND <span className="text-violet-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
+                    <h1 className="text-gray-300 lg:text-lg tracking-wide text-4xl font-bold">TURNING <span className="text-blue-400">IDEAS</span> INTO <span className="text-purple-400">INTERACTIVE</span> AND <span className="text-violet-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
                 </motion.div>
 
 
@@ -54,15 +54,16 @@ const Hero = () => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="mt-2 text-zinc-400 text-[14px] w-80">
+                    <h1 className="mt-2 text-zinc-400 text-[14px] w-full">
                         Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
                     </h1>
 
                     {/* Technologies */}
-                    <div className="mt-4 flex flex-row items-center gap-4">
+                    <div className="mt-4 flex flex-row items-center  gap-4">
                         {HeroStack.map((tech, index) => (
-                            <div key={index} className="text-zinc-400 text-[12px]">
-                                <span className="border border-zinc-600 py-1 px-3 rounded-md ">{tech.name}</span>
+                            <div key={index} className="flex flex-row justify-center gap-2 items-center shadow-md border border-zinc-600 py-1 px-3 rounded-md  text-zinc-400 text-[12px]">
+                                <i className={tech.logo}></i>
+                                <span className="">{tech.name}</span>
                             </div>
                         ))}
                     </div>
