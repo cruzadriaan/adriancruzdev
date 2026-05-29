@@ -23,7 +23,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 2.5 }}
-                className=" bg-gray-800/40 backdrop-blur-lg h-39 mb-20 w-90 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                className=" bg-gray-800/40 backdrop-blur-lg h-39 w-90 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
             >
 
@@ -68,7 +68,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
             </motion.div>
 
             {/* Hero Stats */}
-            <div className="mt-8 mx-auto mb-20 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="mt-10 mx-auto mb-15 w-90 grid grid-cols-2 md:grid-cols-4 gap-4">
                 {AboutMeStats.map((stat, index) => (
                     <motion.div
                         key={index}
