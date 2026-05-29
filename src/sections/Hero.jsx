@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { HeroData, HeroStack } from '../data/HeroData';
 
-const Hero = ({ hardTextGradient, mediumTextGradient }) => {
+const Hero = ({  mediumTextGradient }) => {
 
     const heroVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -22,7 +22,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
             {/* Background Image */}
             <div
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
-                className="absolute inset-0 bg-cover opacity-1 -z-20" />
+                className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
             {/* Content */}
             <div className="relative pt-27 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 mb-25 z-10">
@@ -35,7 +35,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     transition={{ duration: 1 }}
                     className="items-left justify-center lg:text-6xl">
                     <h1 className="text-white text-3xl font-bold mb-1">Hello, I'm</h1>
-                    <h1 className={`${hardTextGradient} text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
+                    <h1 className={`bg-clip-text text-transparent bg-linear-to-r from-blue-500 via-blue-400 to-violet-500 text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
                 </motion.div>
 
                 {/* Tagline */}
@@ -44,7 +44,7 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}>
-                    <h1 className="mt-1 text-gray-300 lg:text-lg tracking-wide text-[13px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
+                    <h1 className="mt-2 text-gray-300 lg:text-lg tracking-wide text-[13px] font-semibold">TURNING IDEAS INTO INTERACTIVE,<br /> HIGH PERFORMANCE WEBSITES.</h1>
                 </motion.div>
 
 
@@ -54,15 +54,15 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="mt-1 text-gray-300 text-[14px] w-70">
+                    <h1 className="mt-2 text-zinc-400 text-[14px] w-70">
                         Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
                     </h1>
 
                     {/* Technologies */}
                     <div className="mt-4 flex flex-row items-center gap-4">
                         {HeroStack.map((tech, index) => (
-                            <div key={index} className="text-gray-400 text-[12px]">
-                                <span className="border py-1 px-3 rounded-sm ">{tech.name}</span>
+                            <div key={index} className="text-zinc-400 text-[12px]">
+                                <span className="border border-zinc-600 py-1 px-3 rounded-md ">{tech.name}</span>
                             </div>
                         ))}
                     </div>
@@ -70,15 +70,15 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
 
                 {/* BUTTONS */}
                 <div className="mt-2 flex flex-row items-center flex-wrap w-85 gap-4 text-sm">
-                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:from-blue-700 hover:to-purple-700 from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-xl cursor-pointer">
+                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-43 py-2 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work
                     </Link>
-                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-white/90 text-black font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-xl cursor-pointer">
+                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-700/90 bg-zinc-700/70 shadow-md backdrop-blur-md text-gray-100 font-semibold lg:py-3 lg:px-5 py-2 px-5 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         View Resume
                     </a>
-                    <Link to="contact" smooth={true} duration={800} offset={-100} className="text-blue-400 mt-4">
+                    <Link to="contact" smooth={true} duration={800} offset={-100} className="hover:text-blue-300 text-blue-400 mt-4 cursor-pointer">
                         <span className="mr-1">Get in Touch</span>
                         <FontAwesomeIcon icon={faArrowRight} className="" />
                     </Link>
@@ -92,13 +92,13 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     transition={{ duration: 2 }}
                     className="mt-2 flex flex-row gap-4">
                     <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
+                        <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
                     </a>
                     <a href="https://github.com/cruzadriaan" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faSquareGithub} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
+                        <FontAwesomeIcon icon={faSquareGithub} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
                     </a>
                     <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faEnvelope} className="text-gray-200 text-3xl rounded-full hover:scale-110 cursor-pointer" />
+                        <FontAwesomeIcon icon={faEnvelope} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
                     </a>
                 </motion.div>
 
@@ -108,16 +108,31 @@ const Hero = ({ hardTextGradient, mediumTextGradient }) => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2.5 }}
                     className="relative mt-1 bg-black/50 h-40 w-90 rounded-lg shadow-lg">
-                    <div className="py-5 px-7 flex flex-col gap-1 text-sm text-white">
-                        <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer</span>  = {`{`}</p>
-                        <div className="ml-5 flex flex-col text-gray-300 gap-1">
-                            <p>name: <span className="text-green-300">"Adrian Cruz"</span></p>
-                            <p>role: <span className="text-green-300">"Frontend Developer"</span></p>
-                            <p>passion: <span className="text-green-300">"Building modern UI"</span></p>
+                    
+                    <div className="">
+
+                        {/* Console IDE */}
+                        <div className="flex flex-row items-center gap-3 border shadow-lg rounded-t-md bg-gray-900 border-gray-800/40 p-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                         </div>
-                        <p className='text-white'>{`}`}
-                            {/* <span className="animate-blink">|</span> */}
-                        </p>
+
+                        {/* Syntax */}
+                        <div className="py-2 px-7 flex flex-col gap-1 text-sm text-white">
+                            <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>  
+                            = <span className="text-yellow-300">{`{`}</span></p>
+                            <div className="ml-5 flex flex-col text-gray-300 ">
+                                <p>name: <span className="text-green-300">"Adrian Cruz"</span></p>
+                                <p>role: <span className="text-green-300">"Frontend Developer"</span></p>
+                                <p>passion: <span className="text-green-300">"Building modern UI"</span></p>
+                            </div>
+
+                            <p className='text-yellow-300'>{`}`}
+                                {/* <span className="animate-blink">|</span> */}
+                            </p>
+
+                        </div>
                     </div>
                 </motion.div>
 
