@@ -17,7 +17,7 @@ const Navbar = () => {
             {/* <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-30" /> */}
 
             {/* Navbar */}
-            <div className="fixed top-2 left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left px-3 py-2 gap-2 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg z-40">
+            <div className="fixed top-2 left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left px-3 py-2.5 gap-2 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg z-40">
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-base border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
@@ -58,7 +58,7 @@ const Navbar = () => {
                 {/* Navigation Links */}
                 <div className="ml-3 mt-1">
                     <h1 className="text-gray-500 text-[10px]">NAVIGATION</h1>
-                    <ul className="flex flex-col gap-3 mt-2">
+                    <ul className="flex flex-col gap-3.5 mt-2">
                         {MenuData.map((item, index) => (
                             <Link to={item.link} smooth={true} duration={800} offset={item.offset} onClick={() => setIsSidebarOpen(false)}>
                                 <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
@@ -73,7 +73,7 @@ const Navbar = () => {
                 {/* Social Links */}
                 <div className="ml-3 mt-7">
                     <h1 className="text-gray-500 text-[10px]">SOCIAL</h1>
-                    <ul className="flex flex-col gap-3 mt-2">
+                    <ul className="flex flex-col gap-3.5 mt-2">
                         {ContactData.social.map((item, index) => (
                             <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[14px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -88,7 +88,7 @@ const Navbar = () => {
                 {/* Other Links */}
                 <div className="ml-3 mt-7">
                     <h1 className="text-gray-500 text-[10px]">OTHERS</h1>
-                    <ul className="flex flex-col gap-3 mt-2">
+                    <ul className="flex flex-col gap-3.5 mt-2">
                         {ContactData.others.map((item, index) => (
                             <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
