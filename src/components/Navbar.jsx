@@ -60,7 +60,7 @@ const Navbar = () => {
                     <h1 className="text-gray-500 text-[10px]">NAVIGATION</h1>
                     <ul className="flex flex-col gap-3.5 mt-2">
                         {MenuData.map((item, index) => (
-                            <Link to={item.link} smooth={true} duration={800} offset={item.offset} onClick={() => setIsSidebarOpen(false)}>
+                            <Link to={item.link} smooth={true} duration={800} offset={item.offset} spy={true} activeClass="text-blue-400" onClick={() => setIsSidebarOpen(false)}>
                                 <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
