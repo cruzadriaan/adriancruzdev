@@ -44,7 +44,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}>
-                    <h1 className=" text-gray-300 lg:text-lg tracking-wide text-xl font-extrabold">TURNING <span className="text-blue-400">IDEAS</span> INTO <span className="text-purple-400">INTERACTIVE</span> AND <span className="text-violet-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
+                    <h1 className="font-poppins text-gray-300 lg:text-lg tracking-wide text-4xl font-bold">TURNING <span className="text-blue-400">IDEAS</span> INTO <span className="text-purple-400">INTERACTIVE</span> AND <span className="text-violet-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
                 </motion.div>
 
 
