@@ -86,11 +86,12 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 ))}
             </div>
 
+            {/* About Me Content */}
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 2.5 }}
-                viewport={{ once: true, amount: 0.4 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className={` ${containerClass} mb-18`}>
 
                 <div className="flex flex-row justify-center gap-4">
