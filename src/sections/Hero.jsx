@@ -110,16 +110,16 @@ const Hero = () => {
             initial={{  opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2 }}
-            className="flex flex-row items-center justify-center mt-7 opacity-60" >
+            className="flex flex-row items-center  ml-5 mt-7 opacity-60" >
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
                     <Link to="aboutme" smooth={true} duration={800} offset={-100}
-                        className="flex flex-col items-center justify-center gap-2 cursor-pointer">
+                        className="flex flex-row items-center justify-center gap-2 cursor-pointer">
                         <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-lg" />
-                        {/* <span className="text-gray-300 text-[9px]">Explore for more</span> */}
+                        <span className="text-gray-300 text-[9px]">Explore for more</span>
                     </Link>
                 </motion.div>
             </motion.div>
