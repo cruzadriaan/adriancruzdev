@@ -17,22 +17,22 @@ const Navbar = () => {
             {/* <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-30" /> */}
 
             {/* Navbar */}
-            <div className="fixed top-2 left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-3 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg px-5 py-4 z-40">
+            <div className="fixed top-2 left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-left gap-2 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg px-5 py-3 z-40">
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-lg border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
                     </button>
 
                     <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
-                        <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-9.5 h-9.5 border border-blue-800 rounded-md" />
+                        <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-8 h-8 border border-blue-800 rounded-md" />
                     </Link>
                 </div>
                 <div>
                     <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
-                        <h1 className="text-white font-semibold">Adrian Cruz</h1>
+                        <h1 className="text-white text-[14px] font-semibold">Adrian Cruz</h1>
                         <div className="flex flex-row items-center justify-center">
                             <div className="mr-2 w-1.5 h-1.5 rounded-full bg-linear-to-r from-blue-500 to-purple-500" />
-                            <h1 className="text-gray-200 text-[12px] font-semibold">Front End Developer</h1>
+                            <h1 className="text-gray-300 text-[12px]">Front End Developer</h1>
                         </div>
                     </Link>
                 </div>
