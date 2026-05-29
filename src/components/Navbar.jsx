@@ -56,12 +56,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Navigation Links */}
-                <div className="ml-3 mt-2">
+                <div className="ml-3 mt-1">
                     <h1 className="text-gray-500 text-[10px]">NAVIGATION</h1>
-                    <ul className="flex flex-col gap-3 mt-2">
+                    <ul className="flex flex-col gap-2 mt-2">
                         {MenuData.map((item, index) => (
                             <Link to={item.link} smooth={true} duration={800} offset={item.offset} onClick={() => setIsSidebarOpen(false)}>
-                                <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                                <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
                                 </li>
@@ -71,11 +71,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Social Links */}
-                <div className="ml-3 mt-9">
+                <div className="ml-3 mt-7">
                     <h1 className="text-gray-500 text-[10px]">SOCIAL</h1>
-                    <ul className="flex flex-col gap-3 mt-2">
+                    <ul className="flex flex-col gap-2 mt-2">
                         {ContactData.social.map((item, index) => (
-                            <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[16px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[14px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.type}</span>
@@ -86,11 +86,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Other Links */}
-                <div className="ml-3 mt-9">
+                <div className="ml-3 mt-7">
                     <h1 className="text-gray-500 text-[10px]">OTHERS</h1>
-                    <ul className="flex flex-col gap-3 mt-2">
+                    <ul className="flex flex-col gap-2 mt-2">
                         {ContactData.others.map((item, index) => (
-                            <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[16px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 active:text-blue-400 hover:text-blue-400 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
