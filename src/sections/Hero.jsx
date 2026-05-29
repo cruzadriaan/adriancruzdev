@@ -14,7 +14,7 @@ const Hero = () => {
     }
 
     return (
-        <div className="relative h-290 mb-35">
+        <div className="relative h-180 mb-35">
 
             {/* Background Base */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 -z-30" />
@@ -54,7 +54,7 @@ const Hero = () => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="mt-2 text-zinc-400 text-[14px] w-70">
+                    <h1 className="mt-2 text-zinc-400 text-[14px] w-80">
                         Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
                     </h1>
 

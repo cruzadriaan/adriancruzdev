@@ -1,16 +1,25 @@
-import {faBriefcase, faCode, faLaptopCode} from "@fortawesome/free-solid-svg-icons";
+import {faBriefcase, faLaptopCode , faCoffee, faClock} from "@fortawesome/free-solid-svg-icons";
 
-export const AboutMeData = [
+
+export const AboutMeStats = [
         {
+            count: "2+",
+            title: "Years of experience",
             icon: faBriefcase,
-            title: "2+ years experience",
         },
         {
+            count: "20,000+",
+            title: "Lines of code",
             icon: faLaptopCode,
-            title: "2+ Projects ongoing",
         },
         {
-            icon: faCode,
-            title: "React, Tailwind, Javascript",
+            count: "500+",
+            title: "Cups of coffee drunk",
+            icon: faCoffee,
+        },
+        {
+            count: "1300+",
+            title: "Hours invested in learning",
+            icon: faClock,
         }
-    ]   
+    ]
