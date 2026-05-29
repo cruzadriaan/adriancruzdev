@@ -16,8 +16,8 @@ export default {
       },
       keyframes: {
         typewriter: {
-          "0%, 100%": { width: "0" },
-          "65%, 90%": { width: "100%" },
+          "0%, 100%": { width: "0ch" },
+          "65%, 90%": { width: "21ch" },
         },
         blink: {
           "0%, 100%": { opacity: "1" },
