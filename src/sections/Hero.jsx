@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faCopy } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
@@ -107,17 +107,21 @@ const Hero = ({ mediumTextGradient }) => {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2.5 }}
-                    className="relative mt-1 bg-gray-800/90 backdrop-blur-xs h-39 w-90 rounded-xl shadow-xs">
+                    className="relative mt-1 bg-gray-800/40 backdrop-blur-lg shadow-[0_0_12px_2px_rgba(173,51,255,1)] h-39 w-90 rounded-xl">
 
                     <div className="">
 
                         {/* Console IDE */}
-                        <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-md  p-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
-                            <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                        <div>
+                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-xl p-3 cursor-pointer">
+                                <span className="w-2 h-2 rounded-full bg-orange-500"></span>
+                                <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
+                                <span className="w-2 h-2 rounded-full bg-green-400"></span>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon icon={faCopy} className="absolute top-2 right-3 text-gray-400  cursor-pointer hover:text-gray-300" />
+                            </div>
                         </div>
-
                         {/* Syntax */}
                         <div className="py-1.5 px-7 flex flex-col text-sm text-white font-mono">
                             <p className="text-gray-500">//About Me</p>
