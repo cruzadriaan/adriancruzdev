@@ -95,7 +95,7 @@ const Hero = () => {
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         View Resume
                     </a>
-                    <Link to="contact" smooth={true} duration={800} offset={-100} className="hover:text-blue-300 text-blue-400 mt-4 cursor-pointer">
+                    <Link to="contact" smooth={true} duration={800} offset={-100} className="hover:text-blue-300 text-blue-400 mt-3 cursor-pointer">
                         <span className="mr-1">Get in Touch</span>
                         <FontAwesomeIcon icon={faArrowRight} className="" />
                     </Link>
@@ -105,7 +105,7 @@ const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="flex flex-row items-center justify-center mt-10" >
+            <div className="flex flex-row items-center justify-center mt-7 opacity-60" >
                 <motion.div
                     animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
@@ -113,7 +113,7 @@ const Hero = () => {
                     <Link to="aboutme" smooth={true} duration={800} offset={-100}
                         className="flex flex-col items-center justify-center gap-2 cursor-pointer">
                         <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-lg" />
-                        <span className="text-gray-300 text-[9px]">Explore for more</span>
+                        {/* <span className="text-gray-300 text-[9px]">Explore for more</span> */}
                     </Link>
                 </motion.div>
             </div>

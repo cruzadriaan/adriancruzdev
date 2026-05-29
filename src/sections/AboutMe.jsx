@@ -13,7 +13,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 2 }}
         >
 
             <SectionDivider section="ABOUT ME" />
