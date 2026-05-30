@@ -35,7 +35,7 @@ return (
 
         <div
             ref={heroRef}
-            className="relative mb-20">
+            className="relative mb-23">
 
             <FloatingButtons showArrowTop={showArrowTop} />
 

@@ -25,8 +25,9 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
             {/* Code Snippet */}
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 2.5 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 2 }}
                 className=" bg-gray-800/40 backdrop-blur-lg w-90 h-45 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300 mb-5"
             >
