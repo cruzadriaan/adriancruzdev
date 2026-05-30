@@ -8,7 +8,7 @@ import ContactForm from './sections/contact/ContactForm';
 import Hero from './sections/Hero';
 import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
-import FloatingIcons from './components/FloatingIcons';
+import FloatingIcons from './components/FloatingButtons';
 import Footer from './components/Footer';
 import { Element } from 'react-scroll';
 import { useEffect } from 'react';

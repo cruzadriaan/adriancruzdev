@@ -5,6 +5,8 @@ import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-i
 import { motion } from 'framer-motion';
 import { HeroStack } from '../data/HeroData';
 import { Link } from 'react-scroll';
+import { useRef, useEffect, useState } from 'react';
+import FloatingButtons from '../components/FloatingButtons';
 
 const Hero = () => {
 
@@ -13,8 +15,29 @@ const Hero = () => {
         visible: { opacity: 1, y: 0 },
     }
 
-    return (
-        <div className="relative mb-20">
+    const heroRef = useRef(null);
+    const [showArrowTop, setShowArrowTop] = useState(false);
+
+    useEffect(() => {
+        const heroElement = heroRef.current;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            setShowArrowTop(!entry.isIntersecting);
+        }, { threshold: 0.5 });
+
+        if (heroElement) {
+            observer.observe(heroElement);
+        }
+    }, []);
+
+
+return (
+
+        <div
+            ref={heroRef}
+            className="relative mb-20">
+
+            <FloatingButtons showArrowTop={showArrowTop} />
 
             {/* Background Base */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 -z-30" />
