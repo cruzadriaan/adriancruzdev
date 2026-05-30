@@ -13,8 +13,8 @@ export const AboutMeStats = [
             icon: faLaptopCode,
         },
         {
-            count: "500+",
-            title: "Cups of coffee drunk",
+            count: "3+",
+            title: "Projects completed",
             icon: faCoffee,
         },
         {

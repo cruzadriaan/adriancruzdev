@@ -9,9 +9,9 @@ const FloatingButtons = ({ showArrowTop }) => {
             <>
                 {/* Floating Arrow Up */}
                 {showArrowTop && (
-                <div className="fixed bottom-15 right-0 z-20" >
+                <div className="fixed bottom-25 right-0 z-20" >
                     <Link to="hero" smooth={true} duration={500}>
-                        <FontAwesomeIcon icon={faArrowUp} className="text-gray-200 bg-gray-800 text-base border border-gray-600 rounded-full p-2.5 m-2 hover:scale-110 cursor-pointer animate-bounce" />
+                        <FontAwesomeIcon icon={faArrowUp} className="text-gray-200 bg-gray-800 text-base border-2 border-purple-500 rounded-full p-3 m-2 hover:scale-110 cursor-pointer animate-bounce" />
                     </Link>
                 </div>
                 )}

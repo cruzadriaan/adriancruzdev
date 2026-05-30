@@ -17,12 +17,15 @@ const Hero = () => {
 
     const heroRef = useRef(null);
     const [showArrowTop, setShowArrowTop] = useState(false);
+    const [showArrowDown, setShowArrowDown] = useState(true);
+
 
     useEffect(() => {
         const heroElement = heroRef.current;
 
         const observer = new IntersectionObserver(([entry]) => {
             setShowArrowTop(!entry.isIntersecting);
+            setShowArrowDown(entry.isIntersecting);
         }, { threshold: 0.5 });
 
         if (heroElement) {
@@ -31,7 +34,7 @@ const Hero = () => {
     }, []);
 
 
-return (
+    return (
 
         <div
             ref={heroRef}
@@ -60,6 +63,13 @@ return (
                     <h1 className="text-white text-3xl font-bold mb-1">Hello, I'm</h1>
                     <h1 className={`bg-clip-text text-transparent bg-linear-to-r from-blue-500 via-blue-400 to-violet-500 text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
                 </motion.div> */}
+                <motion.div
+                    variants={heroVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 1 }}>
+                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hi, I'm Adrian.</h1>
+                </motion.div>
 
                 {/* Tagline */}
                 <motion.div
@@ -67,7 +77,7 @@ return (
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}>
-                    <h1 className="text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">TURNING <span className="text-blue-400">IDEAS</span> INTO <span className="text-purple-400">INTERACTIVE</span> AND <span className="text-violet-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
+                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">BUILDING <span className="text-blue-400">INTERACTIVE</span> AND <span className="text-purple-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
                 </motion.div>
 
 
@@ -93,22 +103,17 @@ return (
                 </motion.div>
 
                 {/* BUTTONS */}
-                <div className="mt-6 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
+                <div className="mt-6 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-3 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work
                     </Link>
-                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-700/90 border border-gray-500 bg-gray-800 shadow-md backdrop-blur-md text-gray-100 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3 w-full rounded-xl cursor-pointer">
+                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-700/90 border border-gray-400  shadow-md backdrop-blur-md text-gray-400 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3 w-full rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         View Resume
                     </a>
                     <div className="flex flex-row items-center gap-8 mt-2">
-                        <Link to="contact" smooth={true} duration={800} offset={-100} className="hover:text-blue-300 text-blue-300 mt-3 cursor-pointer">
-                            <span className="mr-1 animate-glow bg-transparent">Get in Touch</span>
-                            {/* <div>
-                                <FontAwesomeIcon icon={faHandPointer} className="absolute left-10 flex text-white text-lg" />
-                            </div> */}
-                        </Link>
+
 
                         {/* Social Icons */}
                         <motion.div
@@ -131,23 +136,25 @@ return (
             </div>
 
             {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2 }}
-                className="flex flex-col items-center  ml-5 mt-12 opacity-60" >
+            {showArrowDown && (
                 <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                    <Link to="aboutme" smooth={true} duration={800} offset={-100}
-                        className="flex flex-row items-center justify-center gap-2 cursor-pointer">
-                        <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
-                        <span className="text-gray-300 text-[10px]">Explore for more</span>
-                    </Link>
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2 }}
+                    className="flex flex-col items-center  ml-5 opacity-60" >
+                    <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                        <Link to="aboutme" smooth={true} duration={800} offset={-100}
+                            className="flex flex-row items-center justify-center gap-2 cursor-pointer">
+                            <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
+                            <span className="text-gray-300 text-[10px]">Explore for more</span>
+                        </Link>
+                    </motion.div>
                 </motion.div>
-            </motion.div>
+            )}
 
         </div>
     )
