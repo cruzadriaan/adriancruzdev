@@ -8,6 +8,7 @@ import ContactForm from './sections/contact/ContactForm';
 import Hero from './sections/Hero';
 import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
+import FloatingIcons from './components/FloatingIcons';
 import Footer from './components/Footer';
 import { Element } from 'react-scroll';
 import { useEffect } from 'react';
@@ -35,6 +36,7 @@ function App() {
     <div className="font-poppins relative z-0 flex flex-col min-h-screen bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900
 ">
       <Navbar />
+      <FloatingIcons />
       <main className="flex flex-col grow">
         <Element name="hero"><Hero hardTextGradient={hardTextGradient} mediumTextGradient={mediumTextGradient} /></Element>
         <Element name="aboutme"><AboutMe containerClass={containerClass} mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>

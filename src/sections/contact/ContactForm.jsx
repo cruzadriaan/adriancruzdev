@@ -68,12 +68,6 @@ const ContactForm = ({ containerClass }) => {
                 <ContactInfo containerClass={containerClass} />
             </motion.div >
 
-            {/* Viber Button */}
-            <div className="fixed bottom-0 right-0 z-20">
-                <a href="viber://chat?number=+639163629046" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faViber} className="text-gray-200 bg-purple-600 text-xl rounded-full p-2.5 m-2 hover:scale-110 cursor-pointer" />
-                </a>
-            </div>
         </>
     )
 }
