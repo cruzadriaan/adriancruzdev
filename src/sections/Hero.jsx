@@ -7,7 +7,7 @@ import { HeroStack } from '../data/HeroData';
 import { Link } from 'react-scroll';
 import { useRef, useEffect, useState } from 'react';
 import FloatingButtons from '../components/FloatingButtons';
-import AdrianDevAvatarEnhanced from "../assets/images/AdrianDevAvatarEnhanced.png";
+import AdrianDevAvatarNoBg from "../assets/images/AdrianDevAvatarNoBg.png";
 
 
 
@@ -53,19 +53,13 @@ const Hero = () => {
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
                 className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
-            {/* Content */}
-            <div className="relative pt-15 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            {/* My Avatar */}
+            <div className="absolute top-52 right-0 z-10">
+                <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-65 h-65 bg-cover rounded-md" />
+            </div>
 
-                {/* Name introduction */}
-                {/* <motion.div
-                    variants={heroVariants}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 1 }}
-                    className="items-left justify-center lg:text-6xl">
-                    <h1 className="text-white text-3xl font-bold mb-1">Hello, I'm</h1>
-                    <h1 className={`bg-clip-text text-transparent bg-linear-to-r from-blue-500 via-blue-400 to-violet-500 text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
-                </motion.div> */}
+            {/* Content */}
+            <div className="relative pt-15 flex flex-col sm:w-120 w-full gap-3 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
@@ -80,7 +74,7 @@ const Hero = () => {
                     </div>
 
                     {/* Name introduction */}
-                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm <span className="block text-blue-400 text-5xl">Adrian Cruz</span></h1>
+                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm <span className="block text-blue-400 text-4xl">Adrian Cruz</span></h1>
                 </motion.div>
 
                 <motion.div
@@ -89,14 +83,12 @@ const Hero = () => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="mt-2 text-zinc-400 text-[14px] w-full">
-                        Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
+                    <h1 className="text-zinc-400 text-[13px] w-50">
+                        Frontend Developer crafting fast, modern web experiences with clean UI, smooth interactions, and scalable architecture.
                     </h1>
-
                 </motion.div>
 
-                <div className={`relative w-90 mx-auto flex items-center justify-center`}>
-                    <img src={AdrianDevAvatarEnhanced} alt="Adrian Cruz" className="w-79 h-80 bg-cover rounded-md" />
+                <div className={`relative w-90 mx-auto flex items-center justify-center mt-30`}>
 
                     {/* Code Snippet */}
                     <motion.div
@@ -104,7 +96,7 @@ const Hero = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-3 -left-2 bg-gray-800 backdrop-blur-lg w-55 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-5 -left-2 bg-gray-800 backdrop-blur-lg w-50 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
@@ -120,7 +112,7 @@ const Hero = () => {
                         </div>
 
                         {/* Syntax */}
-                        <div className="py-1.5 px-4 flex flex-col text-[9px] text-white font-mono">
+                        <div className="py-1.5 px-2 flex flex-col text-[9px] text-white font-mono">
                             {/* <p className="text-gray-500">//About Me</p> */}
                             <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
                                 = <span className="text-yellow-300">{`{`}</span></p>

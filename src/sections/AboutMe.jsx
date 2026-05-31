@@ -1,7 +1,5 @@
 // import SectionDivider from "../components/SectionDivider";
-import AdrianDevAvatar from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 // import { cardVariants } from "../utils/cardVariants";
 import { AboutMeStats } from "../data/AboutMeData";
