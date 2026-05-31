@@ -148,7 +148,7 @@ const Hero = ({hardTextGradient}) => {
                 </div>
 
                 {/* BUTTONS */}
-                <div className="mt-11 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
+                <div className="mt-11 mb-10 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-3 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work
@@ -157,7 +157,7 @@ const Hero = ({hardTextGradient}) => {
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         View Resume
                     </a>
-                    <div className="flex flex-row items-center gap-8 mt-2">
+                    <div className="flex flex-row items-center gap-8 mt-1">
 
 
                         {/* Social Icons */}
@@ -165,7 +165,7 @@ const Hero = ({hardTextGradient}) => {
                             initial={{ y: 30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 2 }}
-                            className="mt-2 flex flex-row gap-4">
+                            className=" flex flex-row gap-4">
                             <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
                             </a>
@@ -186,7 +186,7 @@ const Hero = ({hardTextGradient}) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 2 }}
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 opacity-60" >
+                    className="absolute bottom-2 left-1/2 -translate-x-1/2 opacity-60" >
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
