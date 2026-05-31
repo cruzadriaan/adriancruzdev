@@ -3,7 +3,7 @@ import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-so
 import { faAnglesDown, faCircle, faCopy } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
-import { HeroStack } from '../data/HeroData';
+
 import { Link } from 'react-scroll';
 import { useRef, useEffect, useState } from 'react';
 import FloatingButtons from '../components/FloatingButtons';
@@ -136,7 +136,11 @@ const Hero = ({hardTextGradient}) => {
                                 <p className='text-gray-200'>
                                     <span>stack: </span>
                                     <span className="text-green-400"> 
-                                         "HTML, CSS, Javascript, React, Tailwind"
+                                        <span className="text-yellow-300">{'['}</span>
+                                         "JavaScript"<span className="text-gray-200">,</span> 
+                                         "React"<span className="text-gray-200">,</span>  "Tailwind"
+                                         <span className="text-gray-200">,</span>  "Python"
+                                        <span className="text-yellow-300">{']'}</span>
                                     </span>
                                     </p>
                                 <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>

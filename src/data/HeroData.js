@@ -1,14 +1,15 @@
-    export const HeroStack = [
-        {
-            name: "Javascript", 
-            logo: "devicon-javascript-plain colored",
-        },
-        {
-            name: "React",
-            logo: "devicon-react-original colored",
-        },
-        {
-            name: "Tailwind",
-            logo: "devicon-tailwindcss-plain colored",
-        },
-    ]
+export const HeroData = [
+    {
+        type: "role",
+        name: "Frontend Developer" 
+    },
+    {
+        type: "passion",
+        name: "Building modern UI"
+    },
+    {
+      type:"stack",
+      name:"hello"
+    }
+];
+    
