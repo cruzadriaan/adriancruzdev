@@ -41,7 +41,7 @@ const Hero = () => {
 
         <div
             ref={heroRef}
-            className="relative mb-23">
+            className="relative mb-30">
 
             <FloatingButtons showArrowTop={showArrowTop} />
 
@@ -51,10 +51,10 @@ const Hero = () => {
             {/* Background Image */}
             <div
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
-                className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
+                className="absolute inset-0 bg-cover opacity-1.5 -z-20" />
 
             {/* My Avatar */}
-            <div className="absolute top-55 right-0 z-10 drop-shadow-[0_0_10px_rgba(96,165,250,0.5)]">
+            <div className="absolute top-55 right-0 z-10">
                 <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-65 h-65 bg-cover rounded-md" />
             </div>
 
@@ -139,11 +139,7 @@ const Hero = () => {
                         </div>
 
                     </motion.div>
-
                 </div>
-
-
-
 
                 {/* BUTTONS */}
                 <div className="mt-6 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
@@ -184,7 +180,7 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 2 }}
-                    className="flex flex-col items-center  ml-5 opacity-60" >
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 opacity-60" >
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
