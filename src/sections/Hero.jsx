@@ -68,7 +68,7 @@ const Hero = () => {
                     transition={{ duration: 1 }}>
 
                     {/* Availability Status */}
-                    <div className="flex items-center text-green-300 text-xs font-normal my-3 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
+                    <div className="flex items-center text-green-300 text-xs font-normal mb-5 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Available to new opportunities</span>
                     </div>
@@ -96,7 +96,7 @@ const Hero = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-5 -left-2 bg-gray-800 backdrop-blur-lg w-50.5 h-31 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-4 -left-2 bg-gray-800 backdrop-blur-lg w-50.5 h-31 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
