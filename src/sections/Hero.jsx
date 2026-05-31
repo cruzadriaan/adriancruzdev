@@ -51,11 +51,11 @@ const Hero = ({hardTextGradient}) => {
             {/* Background Image */}
             <div
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
-                className="absolute inset-0 bg-cover opacity-1 z-20" />
+                className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* My Avatar */}
-            <div className="absolute top-58 right-0 z-10">
-                <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-67 h-67 bg-cover rounded-md" />
+            <div className="absolute top-54 -right-5 z-10">
+                <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-70 h-70 bg-cover rounded-md" />
             </div>
 
             {/* Content */}
@@ -97,7 +97,7 @@ const Hero = ({hardTextGradient}) => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-12 -left-2 bg-gray-800 backdrop-blur-lg w-50.5 h-31 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-4 -left-2 bg-gray-800 backdrop-blur-lg w-50.5 h-31 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
@@ -148,7 +148,7 @@ const Hero = ({hardTextGradient}) => {
                 </div>
 
                 {/* BUTTONS */}
-                <div className="mt-12 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
+                <div className="mt-11 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-3 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work

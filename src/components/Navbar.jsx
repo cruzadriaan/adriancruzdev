@@ -19,9 +19,12 @@ const Navbar = () => {
 
             {/* Navbar */}
             <div className="fixed top-2 left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-95 flex flex-row items-center justify-between px-3 py-1 gap-2 rounded-xl bg-gray-800/20 backdrop-blur-2xl border border-gray-700/40 shadow-lg z-40">
+
                 <div className="flex flex-row items-center gap-2 ">
-                    <img src={AdrianDevLogo} alt="Adrian Dev Logo" className="w-8 h-5 " />
+                    {/* <img src={AdrianDevLogo} alt="Adrian Dev Logo" className="w-8 h-5 " /> */}
+                    <h1 className="text-white text-xl font-semibold">AC.</h1>
                 </div>
+
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-sm border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-2 cursor-pointer" />
@@ -31,11 +34,12 @@ const Navbar = () => {
                         <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-8 h-8 border border-blue-800 rounded-md" />
                     </Link> */}
                 </div>
+
             </div>
 
 
             {/* Sidebar */}
-            <div className={`fixed left-0 top-0 h-full w-60 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-700 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 shadow-lg py-4 z-60`}>
+            <div className={`fixed right-0 top-0 h-full w-60 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-700 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 shadow-lg py-4 z-60`}>
                 <div className="flex flex-row ml-3 gap-4">
                     <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-13 h-13 border border-blue-900 mb-5 rounded-full" />
                     <div className="flex flex-col mt-1">
