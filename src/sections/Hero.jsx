@@ -96,15 +96,6 @@ const Hero = () => {
                         Building fast, modern web experiences with clean UI, smooth interactions, and scalable frontend architecture.
                     </h1>
 
-                    {/* Technologies */}
-                    <div className="mt-4 flex flex-row items-center gap-4">
-                        {HeroStack.map((tech, index) => (
-                            <div key={index} className="flex flex-row justify-center gap-2 items-center opacity-70 shadow-md border border-zinc-600 py-1 px-3 rounded-md  text-zinc-400 text-[12px]">
-                                <i className={`${tech.logo} text-xs`}></i>
-                                <span className="text-xs">{tech.name}</span>
-                            </div>
-                        ))}
-                    </div>
                 </motion.div>
 
                 <div className={`relative w-90 mx-auto flex items-center justify-center`}>
@@ -116,12 +107,12 @@ const Hero = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-3 -left-2 bg-gray-800 backdrop-blur-lg w-65 h-30 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-3 -left-2 bg-gray-800 backdrop-blur-lg w-55 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
                         <div>
-                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2.5 cursor-pointer">
+                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2 cursor-pointer">
                                 <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
                                 <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
@@ -132,13 +123,13 @@ const Hero = () => {
                         </div>
 
                         {/* Syntax */}
-                        <div className="py-1.5 px-7 flex flex-col text-[10px] text-white font-mono">
+                        <div className="py-1.5 px-4 flex flex-col text-[9px] text-white font-mono">
                             {/* <p className="text-gray-500">//About Me</p> */}
                             <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
                                 = <span className="text-yellow-300">{`{`}</span></p>
 
 
-                            <div className="ml-5 flex flex-col text-gray-300 text-[10px]">
+                            <div className="ml-5 flex flex-col text-gray-300 text-[9px]">
 
                                 {/* Typewriter Effect */}
                                 <div className="flex w-40">
