@@ -34,9 +34,6 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
 
                 {/* About Me Image and Introduction */}
                 <div className="flex  flex-row  gap-4">
-                    <div className="w-95 h-35 rounded-xl relative overflow-hidden mx-auto">
-                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className=" w-full h-full object-center" />
-                    </div>
                     <div className="mt-1">
                         <h1 className="text-white text-[17px] flex flex-wrap font-normal">
                             Front End Developer building

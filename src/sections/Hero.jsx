@@ -54,7 +54,7 @@ const Hero = () => {
                 className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
             {/* Content */}
-            <div className="relative pt-18 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-15 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 {/* Name introduction */}
                 {/* <motion.div
@@ -67,9 +67,6 @@ const Hero = () => {
                     <h1 className={`bg-clip-text text-transparent bg-linear-to-r from-blue-500 via-blue-400 to-violet-500 text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
                 </motion.div> */}
 
-
-
-                
                 <motion.div
                     variants={heroVariants}
                     initial="hidden"
@@ -99,7 +96,7 @@ const Hero = () => {
                 </motion.div>
 
                 <div className={`relative w-90 mx-auto flex items-center justify-center`}>
-                    <img src={AdrianDevAvatarEnhanced} alt="Adrian Cruz" className="w-80 h-80 bg-cover rounded-md" />
+                    <img src={AdrianDevAvatarEnhanced} alt="Adrian Cruz" className="w-79 h-80 bg-cover rounded-md" />
 
                     {/* Code Snippet */}
                     <motion.div
