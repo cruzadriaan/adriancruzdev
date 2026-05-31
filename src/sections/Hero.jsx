@@ -54,12 +54,12 @@ const Hero = () => {
                 className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
             {/* My Avatar */}
-            <div className="absolute top-52 right-0 z-10">
+            <div className="absolute top-55 right-0 z-10 drop-shadow-[0_0_10px_rgba(96,165,250,0.5)]">
                 <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-65 h-65 bg-cover rounded-md" />
             </div>
 
             {/* Content */}
-            <div className="relative pt-15 flex flex-col sm:w-120 w-full gap-3 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-18 flex flex-col sm:w-120 w-full gap-3 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
