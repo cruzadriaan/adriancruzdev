@@ -41,7 +41,7 @@ const Hero = ({hardTextGradient}) => {
 
         <div
             ref={heroRef}
-            className="relative mb-30">
+            className="relative mb-30 overflow-hidden">
 
             <FloatingButtons showArrowTop={showArrowTop} />
 
@@ -54,7 +54,7 @@ const Hero = ({hardTextGradient}) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* My Avatar */}
-            <div className="absolute top-54 -right-5 z-10">
+            <div className="absolute top-54 -right-7 z-10 ">
                 <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-70 h-70 bg-cover rounded-md" />
             </div>
 
