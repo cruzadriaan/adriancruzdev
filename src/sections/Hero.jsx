@@ -11,7 +11,7 @@ import AdrianDevAvatarNoBg from "../assets/images/AdrianDevAvatarNoBg.png";
 
 
 
-const Hero = ({hardTextGradient}) => {
+const Hero = ({hardTextGradient, mediumTextGradient}) => {
 
     const heroVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -74,8 +74,9 @@ const Hero = ({hardTextGradient}) => {
                     </div>
 
                     {/* Name introduction */}
-                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm 
-                        <span className={`${hardTextGradient} block text-4xl`}>Adrian Cruz</span></h1>
+                    <h1 className="w-80 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm 
+                        <span className={`${hardTextGradient} text-4xl`}> Adrian Cruz</span></h1>
+                        <h1 className={`text-white text-xl mt-2 font-semibold`}>Frontend Developer</h1>
                 </motion.div>
 
                 <motion.div
@@ -84,8 +85,8 @@ const Hero = ({hardTextGradient}) => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="text-zinc-300 text-[13px] w-50">
-                        Frontend Developer crafting fast, modern web experiences with clean UI, smooth interactions, and scalable architecture.
+                    <h1 className="text-zinc-300 text-[14px] w-50">
+                        Crafting fast, modern web experiences with clean UI, smooth interactions, and scalable architecture.
                     </h1>
                 </motion.div>
 
@@ -136,11 +137,11 @@ const Hero = ({hardTextGradient}) => {
                                 <p className='text-gray-200'>
                                     <span>stack: </span>
                                     <span className="text-green-400"> 
-                                        <span className="text-yellow-300">{'['}</span>
+                                        <span className="text-purple-400">{'['}</span>
                                          "JavaScript"<span className="text-gray-200">,</span> 
                                          "React"<span className="text-gray-200">,</span>  "Tailwind"
                                          <span className="text-gray-200">,</span>  "Python"
-                                        <span className="text-yellow-300">{']'}</span>
+                                        <span className="text-purple-400">{']'}</span>
                                     </span>
                                     </p>
                                 <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>
