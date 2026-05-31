@@ -51,7 +51,7 @@ const Hero = () => {
             {/* Background Image */}
             <div
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
-                className="absolute inset-0 bg-cover opacity-1.5 -z-20" />
+                className="absolute inset-0 bg-cover opacity-[0.9%] -z-20" />
 
             {/* My Avatar */}
             <div className="absolute top-55 right-0 z-10">
