@@ -11,7 +11,7 @@ import AdrianDevAvatarNoBg from "../assets/images/AdrianDevAvatarNoBg.png";
 
 
 
-const Hero = () => {
+const Hero = ({hardTextGradient}) => {
 
     const heroVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -51,11 +51,11 @@ const Hero = () => {
             {/* Background Image */}
             <div
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
-                className="absolute inset-0 bg-cover opacity-[0.9%] -z-20" />
+                className="absolute inset-0 bg-cover opacity-1 z-20" />
 
             {/* My Avatar */}
-            <div className="absolute top-55 right-0 z-10">
-                <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-65 h-65 bg-cover rounded-md" />
+            <div className="absolute top-58 right-0 z-10">
+                <img src={AdrianDevAvatarNoBg} alt="Adrian Cruz" className="w-67 h-67 bg-cover rounded-md" />
             </div>
 
             {/* Content */}
@@ -74,7 +74,8 @@ const Hero = () => {
                     </div>
 
                     {/* Name introduction */}
-                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm <span className="block text-blue-400 text-4xl">Adrian Cruz</span></h1>
+                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm 
+                        <span className={`${hardTextGradient} block text-4xl`}>Adrian Cruz</span></h1>
                 </motion.div>
 
                 <motion.div
@@ -83,7 +84,7 @@ const Hero = () => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="text-zinc-400 text-[13px] w-50">
+                    <h1 className="text-zinc-300 text-[13px] w-50">
                         Frontend Developer crafting fast, modern web experiences with clean UI, smooth interactions, and scalable architecture.
                     </h1>
                 </motion.div>
@@ -96,7 +97,7 @@ const Hero = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-4 -left-2 bg-gray-800 backdrop-blur-lg w-50.5 h-31 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-12 -left-2 bg-gray-800 backdrop-blur-lg w-50.5 h-31 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
@@ -147,7 +148,7 @@ const Hero = () => {
                 </div>
 
                 {/* BUTTONS */}
-                <div className="mt-6 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
+                <div className="mt-12 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-3 px-3 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         Explore My Work
