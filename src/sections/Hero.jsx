@@ -96,7 +96,7 @@ const Hero = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-5 -left-2 bg-gray-800 backdrop-blur-lg w-50 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-5 -left-2 bg-gray-800 backdrop-blur-lg w-50.5 h-31 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
@@ -123,16 +123,21 @@ const Hero = () => {
                                 {/* Typewriter Effect */}
                                 <div className="flex w-40">
                                     <p className="animate-typewriter overflow-hidden whitespace-nowrap">
-                                        <span>name: </span>
-                                        <span className=" text-green-400">"Adrian Cruz"</span>
+                                        <span>role: </span>
+                                        <span className=" text-green-400">"Frontend Developer"</span>,
                                     </p>
                                     <span className="animate-blink border-l"></span>
                                 </div>
 
+
+                                <p>passion: <span className="text-green-400  ">"Building modern UI"</span>,</p>
                                 {/* No typewriter Effect */}
-                                <p>role: <span className="text-green-400">"Frontend Developer"</span>
-                                </p>
-                                <p>passion: <span className="text-green-400  ">"Building modern UI"</span></p>
+                                <p className='text-gray-200'>
+                                    <span>stack: </span>
+                                    <span className="text-green-400"> 
+                                         "HTML, CSS, Javascript, React, Tailwind"
+                                    </span>
+                                    </p>
                                 <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>
                             </div>
 
