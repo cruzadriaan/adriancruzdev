@@ -1,12 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faAnglesDown } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesDown, faCircle, faCopy } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { HeroStack } from '../data/HeroData';
 import { Link } from 'react-scroll';
 import { useRef, useEffect, useState } from 'react';
 import FloatingButtons from '../components/FloatingButtons';
+import AdrianDevAvatarEnhanced from "../assets/images/AdrianDevAvatarEnhanced.png";
+
+
 
 const Hero = () => {
 
@@ -51,7 +54,7 @@ const Hero = () => {
                 className="absolute inset-0 bg-cover opacity-[0.7%] -z-20" />
 
             {/* Content */}
-            <div className="relative pt-29 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-18 flex flex-col sm:w-120 w-full gap-5 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 {/* Name introduction */}
                 {/* <motion.div
@@ -63,23 +66,25 @@ const Hero = () => {
                     <h1 className="text-white text-3xl font-bold mb-1">Hello, I'm</h1>
                     <h1 className={`bg-clip-text text-transparent bg-linear-to-r from-blue-500 via-blue-400 to-violet-500 text-5xl md:text-7xl font-extrabold`}>Adrian Cruz</h1>
                 </motion.div> */}
+
+
+
+                
                 <motion.div
                     variants={heroVariants}
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}>
-                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hi, I'm Adrian.</h1>
-                </motion.div>
 
-                {/* Tagline */}
-                <motion.div
-                    variants={heroVariants}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 1 }}>
-                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">BUILDING <span className="text-blue-400">INTERACTIVE</span> AND <span className="text-purple-400">HIGH PERFORMANCE</span> WEBSITES.</h1>
-                </motion.div>
+                    {/* Availability Status */}
+                    <div className="flex items-center text-green-300 text-xs font-normal my-3 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
+                        <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
+                        <span>Available to new opportunities</span>
+                    </div>
 
+                    {/* Name introduction */}
+                    <h1 className="w-75 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm <span className="block text-blue-400 text-5xl">Adrian Cruz</span></h1>
+                </motion.div>
 
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
@@ -101,6 +106,64 @@ const Hero = () => {
                         ))}
                     </div>
                 </motion.div>
+
+                <div className={`relative w-90 mx-auto flex items-center justify-center`}>
+                    <img src={AdrianDevAvatarEnhanced} alt="Adrian Cruz" className="w-80 h-80 bg-cover rounded-md" />
+
+                    {/* Code Snippet */}
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 1.5 }}
+                        className="absolute -bottom-3 -left-2 bg-gray-800 backdrop-blur-lg w-65 h-30 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                                    hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
+                    >
+
+                        <div>
+                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2.5 cursor-pointer">
+                                <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                                <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                                <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon icon={faCopy} className="absolute top-2 right-3 text-xs text-gray-400  cursor-pointer hover:text-gray-300" />
+                            </div>
+                        </div>
+
+                        {/* Syntax */}
+                        <div className="py-1.5 px-7 flex flex-col text-[10px] text-white font-mono">
+                            {/* <p className="text-gray-500">//About Me</p> */}
+                            <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
+                                = <span className="text-yellow-300">{`{`}</span></p>
+
+
+                            <div className="ml-5 flex flex-col text-gray-300 text-[10px]">
+
+                                {/* Typewriter Effect */}
+                                <div className="flex w-40">
+                                    <p className="animate-typewriter overflow-hidden whitespace-nowrap">
+                                        <span>name: </span>
+                                        <span className=" text-green-400">"Adrian Cruz"</span>
+                                    </p>
+                                    <span className="animate-blink border-l"></span>
+                                </div>
+
+                                {/* No typewriter Effect */}
+                                <p>role: <span className="text-green-400">"Frontend Developer"</span>
+                                </p>
+                                <p>passion: <span className="text-green-400  ">"Building modern UI"</span></p>
+                                <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>
+                            </div>
+
+                        </div>
+
+                    </motion.div>
+
+                </div>
+
+
+
 
                 {/* BUTTONS */}
                 <div className="mt-6 mb-12 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
