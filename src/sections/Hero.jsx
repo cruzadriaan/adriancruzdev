@@ -71,7 +71,7 @@ const Hero = ({ hardTextGradient }) => {
                     </div>
 
                     {/* My Avatar */}
-                    <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-500 to-purple-500 p-[1px] rounded-full">
+                    <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-300 to-purple-400 p-px rounded-full">
                         <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 h-45 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
                     </div>
 
@@ -89,12 +89,12 @@ const Hero = ({ hardTextGradient }) => {
 
 
                 <div>
-                    {/* Tech Stack Icons */}
+                    {/* Tech Stack Chips */}
                     <motion.div
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-3 mt-3 mb-3 borde flex-wrap"
+                        className="flex flex-row gap-4 mt-3 mb-3 borde flex-wrap"
                     >
                         {HeroData.map((hero, index) => (
                             <div key={index} className="flex flex-row text-[11px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-2 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
