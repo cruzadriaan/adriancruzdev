@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileLines, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faAnglesDown, faCircle, faCopy } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesDown, faCircle } from '@fortawesome/free-solid-svg-icons'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { HeroData } from "../data/HeroData";
@@ -53,28 +53,29 @@ const Hero = ({ hardTextGradient }) => {
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
-            {/* My Avatar */}
-            <div className="absolute top-45 right-2 z-10 ">
-                <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 h-45 bg-cover border-2 border-purple-500 rounded-full shadow-[0px_10px_82px_1px_rgba(147,19,187,0.75)]" />
-            </div>
-
             {/* Content */}
-            <div className="relative pt-18 flex flex-col sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-16 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
                     initial="hidden"
                     animate="visible"
-                    transition={{ duration: 1 }}>
+                    transition={{ duration: 1 }}
+                    className="flex flex-col items-center justify-center">
 
                     {/* Availability Status */}
-                    <div className="flex items-center text-green-400 text-xs font-normal mb-5 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
+                    <div className=" text-green-400 text-xs font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Open to Frontend Opportunities</span>
                     </div>
 
+                    {/* My Avatar */}
+                    <div className="flex items-center justify-center mb-5">
+                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 h-45 bg-cover border-2 border-purple-500 rounded-full shadow-[0px_10px_82px_1px_rgba(147,19,187,0.75)]" />
+                    </div>
+
                     {/* Name introduction */}
-                    <h1 className="w-80 text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hello, I'm
+                    <h1 className="w-80 text-center text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hello, I'm
                         <span className={`${hardTextGradient} block text-[38px]`}> Adrian Cruz</span></h1>
                     <h1 className={`text-gray-300 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
                 </motion.div>
@@ -86,10 +87,10 @@ const Hero = ({ hardTextGradient }) => {
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-3 my-5 w-40 flex-wrap"
+                        className="flex flex-row gap-3 my-5 borde flex-wrap"
                     >
                         {HeroData.map((hero, index) => (
-                            <div key={index} className="flex flex-row text-[12px] items-center">
+                            <div key={index} className="flex flex-row text-[12px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-3 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
                                 <i className={`${hero.logo} text-base mr-1`}></i>
                                 <span className="text-gray-300">{hero.name}</span>
                             </div>
@@ -103,67 +104,13 @@ const Hero = ({ hardTextGradient }) => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="text-zinc-300 text-[14px] w-60">
+                    <h1 className="text-zinc-300 text-center text-[14px] w-90">
                         Building fast, responsive web applications with React and modern frontend technologies.
                     </h1>
                 </motion.div>
 
 
-                <div className={`relative w-90 mx-auto flex items-center justify-center mt-30`}>
-
-                    {/* Code Snippet */}
-                    <motion.div
-                        initial={{ y: 50, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 1.5 }}
-                        className="absolute -bottom-1 -left-2 bg-gray-800 backdrop-blur-lg w-55 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
-                                    hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
-                    >
-
-                        <div>
-                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2 cursor-pointer">
-                                <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
-                                <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
-                                <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-                            </div>
-                            <div>
-                                <FontAwesomeIcon icon={faCopy} className="absolute top-2 right-3 text-xs text-gray-400  cursor-pointer hover:text-gray-300" />
-                            </div>
-                        </div>
-
-                        {/* Syntax */}
-                        <div className="py-1.5 px-2 flex flex-col text-[9px] text-white font-mono">
-                            {/* <p className="text-gray-500">//About Me</p> */}
-                            <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
-                                = <span className="text-yellow-300">{`{`}</span></p>
-
-
-                            <div className="ml-5 flex flex-col text-gray-300 text-[9px]">
-
-                                {/* Typewriter Effect */}
-                                <div className="flex w-40">
-                                    <p className="animate-typewriter overflow-hidden whitespace-nowrap">
-                                        <span>focus: </span>
-                                        <span className=" text-green-400">"Frontend Engineering"</span>,
-                                    </p>
-                                    <span className="animate-blink border-l"></span>
-                                </div>
-
-
-                                <p>experience: <span className="text-green-400  ">"2+ Years"</span>,</p>
-                                {/* No typewriter Effect */}
-                                <p className='text-gray-200'>
-                                    <span>specialization: </span>
-                                    <span className="text-green-400">"React Ecosystem"</span>
-                                </p>
-                                <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>
-                            </div>
-
-                        </div>
-
-                    </motion.div>
-                </div>
+ 
 
                 {/* BUTTONS */}
                 <div className="mt-5 mb-10 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
