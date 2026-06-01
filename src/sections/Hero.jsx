@@ -54,7 +54,7 @@ const Hero = ({ hardTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* Content */}
-            <div className="relative pt-14 pb-14 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-13 pb-14 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
