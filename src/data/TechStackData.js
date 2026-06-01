@@ -42,7 +42,7 @@ export const TechStackData = [
     {
         category: "Back End",
         borderColor: "border-t border-green-500",
-        categoryColor: "text-purple-500",
+        categoryColor: "text-blue-400",
         logo: faServer,
         technologies: [
             {
@@ -55,7 +55,7 @@ export const TechStackData = [
     {
         category: "Database",
         borderColor: "border-purple-500",
-        categoryColor: "text-purple-500",
+        categoryColor: "text-blue-400",
         logo: faDatabase,
         technologies: [
             {
@@ -73,7 +73,7 @@ export const TechStackData = [
     {
         category: "Version Control",
         borderColor: "border-yellow-500",
-        categoryColor: "text-yellow-500",
+        categoryColor: "text-blue-400",
         logo: faCodeBranch,
         technologies: [
             {
@@ -91,7 +91,7 @@ export const TechStackData = [
     {
         category: "DevOps",
         borderColor: "border-red-500",
-        categoryColor: "text-red-500",
+        categoryColor: "text-blue-400",
         logo: faCloudArrowDown,
         technologies: [
             {
@@ -114,7 +114,7 @@ export const TechStackData = [
     {
         category: "Tools",
         borderColor: "border-yellow-500",
-        categoryColor: "text-yellow-500",
+        categoryColor: "text-blue-400",
         logo: faTools,
         technologies: [
             {

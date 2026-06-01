@@ -41,7 +41,7 @@ const TechStack = ({ containerClass }) => {
                       whileInView={{ width: `${technology.percentage}%` }}
                       viewport={{once:true, amount: 0.7}}
                       transition={{ duration: 2.5 }}
-                      className="bg-blue-600 h-2 rounded-full" />
+                      className="bg-linear-to-r from-blue-500 to-purple-500 h-2 rounded-full" />
                   </div>
                   <div>
                     <h1 className="text-gray-400 text-[10px]">{technology.percentage}%</h1>
