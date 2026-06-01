@@ -12,7 +12,7 @@ export default {
       animation: {
         float: "float 8s ease-in-out infinite",
         blink: "blink 1s step-start infinite",
-        typewriter: "typewriter 9s steps(28, end) infinite",
+        typewriter: "typewriter 9s steps(31, end) infinite",
         glow: 'glow 2s ease-in-out infinite',
       'ping-slow': 'ping 2s linear infinite',
       'ping-slower': 'ping 3s linear infinite',
@@ -32,7 +32,7 @@ export default {
         },
         typewriter: {
           "0%, 100%": { width: "0ch" },
-          "65%, 90%": { width: "28ch" },
+          "65%, 90%": { width: "31ch" },
         },
         blink: {
           "0%, 100%": { opacity: "1" },
