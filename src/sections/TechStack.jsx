@@ -22,18 +22,33 @@ const TechStack = ({ containerClass }) => {
           {/* Tech Category */}
           <div>
             <div className={`flex items-center gap-1 mb-1 ${tech.categoryColor}`}>
-              <FontAwesomeIcon icon={tech.logo} className="text-xl" />
-              <h1 className="text-lg font-semibold">{tech.category}</h1>
+              <FontAwesomeIcon icon={tech.logo} className="text-xs" />
+              <h1 className="text-sm">{tech.category}</h1>
             </div>
-            <div className="border-t border-gray-700" />
+            <div className="border-t border-gray-800" />
 
             {/* Tech Stack Each */}
-            <div className="flex items-center p-2 flex-wrap gap-7 mt-3">
+            <div className="flex flex-col p-2 flex-wrap gap-7 mt-3">
               {tech.technologies.map((technology, index) => (
-                <div key={index} className="flex flex-col items-center gap-1 hover:scale-110 transition-transform cursor-pointer">
-                  <i className={`${technology.logo} text-3xl`} ></i>
-                  <h1 className="text-gray-200 text-[11px] font-semibold">{technology.name}</h1>
+
+                <div key={index} className="flex flex-row items-center gap-3 cursor-pointer">
+                  <div className="flex flex-col text-right w-20">
+                    <h1 className="text-gray-200 text-[10px] ">{technology.name}</h1>
+                  </div>
+                  <div className="flex flex-col w-full rounded-full bg-gray-700">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${technology.percentage}%` }}
+                      viewport={{once:true, amount: 0.7}}
+                      transition={{ duration: 2.5 }}
+                      className="bg-blue-600 h-2 rounded-full" />
+                  </div>
+                  <div>
+                    <h1 className="text-gray-400 text-[10px]">{technology.percentage}%</h1>
+                  </div>
                 </div>
+
+
               ))}
             </div>
 

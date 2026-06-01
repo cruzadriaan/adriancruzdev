@@ -9,26 +9,32 @@ export const TechStackData = [
         technologies: [
             {
                 name: "HTML5",
+                percentage: 90,
                 logo: "devicon-html5-plain colored",
             },
             {
                 name: "CSS3",
+                percentage: 85,
                 logo: "devicon-css3-plain colored",
             },
             {
                 name: "Javascript",
+                percentage: 80,
                 logo: "devicon-javascript-plain colored",
             },
             {
                 name: "React",
+                percentage: 80,
                 logo: "devicon-react-original colored",
             },
             {
                 name: "Tailwind",
+                percentage: 85,
                 logo: "devicon-tailwindcss-plain colored",
             },
             {
-                name: "Bootstrap",
+                name: "Bootstrap", 
+                percentage: 75,
                 logo: "devicon-bootstrap-plain colored",
             }
         ]
@@ -36,11 +42,12 @@ export const TechStackData = [
     {
         category: "Back End",
         borderColor: "border-t border-green-500",
-        categoryColor: "text-green-500",
+        categoryColor: "text-purple-500",
         logo: faServer,
         technologies: [
             {
                 name: "Python",
+                percentage: 70,
                 logo: "devicon-python-plain colored",
             },
         ]
@@ -53,10 +60,12 @@ export const TechStackData = [
         technologies: [
             {
                 name: "MySQL",
+                percentage: 70,
                 logo: "devicon-mysql-plain colored",
             },
             {
                 name: "PostgreSQL",
+                percentage: 60,
                 logo: "devicon-postgresql-plain colored",
             }
         ]
@@ -69,10 +78,12 @@ export const TechStackData = [
         technologies: [
             {
                 name: "Git",
+                percentage: 80,
                 logo: "devicon-git-plain colored",
             },
             {
                 name: "GitHub",
+                percentage: 80,
                 logo: "devicon-github-original text-white",
             },
         ]
@@ -85,14 +96,17 @@ export const TechStackData = [
         technologies: [
             {
                 name: "AWS",
+                percentage: 75,
                 logo: "devicon-amazonwebservices-plain-wordmark colored",
             },
             {
                 name: "Netlify",
+                percentage: 80,
                 logo: "devicon-netlify-plain text-blue-300",
             },
             {
                 name: "Vercel",
+                percentage: 80,
                 logo: "devicon-vercel-original text-white/80",
             },
         ]
@@ -105,10 +119,12 @@ export const TechStackData = [
         technologies: [
             {
                 name: "VS Code",
+                percentage: 90,
                 logo: "devicon-vscode-plain colored",
             },
             {
                 name: "Photoshop",
+                percentage: 85,
                 logo: "devicon-photoshop-plain text-blue-600",
             }
         ]

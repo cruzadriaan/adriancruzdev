@@ -34,6 +34,7 @@ const Hero = ({ hardTextGradient }) => {
         if (heroElement) {
             observer.observe(heroElement);
         }
+        return () => observer.unobserve(heroElement);
     }, []);
 
 
