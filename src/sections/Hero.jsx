@@ -97,7 +97,7 @@ const Hero = ({ hardTextGradient }) => {
                     >
                         {HeroData.map((hero, index) => (
                             <div key={index} className="flex flex-row text-[12px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-3 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
-                                <i className={`${hero.logo} text-base mr-1`}></i>
+                                <i className={`${hero.logo} text-base`}></i>
                                 <span className="text-gray-300">{hero.name}</span>
                             </div>
                         ))}
