@@ -83,7 +83,7 @@ const Hero = ({ hardTextGradient }) => {
                     {/* Role */}
                     <h1 className={`text-gray-400 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
                     {/* Tagline */}
-                    <p className="text-gray-400 text-[12px] mt-2 text-center">Specialized in React & Modern UI Development</p>
+                    {/* <p className="text-gray-400 text-[12px] mt-2 text-center">Specialized in React & Modern UI Development</p> */}
                 </motion.div>
 
 
