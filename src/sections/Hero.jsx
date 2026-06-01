@@ -93,7 +93,7 @@ const Hero = ({ hardTextGradient }) => {
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-3 mt-3 mb-5 borde flex-wrap"
+                        className="flex flex-row gap-3 mt-3 mb-3 borde flex-wrap"
                     >
                         {HeroData.map((hero, index) => (
                             <div key={index} className="flex flex-row text-[12px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-3 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
