@@ -54,8 +54,8 @@ const Hero = ({ hardTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* My Avatar */}
-            <div className="absolute top-43 right-5 z-10 ">
-                <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 h-45 bg-cover rounded-md" />
+            <div className="absolute top-45 right-2 z-10 ">
+                <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-55 h-55 bg-cover border-2 border-purple-500 rounded-full shadow-[0px_10px_82px_1px_rgba(147,19,187,0.75)]" />
             </div>
 
             {/* Content */}
@@ -74,9 +74,9 @@ const Hero = ({ hardTextGradient }) => {
                     </div>
 
                     {/* Name introduction */}
-                    <h1 className="w-80 text-gray-300 lg:text-lg tracking-tight text-3xl font-bold">Hi, I'm
-                        <span className={`${hardTextGradient} text-4xl`}> Adrian Cruz</span></h1>
-                    <h1 className={`text-white text-xl mt-2 font-semibold`}>Frontend Developer</h1>
+                    <h1 className="w-80 text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hello, I'm
+                        <span className={`${hardTextGradient} block text-5xl`}> Adrian Cruz</span></h1>
+                    <h1 className={`text-gray-300 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
                 </motion.div>
 
 
@@ -86,11 +86,11 @@ const Hero = ({ hardTextGradient }) => {
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-2 my-3 flex-wrap"
+                        className="flex flex-row gap-3 my-3 flex-wrap"
                     >
                         {HeroData.map((hero, index) => (
                             <div key={index} className="flex flex-row text-[12px] items-center">
-                                <i className={`${hero.logo} text-base mr-2`}></i>
+                                <i className={`${hero.logo} text-base mr-1`}></i>
                                 <span className="text-gray-300">{hero.name}</span>
                             </div>
                         ))}
@@ -104,7 +104,7 @@ const Hero = ({ hardTextGradient }) => {
 
                     {/* Paragraph */}
                     <h1 className="text-zinc-300 text-[14px] w-60">
-                        I turn ideas into fast, interactive web experiences using React, Tailwind, and modern frontend architecture.
+                        Building fast, responsive web applications with React and modern frontend technologies.
                     </h1>
                 </motion.div>
 
@@ -117,7 +117,7 @@ const Hero = ({ hardTextGradient }) => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-2 -left-10 bg-gray-800 backdrop-blur-lg w-55 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-1 -left-12 bg-gray-800 backdrop-blur-lg w-55 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
