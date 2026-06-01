@@ -71,7 +71,7 @@ const Hero = ({ hardTextGradient }) => {
                     </div>
 
                     {/* My Avatar */}
-                    <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-500 to-purple-500 p-1 rounded-full">
+                    <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-500 to-purple-500 p-[1px] rounded-full">
                         <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 h-45 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
                     </div>
 
