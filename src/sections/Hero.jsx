@@ -113,12 +113,12 @@ const Hero = ({ hardTextGradient }) => {
  
 
                 {/* BUTTONS */}
-                <div className="mt-5 mb-10 flex flex-col justify-center items-center flex-wrap w-full gap-4 text-sm mx-auto">
-                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5 w-full py-3 px-3 rounded-xl cursor-pointer">
+                <div className="mt-5 mb-10 flex flex-row justify-center items-center flex-wrap w-full gap-5 text-sm mx-auto">
+                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         View Projects
                     </Link>
-                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-100  shadow-md backdrop-blur-md text-gray-100 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3 w-full rounded-xl cursor-pointer">
+                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-100  shadow-md backdrop-blur-md text-gray-100 text-center font-semibold lg:py-3 lg:px-5 py-3 px-5  rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         Resume PDF
                     </a>
