@@ -78,6 +78,7 @@ const Hero = ({ hardTextGradient }) => {
                     <h1 className="w-80 text-center text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hello, I'm
                         <span className={`${hardTextGradient} block text-[38px]`}> Adrian Cruz</span></h1>
                     <h1 className={`text-gray-400 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
+                    <p className="text-gray-400 text-[12px] mt-2 text-center">Specialized in React & Modern UI Development</p>
                 </motion.div>
 
 
@@ -87,7 +88,7 @@ const Hero = ({ hardTextGradient }) => {
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-3 my-5 borde flex-wrap"
+                        className="flex flex-row gap-3 mt-3 mb-5 borde flex-wrap"
                     >
                         {HeroData.map((hero, index) => (
                             <div key={index} className="flex flex-row text-[12px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-3 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
@@ -116,7 +117,7 @@ const Hero = ({ hardTextGradient }) => {
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         View Projects
                     </Link>
-                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-100  shadow-md backdrop-blur-md text-gray-100 text-center font-semibold lg:py-3 lg:px-5 py-3 px-5  rounded-xl cursor-pointer">
+                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-400  shadow-md backdrop-blur-md text-gray-300 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3.5  rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         Resume PDF
                     </a>
