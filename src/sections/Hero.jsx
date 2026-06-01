@@ -54,7 +54,7 @@ const Hero = ({ hardTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* Content */}
-            <div className="relative pt-16 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-14 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
@@ -77,7 +77,7 @@ const Hero = ({ hardTextGradient }) => {
                     {/* Name introduction */}
                     <h1 className="w-80 text-center text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hello, I'm
                         <span className={`${hardTextGradient} block text-[38px]`}> Adrian Cruz</span></h1>
-                    <h1 className={`text-gray-300 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
+                    <h1 className={`text-gray-400 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
                 </motion.div>
 
 
@@ -104,7 +104,7 @@ const Hero = ({ hardTextGradient }) => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="text-zinc-300 text-center text-[14px] w-90">
+                    <h1 className="text-zinc-300 text-center text-[14px] w-90 leading-relaxed">
                         Building fast, responsive web applications with React and modern frontend technologies.
                     </h1>
                 </motion.div>
@@ -114,7 +114,7 @@ const Hero = ({ hardTextGradient }) => {
 
                 {/* BUTTONS */}
                 <div className="mt-5 mb-10 flex flex-row justify-center items-center flex-wrap w-full gap-5 text-sm mx-auto">
-                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-600 to-purple-600 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl cursor-pointer">
+                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         View Projects
                     </Link>
