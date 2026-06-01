@@ -6,7 +6,7 @@ import { MenuData } from "../data/MenuData";
 import { ContactData } from "../data/ContactData";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import AdrianDevLogo from "../assets/images/AdrianDevLogo.png";
+// import AdrianDevLogo from "../assets/images/AdrianDevLogo.png";
 
 const Navbar = () => {
 
@@ -22,7 +22,9 @@ const Navbar = () => {
 
                 <div className="flex flex-row items-center gap-2 ">
                     {/* <img src={AdrianDevLogo} alt="Adrian Dev Logo" className="w-8 h-5 " /> */}
-                    <h1 className="text-white text-xl font-semibold">AC<span className="text-3xl text-purple-500">.</span></h1>
+                    <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
+                        <h1 className="text-white text-xl font-semibold">AC<span className="text-3xl text-purple-500">.</span></h1>
+                    </Link>
                 </div>
 
                 {/* Hamburger menu */}
