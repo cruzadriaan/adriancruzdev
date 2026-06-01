@@ -54,7 +54,7 @@ const Hero = ({ hardTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* Content */}
-            <div className="relative pt-14 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-14 pb-14 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
@@ -104,16 +104,14 @@ const Hero = ({ hardTextGradient }) => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="text-zinc-300 text-center text-[14px] w-90 leading-relaxed">
+                    <h1 className="text-zinc-300 text-center text-[14px] max-w-70 leading-relaxed">
                         Building fast, responsive web applications with React and modern frontend technologies.
                     </h1>
                 </motion.div>
 
 
- 
-
                 {/* BUTTONS */}
-                <div className="mt-5 mb-10 flex flex-row justify-center items-center flex-wrap w-full gap-5 text-sm mx-auto">
+                <div className="mt-5 mb-5 flex flex-row justify-center items-center flex-wrap w-full gap-5 text-sm mx-auto">
                     <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl cursor-pointer">
                         <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                         View Projects
@@ -122,28 +120,31 @@ const Hero = ({ hardTextGradient }) => {
                         <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                         Resume PDF
                     </a>
-                    <div className="flex flex-row items-center gap-8 mt-1">
 
-
-                        {/* Social Icons */}
-                        <motion.div
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 2 }}
-                            className=" flex flex-row gap-4">
-                            <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                            </a>
-                            <a href="https://github.com/cruzadriaan" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faSquareGithub} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                            </a>
-                            <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faEnvelope} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                            </a>
-                        </motion.div>
-                    </div>
                 </div>
+
+                <div>
+                {/* Social Icons */}
+                <motion.div
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 2 }}
+                    className=" flex flex-row gap-4">
+                    <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                    </a>
+                    <a href="https://github.com/cruzadriaan" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faSquareGithub} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                    </a>
+                    <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faEnvelope} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                    </a>
+                </motion.div>
+                </div>
+
             </div>
+
+
 
             {/* Scroll Indicator */}
             {showArrowDown && (
