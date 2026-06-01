@@ -29,7 +29,7 @@ const Hero = ({ hardTextGradient }) => {
         const observer = new IntersectionObserver(([entry]) => {
             setShowArrowTop(!entry.isIntersecting);
             setShowArrowDown(entry.isIntersecting);
-        }, { threshold: 0.5 });
+        }, { threshold: 1 });
 
         if (heroElement) {
             observer.observe(heroElement);

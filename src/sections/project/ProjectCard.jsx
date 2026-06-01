@@ -63,9 +63,10 @@ const ProjectCard = ({ containerClass, mediumTextGradient }) => {
                     </div>
 
                     {/* WEBSITE HYPERLINK */}
-                    <div className={`${openCardDetailsIndex === index ? 'mt-7' : 'mt-5'} flex flex-col`}>
+                    <div className={`${openCardDetailsIndex === index ? 'mt-5' : 'mt-3'} flex flex-col`}>
+                        <div className='border-t border-gray-800 mb-3 ' />
                         <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className={`${mediumTextGradient} font-semibold text-[12px] hover:text-blue-400`}>
-                            Visit Website<FontAwesomeIcon icon={faExternalLinkAlt} className={`text-blue-400 ml-1 text-[11px] font-extralight`} />
+                            <FontAwesomeIcon icon={faExternalLinkAlt} className={`text-blue-400 mr-1 text-[12px]`} />Visit Website
                         </a>
                     </div>
                 </motion.div>
