@@ -18,7 +18,7 @@ const Navbar = () => {
             {/* <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-30" /> */}
 
             {/* Navbar */}
-            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-full flex flex-row items-center justify-between bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 px-3 py-1.5 gap-2 z-40">
+            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-full flex flex-row items-center justify-between bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 px-3.5 py-1.5 gap-2 z-40">
 
                 <div className="flex flex-row items-center gap-2 ">
                     {/* <img src={AdrianDevLogo} alt="Adrian Dev Logo" className="w-8 h-5 " /> */}
@@ -30,7 +30,7 @@ const Navbar = () => {
                 {/* Hamburger menu */}
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
-                        <FontAwesomeIcon icon={faBars} className="text-gray-200 text-sm border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-1.5 cursor-pointer" />
+                        <FontAwesomeIcon icon={faBars} className="text-gray-200 text-[15px] border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-1.5 cursor-pointer" />
                     </button>
 
                     {/* <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
