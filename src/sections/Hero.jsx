@@ -55,11 +55,11 @@ const Hero = ({ hardTextGradient }) => {
 
             {/* My Avatar */}
             <div className="absolute top-45 right-2 z-10 ">
-                <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-55 h-55 bg-cover border-2 border-purple-500 rounded-full shadow-[0px_10px_82px_1px_rgba(147,19,187,0.75)]" />
+                <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 h-45 bg-cover border-2 border-purple-500 rounded-full shadow-[0px_10px_82px_1px_rgba(147,19,187,0.75)]" />
             </div>
 
             {/* Content */}
-            <div className="relative pt-18 flex flex-col sm:w-120 w-full gap-3 lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative pt-18 flex flex-col sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
@@ -75,7 +75,7 @@ const Hero = ({ hardTextGradient }) => {
 
                     {/* Name introduction */}
                     <h1 className="w-80 text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hello, I'm
-                        <span className={`${hardTextGradient} block text-5xl`}> Adrian Cruz</span></h1>
+                        <span className={`${hardTextGradient} block text-[38px]`}> Adrian Cruz</span></h1>
                     <h1 className={`text-gray-300 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
                 </motion.div>
 
@@ -86,7 +86,7 @@ const Hero = ({ hardTextGradient }) => {
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-3 my-3 flex-wrap"
+                        className="flex flex-row gap-3 my-5 w-40 flex-wrap"
                     >
                         {HeroData.map((hero, index) => (
                             <div key={index} className="flex flex-row text-[12px] items-center">
@@ -117,7 +117,7 @@ const Hero = ({ hardTextGradient }) => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute -bottom-1 -left-12 bg-gray-800 backdrop-blur-lg w-55 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                        className="absolute -bottom-1 -left-2 bg-gray-800 backdrop-blur-lg w-55 h-28 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                     >
 
