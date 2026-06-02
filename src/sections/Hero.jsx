@@ -165,7 +165,7 @@ const Hero = ({ hardTextGradient }) => {
                         animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
                     >
-                        <Link to="aboutme" smooth={true} duration={800} offset={-100}
+                        <Link to="aboutme" smooth={true} duration={800} offset={-40}
                             className="flex flex-row items-center justify-center gap-2 cursor-pointer">
                             <FontAwesomeIcon icon={faAnglesDown} className="text-gray-400 text-xl" />
                             <span className="text-gray-300 text-[10px]">Explore for more</span>
