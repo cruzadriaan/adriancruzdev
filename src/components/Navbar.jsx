@@ -14,22 +14,19 @@ const Navbar = () => {
 
     return (
         <>
-            {/* Top backdrop of navbar */}
-            {/* <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-30" /> */}
-
             {/* Navbar */}
-            <div className="fixed left-1/2 -translate-x-1/2 w-full flex flex-row items-center justify-between bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 lg:px-10 md:px-8 sm:px-6 px-3.5 sm:py-2 py-1.5 gap-2 z-40">
+            <div className="fixed left-1/2 -translate-x-1/2 w-full flex flex-row items-center justify-between bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 px-3.5 sm:px-6 md:px-8 lg:px-10 py-1.5 sm:py-2 gap-2 z-40">
 
                 <div className="flex flex-row items-center gap-2 ">
                     <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
-                        <h1 className="text-white sm:text-2xl text-xl font-semibold">AC<span className="text-3xl text-purple-500">.</span></h1>
+                        <h1 className="text-white text-xl sm:text-2xl font-semibold">AC<span className="text-3xl text-purple-500">.</span></h1>
                     </Link>
                 </div>
 
                 {/* Hamburger menu */}
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
-                        <FontAwesomeIcon icon={faBars} className="text-gray-200 sm:text-[17px] text-[15px] border bg-gray-800 hover:scale-105 shadow-md border-gray-700 rounded-md p-1.5 cursor-pointer" />
+                        <FontAwesomeIcon icon={faBars} className="text-gray-200 text-[15px] sm:text-[17px] border border-gray-700 bg-gray-800 hover:scale-105 shadow-md rounded-md p-1.5 cursor-pointer" />
                     </button>
                 </div>
 
@@ -59,7 +56,7 @@ const Navbar = () => {
                         {MenuData.map((item, index) => (
                             <li key={index} className="flex flex-col gap-4 mt-3">
                                 <Link to={item.link} smooth={true} duration={800} offset={item.offset} spy={true} activeClass="active-nav"
-                                    className="text-gray-300 active:bg-gray-800/80 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3" onClick={() => setIsSidebarOpen(false)}>
+                                    className="text-gray-300 text-[14px] font-semibold  cursor-pointer active:bg-gray-800/80 hover:bg-gray-800 p-2 rounded-md mr-3" onClick={() => setIsSidebarOpen(false)}>
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
                                 </Link>
@@ -73,7 +70,7 @@ const Navbar = () => {
                     <h1 className="text-gray-500 text-[10px]">SOCIAL</h1>
                     <ul className="flex flex-col gap-4 mt-3">
                         {ContactData.social.map((item, index) => (
-                            <li key={index} className="text-gray-300 active:bg-gray-800/80 hover:text-blue-400 text-[14px] font-semibold cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 text-[14px] hover:text-blue-400 font-semibold cursor-pointer active:bg-gray-800/80 hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.type}</span>
@@ -88,7 +85,7 @@ const Navbar = () => {
                     <h1 className="text-gray-500 text-[10px]">OTHERS</h1>
                     <ul className="flex flex-col gap-4 mt-3">
                         {ContactData.others.map((item, index) => (
-                            <li key={index} className="text-gray-300 active:bg-gray-800/80 hover:text-blue-400 text-[14px] font-semibold  cursor-pointer hover:bg-gray-800 p-2 rounded-md mr-3">
+                            <li key={index} className="text-gray-300 hover:text-blue-400 text-[14px] font-semibold cursor-pointer active:bg-gray-800/80 hover:bg-gray-800 p-2 rounded-md mr-3">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                                     <span>{item.name}</span>
