@@ -42,7 +42,7 @@ const Hero = ({ hardTextGradient }) => {
 
         <div
             ref={heroRef}
-            className="relative mb-16 min-h-screen overflow-hidden">
+            className="relative mb-10 min-h-screen overflow-hidden">
 
             <FloatingButtons showArrowTop={showArrowTop} />
 
