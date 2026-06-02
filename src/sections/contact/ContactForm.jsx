@@ -35,9 +35,9 @@ const ContactForm = ({ containerClass }) => {
                                 <div key={index} className="text-gray-300 hover:scale-105 w-75 px-1 py-2 rounded-lg cursor-pointer">
                                     <a href={personal.link} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-1">
                                         <FontAwesomeIcon icon={personal.icon} className="mr-2 text-lg bg-linear-to-r from-blue-800 to-purple-800 p-3 rounded-lg" />
-                                        <div className='text-sm'>
+                                        <div className='text-sm '>
                                             <h1 className='font-bold'>{personal.type}</h1>
-                                            <a>{personal.title}</a>
+                                            <a className="text-[13px] font-extralight">{personal.title}</a>
                                         </div>
                                     </a>
                                 </div>
@@ -54,7 +54,7 @@ const ContactForm = ({ containerClass }) => {
                                             <FontAwesomeIcon icon={social.icon} className="mr-2 text-lg bg-linear-to-r from-blue-800 to-purple-800 p-3 rounded-lg" />
                                             <div className="text-sm">
                                                 <h1 className='font-bold'>{social.type}</h1>
-                                                <a>
+                                                <a className="text-[13px] font-extralight">
                                                     {social.title}
                                                 </a>
                                             </div>
