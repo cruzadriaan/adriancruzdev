@@ -15,7 +15,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 transition={{ duration: 0.7 }}
                 >
 
-                <SectionDivider section="About me" />
+                <SectionDivider section="ABOUT ME" />
 
                 {/* Whole Code Snippet */}
                 <div className={`relative mt-5 w-90 mx-auto flex items-center justify-center mb-10`}>
