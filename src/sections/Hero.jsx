@@ -42,7 +42,7 @@ const Hero = ({ hardTextGradient }) => {
 
         <div
             ref={heroRef}
-            className="relative mb-16 h-[100dvh] overflow-hidden">
+            className="relative mb-16 h-dvh overflow-hidden">
 
             <FloatingButtons showArrowTop={showArrowTop} />
 
@@ -159,7 +159,7 @@ const Hero = ({ hardTextGradient }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 2 }}
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 opacity-60 z-20" >
+                    className="absolute bottom-2 left-1/2 -translate-x-1/2 opacity-60 z-20" >
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
