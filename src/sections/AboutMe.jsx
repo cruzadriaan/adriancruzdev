@@ -1,15 +1,17 @@
-// import SectionDivider from "../components/SectionDivider";
+import SectionDivider from "../components/SectionDivider";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 // import { cardVariants } from "../utils/cardVariants";
 import { AboutMeStats } from "../data/AboutMeData";
-import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
         <>
+            <SectionDivider section="About me" />
 
-            <div className={`relative w-90 mx-auto flex items-center justify-center mb-10`}>
+            {/* Whole Code Snippet */}
+            <div className={`relative mt-5 w-90 mx-auto flex items-center justify-center mb-10`}>
 
                 {/* Code Snippet */}
                 <motion.div
@@ -20,7 +22,8 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                     className=" bg-gray-800 backdrop-blur-lg w-75 h-33 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
                                     hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                 >
-
+                    
+                    {/* Snippet navbar */}
                     <div>
                         <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2.5 cursor-pointer">
                             <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
@@ -34,14 +37,13 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
 
                     {/* Syntax */}
                     <div className="py-1.5 px-4 flex flex-col text-[11px] text-white font-mono">
-                        {/* <p className="text-gray-500">//About Me</p> */}
+
                         <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
                             = <span className="text-yellow-300">{`{`}</span></p>
 
-
                         <div className="ml-5 flex flex-col text-gray-300 text-[11px]">
 
-                            {/* Typewriter Effect */}
+                            {/* with typewriter Effect */}
                             <div className="flex w-50">
                                 <p className="animate-typewriter overflow-hidden whitespace-nowrap">
                                     <span>focus: </span>
@@ -50,12 +52,11 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                                 <span className="animate-blink border-l"></span>
                             </div>
 
-
-                            <p>experience: <span className="text-green-400  ">"2+ Years"</span>,</p>
-                            {/* No typewriter Effect */}
+                            <p>passion: <span className="text-green-400  ">"UI/UX Development"</span>,</p>
+                            {/* without typewriter Effect */}
                             <p className='text-gray-200'>
-                                <span>specialization: </span>
-                                <span className="text-green-400">"React Ecosystem"</span>
+                                <span>goal: </span>
+                                <span className="text-green-400">"Building Great Products"</span>
                             </p>
                             <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>
                         </div>
@@ -74,26 +75,32 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 className={` ${containerClass} mb-10`}>
 
 
-                {/* About Me Image and Introduction */}
-                <div className="flex  flex-row  gap-4">
-                    <div className="mt-5">
-                        <h1 className="text-white text-[17px] flex flex-wrap font-normal">
-                            Front End Developer building
-                            responsive, high-performance
-                            web experiences.
-                        </h1>
+                {/* About Me Introduction */}
+                <div className="p-1">
+                    <h1 className="text-white text-[17px] flex flex-wrap font-semibold">
+                        How I build
+                    </h1>
+
+                    <div className="flex flex-col gap-2 mt-5">
+                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                            <p>Clean and maintanable code</p>
+                        </div>
+                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                            <p>Mobile-first development</p>
+                        </div>
+                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                            <p>Performance focused interfaces</p>
+                        </div>
+                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                            <p>Accessible user experiences</p>
+                        </div>
                     </div>
                 </div>
 
-                {/* About Me Description */}
-                <div className="mt-5 text-gray-300 text-[13px] leading-relaxed">
-                    <p>I specialize in React, Tailwind CSS,
-                        and modern frontend workflows.
-
-                        I enjoy transforming complex ideas
-                        into intuitive interfaces that feel
-                        fast, accessible, and engaging.</p>
-                </div>
             </motion.div>
 
             {/* Hero Stats */}

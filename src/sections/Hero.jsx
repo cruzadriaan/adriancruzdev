@@ -65,7 +65,7 @@ const Hero = ({ hardTextGradient }) => {
                     className="flex flex-col items-center justify-center">
 
                     {/* Availability Status */}
-                    <div className=" text-green-400 text-xs font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
+                    <div className=" text-green-400 text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Open to Frontend Opportunities</span>
                     </div>
@@ -112,7 +112,7 @@ const Hero = ({ hardTextGradient }) => {
 
                     {/* Paragraph */}
                     <h1 className="text-zinc-300 text-center text-[14px] max-w-70 leading-relaxed">
-                        Building fast, responsive web applications with React and modern frontend technologies.
+                        TUrning ideas into responsive and accessible web applications
                     </h1>
                 </motion.div>
 

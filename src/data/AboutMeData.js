@@ -1,4 +1,4 @@
-import {faBriefcase, faLaptopCode , faCoffee, faClock} from "@fortawesome/free-solid-svg-icons";
+import {faBriefcase, faLaptopCode , faBook, faClock} from "@fortawesome/free-solid-svg-icons";
 
 
 export const AboutMeStats = [
@@ -15,7 +15,7 @@ export const AboutMeStats = [
         {
             count: "3+",
             title: "Projects completed",
-            icon: faCoffee,
+            icon: faBook,
         },
         {
             count: "1300+",
