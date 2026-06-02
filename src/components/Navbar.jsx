@@ -42,7 +42,7 @@ const Navbar = () => {
 
 
             {/* Sidebar */}
-            <div className={`fixed right-0 top-0 h-full w-60 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-700 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 shadow-lg py-4 z-60`}>
+            <div className={`fixed right-0 top-0 max-h-full w-60 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-700 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 shadow-lg py-4 z-60`}>
                 <div className="flex flex-row ml-3 gap-4">
                     <img src={AdrianAvatarEnhanced} alt="Adrian Cruz" className="w-13 h-13 border border-blue-900 mb-5 rounded-full" />
                     <div className="flex flex-col mt-1">
