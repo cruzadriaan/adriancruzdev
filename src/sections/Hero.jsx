@@ -55,7 +55,7 @@ const Hero = ({ hardTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* Content */}
-            <div className="relative pt-13 pb-14 flex flex-col items-center sm:w-120 w-full lg:mx-11 md:mx-8 sm:mx-8 px-5 z-10">
+            <div className="relative sm:pt-14 pt-13 pb-14 flex flex-col justify-center items-center w-full px-5 z-10">
 
                 <motion.div
                     variants={heroVariants}
@@ -65,26 +65,24 @@ const Hero = ({ hardTextGradient }) => {
                     className="flex flex-col items-center justify-center">
 
                     {/* Availability Status */}
-                    <div className="flex flex-row items-center justify-center text-green-400 text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
+                    <div className="flex flex-row items-center justify-center text-green-400 sm:text-[12px] text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Open to Frontend Opportunities</span>
                     </div>
 
                     {/* My Avatar */}
                     <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-300 to-purple-400 p-px rounded-full">
-                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 h-45 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
+                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className="sm:w-50 w-45 sm:h-50 h-45 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
                     </div>
 
                     {/* Name introduction */}
                     <div className="flex flex-col justify-start">
-                        <h1 className="flex flex-col items-center w-80 text-center text-gray-300 lg:text-lg tracking-tight text-2xl font-bold">Hello, I'm
-                            <h1 className={`${hardTextGradient} block text-[38px]`}> Adrian Cruz</h1>
+                        <h1 className="flex flex-col items-center w-80 text-center text-gray-300 tracking-tight  sm:text-3xl text-2xl font-bold">Hello, I'm
+                            <h1 className={`${hardTextGradient} block sm:text-[44px] text-[38px]`}> Adrian Cruz</h1>
                         </h1>
                     </div>
                     {/* Role */}
-                    <h1 className={`text-gray-400 text-lg mt-2 font-semibold`}>Frontend Developer</h1>
-                    {/* Tagline */}
-                    {/* <p className="text-gray-400 text-[12px] mt-2 text-center">Specialized in React & Modern UI Development</p> */}
+                    <h1 className={`text-gray-400 sm:text-xl text-lg mt-2 font-semibold`}>Frontend Developer</h1>
                 </motion.div>
 
 
@@ -94,10 +92,10 @@ const Hero = ({ hardTextGradient }) => {
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-4 mt-3 mb-3 borde flex-wrap"
+                        className="flex flex-row gap-4 mt-3 sm:mb-4 mb-3 borde flex-wrap"
                     >
                         {HeroData.map((hero, index) => (
-                            <div key={index} className="flex flex-row text-[11px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-2 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
+                            <div key={index} className="flex flex-row sm:text-[13px] text-[11px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-2 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
                                 <i className={`${hero.logo} text-base`}></i>
                                 <span className="text-gray-300">{hero.name}</span>
                             </div>
@@ -111,8 +109,8 @@ const Hero = ({ hardTextGradient }) => {
                     transition={{ duration: 1 }}>
 
                     {/* Paragraph */}
-                    <h1 className="text-zinc-300 text-center text-[14px] max-w-70 leading-relaxed">
-                        TUrning ideas into responsive and accessible web applications
+                    <h1 className="text-zinc-300 text-center sm:text-[15px] text-[14px] sm:max-w-80 max-w-70 leading-relaxed">
+                        Turning ideas into responsive and accessible web applications
                     </h1>
                 </motion.div>
 
