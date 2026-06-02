@@ -1,17 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import SectionDivider from '../components/SectionDivider';
-// import { cardVariants } from "../utils/cardVariants";
+import { cardVariants } from "../utils/cardVariants";
 import { AboutMeStats } from "../data/AboutMeData";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
         <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ duration: 0.8 }}
             className="flex flex-col"
             className="pt-10  px-5">
 
