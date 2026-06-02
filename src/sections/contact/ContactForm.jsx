@@ -24,11 +24,10 @@ const ContactForm = ({ containerClass }) => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
-                    className="mb-12 sm:mb-2 sm:mx-12 md:mx-2 lg:mx-5"
-                >
+                    className="mb-2 sm:mx-12 md:mx-2 lg:mx-5">
 
                     {/* Personal Details */}
-                    <div className={`flex flex-col gap-2 mb-5 sm:mb-2 ${containerClass} md:py-8 md:h-100 sm:mx-12 md:mx-2 lg:mx-5`}>
+                    <div className={`flex flex-col gap-2 mb-0 sm:mb-2 ${containerClass} md:py-8 md:h-100 sm:mx-12 md:mx-2 lg:mx-5`}>
                         <h1 className="text-[11px] text-gray-500 ml-1">PERSONAL</h1>
                         {
                             ContactData.personal.map((personal, index) => (
