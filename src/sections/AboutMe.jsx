@@ -8,63 +8,64 @@ import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
         <>
-            <SectionDivider section="About me" />
+            <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5 }}>
 
-            {/* Whole Code Snippet */}
-            <div className={`relative mt-5 w-90 mx-auto flex items-center justify-center mb-10`}>
+                <SectionDivider section="About me" />
 
-                {/* Code Snippet */}
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 1.5 }}
-                    className=" bg-gray-800 backdrop-blur-lg w-75 h-33 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
-                                    hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
-                >
-                    
-                    {/* Snippet navbar */}
-                    <div>
-                        <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2.5 cursor-pointer">
-                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
-                            <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-                        </div>
+                {/* Whole Code Snippet */}
+                <div className={`relative mt-5 w-90 mx-auto flex items-center justify-center mb-10`}>
+
+                    {/* Code Snippet */}
+                    <div
+                        className=" bg-gray-800 backdrop-blur-lg w-75 h-33 rounded-2xl flex flex-col mx-auto border border-gray-700 cursor-pointer
+                                    hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
+
+                        {/* Snippet navbar */}
                         <div>
-                            <FontAwesomeIcon icon={faCopy} className="absolute top-2 right-3 text-xs text-gray-400  cursor-pointer hover:text-gray-300" />
+                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2.5 cursor-pointer">
+                                <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                                <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                                <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon icon={faCopy} className="absolute top-2 right-3 text-xs text-gray-400  cursor-pointer hover:text-gray-300" />
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Syntax */}
-                    <div className="py-1.5 px-4 flex flex-col text-[11px] text-white font-mono">
+                        {/* Syntax */}
+                        <div className="py-1.5 px-4 flex flex-col text-[11px] text-white font-mono">
 
-                        <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
-                            = <span className="text-yellow-300">{`{`}</span></p>
+                            <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
+                                = <span className="text-yellow-300">{`{`}</span></p>
 
-                        <div className="ml-5 flex flex-col text-gray-300 text-[11px]">
+                            <div className="ml-5 flex flex-col text-gray-300 text-[11px]">
 
-                            {/* with typewriter Effect */}
-                            <div className="flex w-50">
-                                <p className="animate-typewriter overflow-hidden whitespace-nowrap">
-                                    <span>focus: </span>
-                                    <span className=" text-green-400">"Frontend Engineering"</span>,
+                                {/* with typewriter Effect */}
+                                <div className="flex w-50">
+                                    <p className="animate-typewriter overflow-hidden whitespace-nowrap">
+                                        <span>focus: </span>
+                                        <span className=" text-green-400">"Frontend Engineering"</span>,
+                                    </p>
+                                    <span className="animate-blink border-l"></span>
+                                </div>
+
+                                <p>passion: <span className="text-green-400  ">"UI/UX Development"</span>,</p>
+                                {/* without typewriter Effect */}
+                                <p className='text-gray-200'>
+                                    <span>goal: </span>
+                                    <span className="text-green-400">"Building Great Products"</span>
                                 </p>
-                                <span className="animate-blink border-l"></span>
+                                <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>
                             </div>
 
-                            <p>passion: <span className="text-green-400  ">"UI/UX Development"</span>,</p>
-                            {/* without typewriter Effect */}
-                            <p className='text-gray-200'>
-                                <span>goal: </span>
-                                <span className="text-green-400">"Building Great Products"</span>
-                            </p>
-                            <p><span className="text-yellow-300 pt-1 block">{`}`}</span></p>
                         </div>
-
                     </div>
-
-                </motion.div>
-            </div>
+                </div>
+            </motion.div>
 
             {/* About Me Content */}
             <motion.div
@@ -76,7 +77,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
 
 
                 {/* About Me Introduction */}
-                <div className="p-1">
+                <div className="p-2">
                     <h1 className="text-white text-[17px] flex flex-wrap font-semibold">
                         How I build
                     </h1>
