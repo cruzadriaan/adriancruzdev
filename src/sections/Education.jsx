@@ -14,7 +14,7 @@ const Education = ({ containerClass }) => {
             className="mb-20"
         >
             <SectionDivider section="EDUCATION" />
-            <div className={`relative flex flex-col ${containerClass}  pt-7 pb-4 px-4 my-1 w-90 sm:w-130 md:w-110 sm:mx-auto md:mx-5 lg:mx-5`} >
+            <div className={`relative flex flex-col ${containerClass}  pt-7 md:pt-6 pb-4 md:pr-8 my-1 sm:mx-17 md:mx-7 md:w-fit lg:mx-5`} >
                 {EducationData.map((education, index) => (
                     <div key={index} className="relative">
 
@@ -28,7 +28,7 @@ const Education = ({ containerClass }) => {
                         {/* Education Details */}
                         <div className="flex flex-col gap-1 pt-0.5 mb-5 ml-10">
                             <h1 className="text-white text-sm font-semibold">{education.school}</h1>
-                            <p className="text-gray-400 text-[13px]">{education.course}</p>
+                            <p className="text-gray-400 text-[12px] sm:text-[13px]">{education.course}</p>
                             <p className="text-gray-400 text-[11px]">{education.graduationYear}</p>
                         </div>
                     </div>
