@@ -14,7 +14,7 @@ const Education = ({ containerClass }) => {
             className="mb-20"
         >
             <SectionDivider section="EDUCATION" />
-            <div className={`relative flex flex-col ${containerClass}  pt-7 pb-4 px-4 my-1 w-110 sm:w-130 md:w-110 sm:mx-auto md:mx-5 lg:mx-5`} >
+            <div className={`relative flex flex-col ${containerClass}  pt-7 pb-4 px-4 my-1 w-90 sm:w-130 md:w-110 sm:mx-auto md:mx-5 lg:mx-5`} >
                 {EducationData.map((education, index) => (
                     <div key={index} className="relative">
 
