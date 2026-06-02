@@ -43,13 +43,13 @@ const ProjectCard = ({ containerClass, mediumTextGradient }) => {
 
                     {/* SHORT DESCRIPTION */}
                     <div>
-                        <p className="text-gray-400 text-xs">{project.description}</p>
+                        <p className="text-gray-400 text-xs font-extralight">{project.description}</p>
                     </div>
 
                     {/* FULL DESCRIPTION */}
                     {openCardDetailsIndex === index && (
                         <div>
-                            <p className="text-gray-400 text-xs">{project.fullDescription}</p>
+                            <p className="text-gray-400 text-xs font-extralight">{project.fullDescription}</p>
                         </div>
                     )}
 
