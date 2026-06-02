@@ -11,7 +11,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 1.5 }}
                 >
 
