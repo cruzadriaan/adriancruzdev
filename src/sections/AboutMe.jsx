@@ -76,26 +76,26 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 className={` ${containerClass} mb-10`}>
 
 
-                {/* About Me Introduction */}
+                {/* How I build section */}
                 <div className="p-2">
                     <h1 className="text-white text-[17px] flex flex-wrap font-semibold">
                         How I build
                     </h1>
 
                     <div className="flex flex-col gap-2 mt-5">
-                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
                             <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
                             <p>Clean and maintanable code</p>
                         </div>
-                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
                             <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
                             <p>Mobile-first development</p>
                         </div>
-                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
                             <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
                             <p>Performance focused interfaces</p>
                         </div>
-                        <div className="flex flex-row items-center text-gray-300 text-[13px] leading-relaxed">
+                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
                             <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
                             <p>Accessible user experiences</p>
                         </div>
