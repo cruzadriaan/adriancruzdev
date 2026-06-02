@@ -1,119 +1,110 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import SectionDivider from '../components/SectionDivider';
-import { cardVariants } from "../utils/cardVariants";
+// import { cardVariants } from "../utils/cardVariants";
 import { AboutMeStats } from "../data/AboutMeData";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
-        <motion.div
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.1 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col"
-            className="pt-10  px-5">
-
-
-
-            <SectionDivider section="ABOUT ME" />
-
+        <div className="flex flex-col pt-10 px-5 md:px-0">
 
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.7 }}
-                className="flex flex-col items-center justify-center md:flex-row"
-            >
+                transition={{ duration: 0.7 }}>
 
+                <SectionDivider section="ABOUT ME" />
 
-                {/* Whole Code Snippet */}
-                <div className="flex flex-col bg-gray-800 backdrop-blur-lg w-75 sm:w-90 h-33 sm:h-37 mb-10 rounded-2xl border border-gray-700 cursor-pointer">
+                <div className="flex flex-col md:flex-row items-center justify-center">
 
-                    {/* Snippet navbar */}
-                    <div>
-                        <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2.5 cursor-pointer">
-                            <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-orange-500"></span>
-                            <span className="w-1.5 sm:w-2 h-1.5 sm:h-2  rounded-full bg-yellow-400"></span>
-                            <span className="w-1.5 sm:w-2 h-1.5 sm:h-2  rounded-full bg-green-400"></span>
-                        </div>
+                    {/* Code Snippet */}
+                    <div className="flex flex-col bg-gray-800 backdrop-blur-lg w-75 sm:w-90 h-33 sm:h-37 mb-10 rounded-2xl border border-gray-700 cursor-pointer">
+
+                        {/* Snippet navbar */}
                         <div>
-                            <FontAwesomeIcon icon={faCopy} className="absolute top-2 right-3 text-xs text-gray-400  cursor-pointer hover:text-gray-300" />
+                            <div className="flex flex-row items-center gap-2.5  bg-gray-800 border-b border-gray-900/70 rounded-t-2xl p-2.5 cursor-pointer">
+                                <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-orange-500"></span>
+                                <span className="w-1.5 sm:w-2 h-1.5 sm:h-2  rounded-full bg-yellow-400"></span>
+                                <span className="w-1.5 sm:w-2 h-1.5 sm:h-2  rounded-full bg-green-400"></span>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon icon={faCopy} className="absolute top-2 right-3 text-xs text-gray-400  cursor-pointer hover:text-gray-300" />
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Syntax */}
-                    <div className="py-1.5 sm:py-2 px-4 sm:px-5 flex flex-col text-[11px] sm:text-[12px] text-white font-mono">
+                        {/* Syntax */}
+                        <div className="py-1.5 sm:py-2 px-4 sm:px-5 flex flex-col text-[11px] sm:text-[12px] text-white font-mono">
 
-                        <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
-                            = <span className="text-yellow-300">{`{`}</span></p>
+                            <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
+                                = <span className="text-yellow-300">{`{`}</span></p>
 
-                        <div className="ml-5 flex flex-col text-gray-300 text-[11px] sm:text-[12px]">
+                            <div className="ml-5 flex flex-col text-gray-300 text-[11px] sm:text-[12px]">
 
-                            {/* with typewriter Effect */}
-                            <div className="flex w-50 sm:w-55 md:w-56">
-                                <p className="animate-typewriter sm:animate-typewriter-sm md:animate-typewriter-md  overflow-hidden whitespace-nowrap">
-                                    <span>focus: </span>
-                                    <span className=" text-green-400">"Frontend Engineering"</span>,
+                                {/* with typewriter Effect */}
+                                <div className="flex w-50 sm:w-55 md:w-56">
+                                    <p className="animate-typewriter sm:animate-typewriter-sm md:animate-typewriter-md  overflow-hidden whitespace-nowrap">
+                                        <span>focus: </span>
+                                        <span className=" text-green-400">"Frontend Engineering"</span>,
+                                    </p>
+                                    <span className="animate-blink border-l" />
+                                </div>
+
+                                {/* without typewriter Effect */}
+                                <p>passion: <span className="text-green-400  ">"UI/UX Development"</span>,</p>
+                                <p className='text-gray-200'>
+                                    <span>goal: </span>
+                                    <span className="text-green-400">"Building Great Products"</span>
+                                    <span className="text-yellow-300 pt-1 block">{`}`}</span>
                                 </p>
-                                <span className="animate-blink border-l" />
                             </div>
 
-                            {/* without typewriter Effect */}
-                            <p>passion: <span className="text-green-400  ">"UI/UX Development"</span>,</p>
-                            <p className='text-gray-200'>
-                                <span>goal: </span>
-                                <span className="text-green-400">"Building Great Products"</span>
-                                <span className="text-yellow-300 pt-1 block">{`}`}</span>
-                            </p>
                         </div>
-
                     </div>
+
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{ duration: 0.7 }}
+                        className="flex flex-col items-center justify-center md:flex-row"
+                    >
+
+                        {/* How I build section */}
+                        <div className={` ${containerClass} mb-10  w-90`}>
+
+                            <h1 className="text-white text-[17px] flex flex-wrap font-semibold">
+                                How I build
+                            </h1>
+
+                            <div className="flex flex-col gap-2 mt-5">
+                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                    <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                                    <p>Clean and maintanable code</p>
+                                </div>
+                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                    <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                                    <p>Mobile-first development</p>
+                                </div>
+                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                    <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                                    <p>Performance focused interfaces</p>
+                                </div>
+                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                    <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
+                                    <p>Accessible user experiences</p>
+                                </div>
+                            </div>
+
+                        </div >
+                    </motion.div >
+
                 </div>
-
-                {/* How I build section */}
-                < motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    className={` ${containerClass} mb-10  w-90`}>
-
-
-                    <h1 className="text-white text-[17px] flex flex-wrap font-semibold">
-                        How I build
-                    </h1>
-
-                    <div className="flex flex-col gap-2 mt-5">
-                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
-                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
-                            <p>Clean and maintanable code</p>
-                        </div>
-                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
-                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
-                            <p>Mobile-first development</p>
-                        </div>
-                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
-                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
-                            <p>Performance focused interfaces</p>
-                        </div>
-                        <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
-                            <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] mr-2" />
-                            <p>Accessible user experiences</p>
-                        </div>
-                    </div>
-
-
-                </motion.div >
-
-            </motion.div >
-
+            </motion.div>
 
             {/* Hero Stats */}
-            < div className="mb-15 mx-auto justify-items-center w-90 grid grid-cols-2 md:grid-cols-4 gap-4" >
+            < div className="mb-15 md:mt-5 mx-auto justify-items-center w-90 md:w-190 grid grid-cols-2 md:grid-cols-4 gap-4" >
                 {
                     AboutMeStats.map((stat, index) => (
                         <motion.div
@@ -132,8 +123,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                     ))
                 }
             </div >
-
-        </motion.div >
+        </div >
     )
 }
 
