@@ -28,7 +28,7 @@ const Education = ({ containerClass }) => {
                         {/* Education Details */}
                         <div className="flex flex-col gap-1 pt-0.5 mb-5 ml-10">
                             <h1 className="text-white text-sm font-semibold">{education.school}</h1>
-                            <p className="text-gray-400 text-[12px] sm:text-[13px]">{education.course}</p>
+                            <p className="text-gray-300 text-[12px] sm:text-[13px]">{education.course}</p>
                             <p className="text-gray-400 text-[11px]">{education.graduationYear}</p>
                         </div>
                     </div>
