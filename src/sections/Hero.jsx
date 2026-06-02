@@ -65,7 +65,7 @@ const Hero = ({ hardTextGradient }) => {
                     className="flex flex-col items-center justify-center">
 
                     {/* Availability Status */}
-                    <div className=" text-green-400 text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
+                    <div className="flex flex-row items-center justify-center text-green-400 text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Open to Frontend Opportunities</span>
                     </div>
