@@ -12,7 +12,8 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 1.5 }}>
+                transition={{ duration: 1.5 }}
+                className="border-t border-gray-800/50 shadow-lg pt-5">
 
                 <SectionDivider section="About me" />
 
