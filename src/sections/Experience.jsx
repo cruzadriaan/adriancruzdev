@@ -19,36 +19,38 @@ const Experience = ({ containerClass, mediumTextGradient }) => {
             transition={{ duration: 1 }}
             className="mb-20">
             <SectionDivider section="EXPERIENCE" />
-            {ExperienceData.map((experience, index) => (
-                <div key={index} className={`relative flex flex-col mb-4 ${containerClass}`}>
-                    <div className="flex justify-between">
-                        <div className="flex flex-col mb-2">
-                            <h1 className="text-white font-bold">{experience.company}</h1>
-                            <h1 className={`${mediumTextGradient} font-semibold`}>{experience.position}</h1>
-                            <p className="text-gray-400 text-[12px] mt-1">{experience.duration}</p>
+            <div className="flex flex-col md:grid md:grid-cols-2 sm:mx-12 md:mx-2 lg:mx-5">
+                {ExperienceData.map((experience, index) => (
+                    <div key={index} className={`relative flex flex-col mb-4 ${containerClass}`}>
+                        <div className="flex justify-between">
+                            <div className="flex flex-col mb-2">
+                                <h1 className="text-white font-bold">{experience.company}</h1>
+                                <h1 className={`${mediumTextGradient} font-semibold`}>{experience.position}</h1>
+                                <p className="text-gray-400 text-[12px] mt-1">{experience.duration}</p>
+                            </div>
+                            <div>
+                                <button className="flex items-center justify-center w-7 h-7 border hover:bg-gray-800 border-gray-600 shadow-xs shadow-blue-700 cursor-pointer rounded-full"
+                                    onClick={() => setIsDetailsOpen(isDetailsOpen === index ? null : index)}>
+                                    <FontAwesomeIcon icon={faAngleDown} className={`${isDetailsOpen === index ? 'rotate-180' : ''} transition-transform duration-500 text-sm text-white/80`}></FontAwesomeIcon>
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <button className="flex items-center justify-center w-7 h-7 border hover:bg-gray-800 border-gray-600 shadow-xs shadow-blue-700 cursor-pointer rounded-full"
-                                onClick={() => setIsDetailsOpen(isDetailsOpen === index ? null : index)}>
-                                <FontAwesomeIcon icon={faAngleDown} className={`${isDetailsOpen === index ? 'rotate-180' : ''} transition-transform duration-500 text-sm text-white/80`}></FontAwesomeIcon>
-                            </button>
-                        </div>
+
+                        <div className="border-t border-gray-700" />
+
+                        {isDetailsOpen === index &&
+                            <div className="text-white text-sm pl-5 pt-3">
+                                <ul className="list-disc text-[13px] text-gray-300 flex flex-col gap-1">
+                                    {experience.achieve.map((exp, i) => (
+                                        <li key={i}>{exp}</li>
+                                    ))
+                                    }
+                                </ul>
+                            </div>
+                        }
                     </div>
-
-                    <div className="border-t border-gray-700" />
-
-                    {isDetailsOpen === index &&
-                        <div className="text-white text-sm pl-5 pt-3">
-                            <ul className="list-disc text-[13px] text-gray-300 flex flex-col gap-1">
-                                {experience.achieve.map((exp, i) => (
-                                    <li key={i}>{exp}</li>
-                                ))
-                                }
-                            </ul>
-                        </div>
-                    }
-                </div>
-            ))}
+                ))}
+            </div>
         </motion.div>
     )
 }

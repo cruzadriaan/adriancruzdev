@@ -14,18 +14,22 @@ const Certification = ({ containerClass, mediumTextGradient }) => {
             className="mb-20"
         >
             <SectionDivider section="CERTIFICATION" />
-            <div className={`${containerClass} py-5 flex flex-col gap-2`}>
-                {CertificationData.map((certification, index) => (
-                    <div key={index}>
-                        <div className="px-5 py-4 flex flex-row items-center  gap-4 mb-2 border bg-gray-800/40 border-gray-600 rounded-2xl">
-                            <img src={certification.image} alt={certification.title} className={certification.imageSize} />
-                            <div className="">
-                                <h1 className={`${mediumTextGradient} text-sm font-bold flex flex-wrap`}>{certification.title}</h1>
-                                <p className="text-gray-400 text-xs">Issued: {certification.issued}</p>
+
+            <div className="flex flex-col md:grid md:grid-cols-2 sm:mx-12 md:mx-2 lg:mx-5">
+                <div className={`${containerClass} py-5 flex flex-col gap-2`}>
+                    {CertificationData.map((certification, index) => (
+                        <div key={index}>
+                            <div className="px-5 py-4 flex flex-row items-center  gap-4 mb-2 border bg-gray-800/40 border-gray-600 rounded-2xl">
+                                <img src={certification.image} alt={certification.title} className={certification.imageSize} />
+                                <div className="">
+                                    <h1 className={`${mediumTextGradient} text-sm font-bold flex flex-wrap`}>{certification.title}</h1>
+                                    <p className="text-gray-400 text-xs">Issued: {certification.issued}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                
             </div>
         </motion.div>
     )
