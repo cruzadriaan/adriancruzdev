@@ -1,12 +1,23 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
+import SectionDivider from '../components/SectionDivider';
 // import { cardVariants } from "../utils/cardVariants";
 import { AboutMeStats } from "../data/AboutMeData";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
-        <div className="pt-10  px-5">
+        <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col"
+            className="pt-10  px-5">
+
+
+
+            <SectionDivider section="ABOUT ME" />
 
 
             <motion.div
@@ -101,7 +112,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
 
 
             {/* Hero Stats */}
-            < div className=" mb-15 md:w-full grid grid-cols-2  gap-3 md:grid-cols-4" >
+            < div className="mb-15 mx-auto justify-items-center w-90 grid grid-cols-2 md:grid-cols-4 gap-4" >
                 {
                     AboutMeStats.map((stat, index) => (
                         <motion.div
@@ -110,7 +121,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                             whileInView={{ y: 0, opacity: 1 }}
                             viewport={{ once: true, amount: 0.5 }}
                             transition={{ duration: 1.5, delay: index * 0.1 }}
-                            className="bg-gray-800/40 backdrop-blur-md py-4 px-4 w-45 rounded-xl border border-gray-700 cursor-pointer
+                            className="bg-gray-800/40 backdrop-blur-md py-4 px-4 w-42 md:w-45 rounded-xl border border-gray-700 cursor-pointer
                             hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300"
                         >
                             <FontAwesomeIcon icon={stat.icon} className="text-gray-400 text-base mb-2" />
@@ -121,7 +132,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 }
             </div >
 
-        </div >
+        </motion.div >
     )
 }
 
