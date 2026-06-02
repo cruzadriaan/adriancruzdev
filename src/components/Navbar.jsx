@@ -18,7 +18,7 @@ const Navbar = () => {
             {/* <div className="fixed top-0 left-0 w-full h-5 bg-gray-900/80 backdrop-blur-md z-30" /> */}
 
             {/* Navbar */}
-            <div className="fixed left-1/2 -translate-x-1/2 xl:w-290 lg:w-220 md:w-170 sm:w-140 w-full flex flex-row items-center justify-between bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 px-3.5 py-1.5 gap-2 z-40">
+            <div className="fixed left-1/2 -translate-x-1/2 w-full flex flex-row items-center justify-between bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 lg:px-10 md:px-8 sm:px-6 px-3.5 sm:py-2 py-1.5 gap-2 z-40">
 
                 <div className="flex flex-row items-center gap-2 ">
                     {/* <img src={AdrianDevLogo} alt="Adrian Dev Logo" className="w-8 h-5 " /> */}
