@@ -7,7 +7,7 @@ import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const AboutMe = ({ containerClass, mediumTextGradient }) => {
     return (
-        <div className="border-t border-gray-800/30 shadow-lg pt-5">
+        <div className="pt-10">
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
