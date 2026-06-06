@@ -59,7 +59,7 @@ const Hero = ({ hardTextGradient }) => {
 
                 {/* Availability Status */}
                 <div className='lg:flex lg:justify-end lg:items-end'>
-                    <div className="flex flex-row items-center justify-center text-green-400 text-[11px] sm:text-[12px] font-normal mb-4 lg:mb-0 border border-gray-600 w-fit px-3 py-1.5 rounded-full
+                    <div className="flex flex-row items-center justify-center text-green-400 text-[11px] sm:text-[12px] lg:text-[14px] font-normal mb-4 lg:mb-0 border border-gray-600 w-fit px-3 lg:px-4 py-1.5 rounded-full
                     ">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Open to Frontend Opportunities</span>
@@ -79,9 +79,9 @@ const Hero = ({ hardTextGradient }) => {
                     </div>
 
                     {/* Name introduction */}
-                    <div className="lg:flex lg:flex-col lg:items-start  lg:ml-5">
+                    <div className="flex flex-col lg:flex lg:flex-col items-center lg:items-start  lg:ml-5">
                         <div className="flex flex-col">
-                            <h1 className="flex flex-col items-center lg:items-start  w-80 text-center text-gray-300 tracking-tight  sm:text-3xl text-2xl font-bold">Hello, I'm
+                            <h1 className="flex flex-col items-center lg:items-start  w-80 text-center text-gray-300 tracking-tight sm:text-3xl text-2xl font-bold">Hello, I'm
                                 <h1 className={`${hardTextGradient} block sm:text-[44px] text-[38px]`}> Adrian Cruz</h1>
                             </h1>
                         </div>
@@ -142,7 +142,7 @@ const Hero = ({ hardTextGradient }) => {
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 2 }}
-                        className=" flex flex-row gap-4">
+                        className=" flex flex-row gap-4 lg:mt-3">
                         <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
                         </a>
