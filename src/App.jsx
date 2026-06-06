@@ -1,13 +1,11 @@
 import './App.css'
 import Navbar from './components/Navbar';
 import AboutMe from './sections/AboutMe';
-import Education from './sections/Education';
-import Experience from './sections/Experience';
-import Certification from './sections/Certification';
 import ContactForm from './sections/contact/ContactForm';
 import Hero from './sections/Hero';
 import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
+import ResumeGrid from './groupings/ResumeGrid';
 import FloatingIcons from './components/FloatingButtons';
 import Footer from './components/Footer';
 import { Element } from 'react-scroll';
@@ -42,9 +40,7 @@ function App() {
         <Element name="aboutme"><AboutMe containerClass={containerClass} mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>
         <Element name="project"><Projects containerClass={containerClass}  mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>
         <Element name="techstack"><TechStack containerClass={containerClass} /></Element>
-        <Element name="experience"><Experience containerClass={containerClass} mediumTextGradient={mediumTextGradient} /></Element>
-        <Element name="certification"><Certification containerClass={containerClass} mediumTextGradient={mediumTextGradient} /></Element>
-        <Element name="education"><Education id="education" containerClass={containerClass} /></Element>
+        <ResumeGrid containerClass={containerClass} mediumTextGradient={mediumTextGradient} />
         <Element name="contact"><ContactForm containerClass={containerClass} hardTextGradient={hardTextGradient} /></Element>
       </main>
       <Footer />

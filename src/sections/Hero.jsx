@@ -29,7 +29,7 @@ const Hero = ({ hardTextGradient }) => {
         const observer = new IntersectionObserver(([entry]) => {
             setShowArrowTop(entry.intersectionRatio < 0.5);
             setShowArrowDown(entry.intersectionRatio > 0.9);
-        }, { threshold: [ 0.5, 0.9] });
+        }, { threshold: [0.5, 0.9] });
 
         if (heroElement) {
             observer.observe(heroElement);
@@ -57,6 +57,15 @@ const Hero = ({ hardTextGradient }) => {
             {/* Content */}
             <div className="relative sm:pt-14 pt-13 pb-14 flex flex-col justify-center items-center w-full px-5 z-10">
 
+                {/* Availability Status */}
+                <div className='lg:flex lg:justify-end lg:items-end'>
+                    <div className="flex flex-row items-center justify-center text-green-400 sm:text-[12px] text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full
+                    ">
+                        <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
+                        <span>Open to Frontend Opportunities</span>
+                    </div>
+                </div>
+
                 <motion.div
                     variants={heroVariants}
                     initial="hidden"
@@ -64,15 +73,9 @@ const Hero = ({ hardTextGradient }) => {
                     transition={{ duration: 1 }}
                     className="flex flex-col items-center justify-center">
 
-                    {/* Availability Status */}
-                    <div className="flex flex-row items-center justify-center text-green-400 sm:text-[12px] text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full">
-                        <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
-                        <span>Open to Frontend Opportunities</span>
-                    </div>
-
                     {/* My Avatar */}
-                    <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-300 to-purple-400 p-px rounded-full">
-                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className="sm:w-50 w-45 sm:h-50 h-45 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
+                    <div className="flex items-center justify-center mb-4 lg:mt-12 bg-linear-to-r from-blue-300 to-purple-400 p-px rounded-full">
+                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 sm:w-50 lg:w-60 h-45 sm:h-50 lg:h-60 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
                     </div>
 
                     {/* Name introduction */}

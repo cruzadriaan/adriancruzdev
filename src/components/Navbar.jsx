@@ -19,14 +19,14 @@ const Navbar = () => {
 
                 <div className="flex flex-row items-center gap-2 ">
                     <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">
-                        <h1 className="text-white text-xl sm:text-2xl font-semibold">AC<span className="text-3xl text-purple-500">.</span></h1>
+                        <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-semibold">AC<span className="text-3xl lg:text-4xl text-purple-500">.</span></h1>
                     </Link>
                 </div>
 
                 {/* Hamburger menu */}
                 <div className="flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
-                        <FontAwesomeIcon icon={faBars} className="text-gray-200 text-[15px] sm:text-[17px] border border-gray-700 bg-gray-800 hover:scale-105 shadow-md rounded-md p-1.5 cursor-pointer" />
+                        <FontAwesomeIcon icon={faBars} className="text-gray-200 text-[15px] sm:text-[17px] lg:text-[20px] border border-gray-700 bg-gray-800 hover:scale-105 shadow-md rounded-md p-1.5 cursor-pointer" />
                     </button>
                 </div>
 

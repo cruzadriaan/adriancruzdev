@@ -17,7 +17,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
 
                 <SectionDivider section="ABOUT ME" />
 
-                <div className="flex flex-col md:flex-row items-center justify-center">
+                <div className="flex flex-col md:flex-row lg:gap-10 items-center justify-center">
 
                     {/* Code Snippet */}
                     <div className="flex flex-col bg-gray-800 backdrop-blur-lg w-75 sm:w-100 h-33 sm:h-43 mb-10 rounded-2xl border border-gray-700 cursor-pointer">
@@ -71,7 +71,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                     >
 
                         {/* How I build section */}
-                        <div className={` ${containerClass} py-6 mb-10  w-90 sm:w-120`}>
+                        <div className={` ${containerClass} py-6 mb-10  w-90 sm:w-120 md:w-90`}>
 
                             <h1 className="text-white text-[17px] sm:text-[20px] flex flex-wrap font-semibold">
                                 How I build
@@ -103,7 +103,7 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
             </motion.div>
 
             {/* Hero Stats */}
-            < div className="mb-15 md:mt-5 mx-auto justify-items-center w-90 sm:w-105 md:w-190 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6" >
+            < div className="mb-15 lg:mb-20 md:mt-5 mx-auto justify-items-center w-90 sm:w-105 md:w-190 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-24" >
                 {
                     AboutMeStats.map((stat, index) => (
                         <motion.div

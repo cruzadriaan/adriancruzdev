@@ -24,7 +24,7 @@ const ProjectCard = ({ containerClass, mediumTextGradient }) => {
                     <div className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
                         <img src={project.image} alt="Beat Jam Preview" className="h-full w-full object-fit" />
                     </div>
-                    <div className="flex flex-row justify-between ">
+                    <div className="flex flex-row lg:flex-col lg:justify-start lg:items-start justify-between">
                         <div>
                             <h1 className="text-white text-sm font-light">{project.stack}</h1>
                             <h1 className="text-gray-400 text-sm font-light">{project.type}</h1>
