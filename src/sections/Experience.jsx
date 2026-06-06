@@ -19,7 +19,8 @@ const Experience = ({ containerClass, mediumTextGradient }) => {
             transition={{ duration: 1 }}
             className="mb-20 md:h-20">
             <SectionDivider section="EXPERIENCE" />
-            <div className="flex flex-col  sm:mx-12 md:mx-2 lg:mx-5">
+            <div className="flex flex-col  sm:mx-12 md:mx-2 lg:mx-5
+">
                 {ExperienceData.map((experience, index) => (
                     <div key={index} className={`relative flex flex-col mb-4 ${containerClass}`}>
                         <div className="flex justify-between">

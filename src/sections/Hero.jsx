@@ -55,11 +55,11 @@ const Hero = ({ hardTextGradient }) => {
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
             {/* Content */}
-            <div className="relative sm:pt-14 pt-13 pb-14 flex flex-col justify-center items-center w-full px-5 z-10">
+            <div className="relative pt-13 sm:pt-14 pb-14 flex flex-col justify-center items-center w-full px-5 z-10">
 
                 {/* Availability Status */}
                 <div className='lg:flex lg:justify-end lg:items-end'>
-                    <div className="flex flex-row items-center justify-center text-green-400 sm:text-[12px] text-[11px] font-normal mb-4 border border-gray-600 w-fit px-3 py-1.5 rounded-full
+                    <div className="flex flex-row items-center justify-center text-green-400 text-[11px] sm:text-[12px] font-normal mb-4 lg:mb-0 border border-gray-600 w-fit px-3 py-1.5 rounded-full
                     ">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Open to Frontend Opportunities</span>
@@ -71,65 +71,70 @@ const Hero = ({ hardTextGradient }) => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}
-                    className="flex flex-col items-center justify-center">
+                    className="flex flex-col lg:flex-row lg:items-start lg:justify-start lg:mt-10 lg:gap-5 items-center justify-center">
 
                     {/* My Avatar */}
-                    <div className="flex items-center justify-center mb-4 lg:mt-12 bg-linear-to-r from-blue-300 to-purple-400 p-px rounded-full">
+                    <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-300 to-purple-400 p-px rounded-full">
                         <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 sm:w-50 lg:w-60 h-45 sm:h-50 lg:h-60 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
                     </div>
 
                     {/* Name introduction */}
-                    <div className="flex flex-col justify-start">
-                        <h1 className="flex flex-col items-center w-80 text-center text-gray-300 tracking-tight  sm:text-3xl text-2xl font-bold">Hello, I'm
-                            <h1 className={`${hardTextGradient} block sm:text-[44px] text-[38px]`}> Adrian Cruz</h1>
-                        </h1>
+                    <div className="lg:flex lg:flex-col lg:items-start  lg:ml-5">
+                        <div className="flex flex-col">
+                            <h1 className="flex flex-col items-center lg:items-start  w-80 text-center text-gray-300 tracking-tight  sm:text-3xl text-2xl font-bold">Hello, I'm
+                                <h1 className={`${hardTextGradient} block sm:text-[44px] text-[38px]`}> Adrian Cruz</h1>
+                            </h1>
+                        </div>
+
+                        {/* Role */}
+                        <div>
+                            <h1 className={`text-gray-400 sm:text-xl text-lg text-center mt-2 font-semibold`}>Frontend Developer</h1>
+                        </div>
+
+                        <div>
+                            {/* Tech Stack Chips */}
+                            <motion.div
+                                initial={{ y: 30, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 1.5 }}
+                                className="flex flex-row gap-4 mt-3 sm:mb-4 mb-3 borde flex-wrap"
+                            >
+                                {HeroData.map((hero, index) => (
+                                    <div key={index} className="flex flex-row sm:text-[13px] text-[11px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-2 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
+                                        <i className={`${hero.logo} text-base`}></i>
+                                        <span className="text-gray-300">{hero.name}</span>
+                                    </div>
+                                ))}
+                            </motion.div>
+                        </div>
+
+                        {/* Tagline */}
+                        <motion.div
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={{ y: 0, opacity: 2 }}
+                            transition={{ duration: 1 }}>
+
+                            {/* Paragraph */}
+                            <h1 className="text-zinc-300 text-center lg:text-left sm:text-[15px] text-[14px]  leading-relaxed">
+                                Turning ideas into responsive and accessible web applications
+                            </h1>
+                        </motion.div>
+
+                        {/* BUTTONS */}
+                        <div className="mt-5 mb-5 flex flex-row justify-center items-center lg:items-start lg:justify-start flex-wrap w-full gap-5 text-sm mx-auto">
+                            <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl cursor-pointer">
+                                <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
+                                View Projects
+                            </Link>
+                            <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-400  shadow-md backdrop-blur-md text-gray-300 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3.5  rounded-xl cursor-pointer">
+                                <FontAwesomeIcon icon={faFileLines} className="mr-1" />
+                                Resume PDF
+                            </a>
+
+                        </div>
                     </div>
-                    {/* Role */}
-                    <h1 className={`text-gray-400 sm:text-xl text-lg mt-2 font-semibold`}>Frontend Developer</h1>
                 </motion.div>
 
-
-                <div>
-                    {/* Tech Stack Chips */}
-                    <motion.div
-                        initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1.5 }}
-                        className="flex flex-row gap-4 mt-3 sm:mb-4 mb-3 borde flex-wrap"
-                    >
-                        {HeroData.map((hero, index) => (
-                            <div key={index} className="flex flex-row sm:text-[13px] text-[11px] items-center border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-md px-2 py-1 rounded-lg gap-2 cursor-pointer hover:shadow-[0_0_10px_rgba(107,0,255,0.98)] transition-shadow duration-300">
-                                <i className={`${hero.logo} text-base`}></i>
-                                <span className="text-gray-300">{hero.name}</span>
-                            </div>
-                        ))}
-                    </motion.div>
-                </div>
-
-                <motion.div
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 2 }}
-                    transition={{ duration: 1 }}>
-
-                    {/* Paragraph */}
-                    <h1 className="text-zinc-300 text-center sm:text-[15px] text-[14px] sm:max-w-80 max-w-70 leading-relaxed">
-                        Turning ideas into responsive and accessible web applications
-                    </h1>
-                </motion.div>
-
-
-                {/* BUTTONS */}
-                <div className="mt-5 mb-5 flex flex-row justify-center items-center flex-wrap w-full gap-5 text-sm mx-auto">
-                    <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl cursor-pointer">
-                        <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
-                        View Projects
-                    </Link>
-                    <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-400  shadow-md backdrop-blur-md text-gray-300 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3.5  rounded-xl cursor-pointer">
-                        <FontAwesomeIcon icon={faFileLines} className="mr-1" />
-                        Resume PDF
-                    </a>
-
-                </div>
 
                 <div>
                     {/* Social Icons */}

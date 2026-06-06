@@ -9,15 +9,16 @@ const ContactForm = ({ containerClass }) => {
     return (
         <>
             {/* Header Greetings */}
-            <div className='flex flex-col items-center justify-center text-center w-90 sm:w-100 mx-auto p-5'>
-                <h1 className='text-[13px] sm:text-[17px] font-semibold bg-clip-text text-transparent bg-linear-to-r from-blue-100 to-purple-100'>LET'S WORK TOGETHER</h1>
-                <h1 className='text-4xl sm:text-5xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-800'>Let's Connect!</h1>
-                <p className='mt-1 text-[12px] sm:text-[13px] sm:w-80 text-white/80 leading-relaxed'>Have a project you’d like to discuss? <br/>
+            <div className='flex flex-col items-center justify-center text-center w-90 lg:w-120 lg:mb-5 sm:w-100 mx-auto p-5'>
+                <h1 className='text-[13px] sm:text-[17px] lg:text-xl font-semibold bg-clip-text text-transparent bg-linear-to-r from-blue-100 to-purple-100'>LET'S WORK TOGETHER</h1>
+                <h1 className='text-4xl sm:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-purple-800'>Let's Connect!</h1>
+                <p className='mt-1 text-[12px] sm:text-[13px]  sm:w-80 lg:w-120 text-white/80 leading-relaxed'>Have a project you’d like to discuss? <br/>
                     I welcome your message and look forward to hearing from you.
                 </p>
             </div>
-            <div className="flex flex-col md:grid md:grid-cols-2 gap-5">
 
+            {/* ContactInfo and ContactForm Container */}
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-5 lg:gap-8 lg:mx-auto lg:w-250">
                 <motion.div
                     variants={cardVariants}
                     initial="hidden"
@@ -26,8 +27,8 @@ const ContactForm = ({ containerClass }) => {
                     transition={{ duration: 0.8 }}
                     className="mb-2 sm:mx-12 md:mx-2 lg:mx-5">
 
-                    {/* Personal Details */}
-                    <div className={`flex flex-col gap-2 mb-0 sm:mb-2 ${containerClass} md:py-8 md:h-100 sm:mx-12 md:mx-2 lg:mx-5`}>
+                    {/* ContactInfo Details Container */}
+                    <div className={`flex flex-col gap-2 mb-0 sm:mb-2 ${containerClass} md:py-8 md:h-100 sm:mx-12 md:mx-2 lg:mx-auto lg:w-120`}>
                         <h1 className="text-[11px] text-gray-500 ml-1">PERSONAL</h1>
                         {
                             ContactData.personal.map((personal, index) => (

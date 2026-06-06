@@ -24,7 +24,7 @@ const ProjectCard = ({ containerClass, mediumTextGradient }) => {
                     <div className="w-full lg:h-50 md:h-40 sm:h-65 h-50 rounded-lg cursor-pointer overflow-hidden">
                         <img src={project.image} alt="Beat Jam Preview" className="h-full w-full object-fit" />
                     </div>
-                    <div className="flex flex-row lg:flex-col lg:justify-start lg:items-start justify-between">
+                    <div className="flex flex-row lg:flex-col lg:items-start justify-between">
                         <div>
                             <h1 className="text-white text-sm font-light">{project.stack}</h1>
                             <h1 className="text-gray-400 text-sm font-light">{project.type}</h1>
@@ -32,7 +32,7 @@ const ProjectCard = ({ containerClass, mediumTextGradient }) => {
                         </div>
 
                         {/* Button Details */}
-                        <div className="flex flex-col items-center m-2">
+                        <div className="flex flex-col items-center m-2 lg:m-0 lg:my-2.5">
                             <button className="text-white text-xs border hover:bg-gray-800 border-gray-600 px-2.5 py-1 rounded-full shadow-md cursor-pointer"
                                 onClick={() => setOpenCardDetailsIndex(openCardDetailsIndex === index ? null : index)}>
                                 <span className="mr-1">DETAILS</span>

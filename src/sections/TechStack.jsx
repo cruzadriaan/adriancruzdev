@@ -16,7 +16,7 @@ const TechStack = ({ containerClass }) => {
 
       <SectionDivider section="TECH STACK" />
 
-      <div className="flex flex-col md:grid md:grid-cols-2 gap-2 sm:mx-12 md:mx-2 lg:mx-5">
+      <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-2 sm:mx-12 md:mx-2 lg:mx-5">
         {TechStackData.map((tech, index) => (
           <div key={index} className={`${containerClass} shadow-3xl mb-4`}>
 

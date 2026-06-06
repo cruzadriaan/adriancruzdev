@@ -1,6 +1,6 @@
 const ContactInfo = ({containerClass}) => {
     return (
-        <div className={`flex flex-col mb-5 ${containerClass} px-7 pb-8 sm:mx-25 md:mx-2 md:h-100 lg:mx-5 mb-10`}>
+        <div className={`flex flex-col mb-5 ${containerClass} px-7 lg:px-12 pb-8 sm:mx-25 md:mx-2 md:h-100 lg:mx-auto lg:w-130 mb-10`}>
             <h1 className="text-white">Send me a message</h1>
 
             <form action="https://formspree.io/f/xredrbgq" method="POST">
