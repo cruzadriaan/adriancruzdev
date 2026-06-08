@@ -19,7 +19,7 @@ export const MenuData = [
         icon: faBriefcase,
         offset: -70
     },
-        {
+    {
         name: "Tech Stack",
         link: "techstack",
         icon: faCode,
@@ -49,4 +49,44 @@ export const MenuData = [
         icon: faEnvelope,
         offset: -70
     },
+]
+
+export const MenuDataLargeScreen = [
+    {
+        name: "Home",
+        link: "hero",
+        icon: faHouse,
+        offset: 0
+    },
+    {
+        name: "About",
+        link: "aboutme",
+        icon: faUser,
+        offset: -20
+    },
+    {
+        name: "Projects",
+        link: "project",
+        icon: faBriefcase,
+        offset: -70
+    },
+    {
+        name: "Tech Stack",
+        link: "techstack",
+        icon: faCode,
+        offset: -55
+    },
+    {
+        name: "Background",
+        link: "experience",
+        icon: faHistory,
+        offset: -70
+    },
+    {
+        name: "Contact",
+        link: "contact",
+        icon: faEnvelope,
+        offset: -70
+    },
+
 ]

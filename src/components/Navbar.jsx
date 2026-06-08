@@ -2,7 +2,7 @@
 import AdrianAvatarEnhanced from "../assets/images/AdrianDevAvatarEnhanced.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { MenuData } from "../data/MenuData";
+import { MenuData, MenuDataLargeScreen } from "../data/MenuData";
 import { ContactData } from "../data/ContactData";
 import { useState } from "react";
 import { Link } from "react-scroll";
@@ -23,8 +23,18 @@ const Navbar = () => {
                     </Link>
                 </div>
 
+                <ul className="hidden lg:flex flex-row gap-12 text-white">
+                    {MenuDataLargeScreen.map((menu, i) => (
+                        <li key={i} className="cursor-pointer hover:text-purple-400 hover:scale-105">
+                            <Link to={menu.link} smooth={true} duration={800} offset={menu.offset}>
+                                {menu.name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+
                 {/* Hamburger menu */}
-                <div className="flex flex-row items-center justify-center gap-5">
+                <div className="lg:hidden flex flex-row items-center justify-center gap-5">
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <FontAwesomeIcon icon={faBars} className="text-gray-200 text-[15px] sm:text-[17px] lg:text-[20px] border border-gray-700 bg-gray-800 hover:scale-105 shadow-md rounded-md p-1.5 cursor-pointer" />
                     </button>
