@@ -1,7 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar';
 import AboutMe from './sections/AboutMe';
-import ContactForm from './sections/contact/ContactForm';
+import ContactDetails from './sections/contact/ContactDetails';
 import Hero from './sections/Hero';
 import Projects from './sections/project/Project';
 import TechStack from './sections/TechStack';
@@ -41,7 +41,7 @@ function App() {
         <Element name="project"><Projects containerClass={containerClass}  mediumTextGradient={mediumTextGradient} softTextGradient={softTextGradient} /></Element>
         <Element name="techstack"><TechStack containerClass={containerClass} /></Element>
         <ResumeGrid containerClass={containerClass} mediumTextGradient={mediumTextGradient} />
-        <Element name="contact"><ContactForm containerClass={containerClass} hardTextGradient={hardTextGradient} /></Element>
+        <Element name="contact"><ContactDetails containerClass={containerClass} hardTextGradient={hardTextGradient} /></Element>
       </main>
       <Footer />
     </div>
