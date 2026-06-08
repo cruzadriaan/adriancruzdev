@@ -1,6 +1,12 @@
+import { motion } from "framer-motion"
+
 const ContactForm = ({containerClass}) => {
     return (
-        <div className={`flex flex-col mb-5 ${containerClass} px-7 lg:px-12 pb-8 sm:mx-25 md:mx-2 md:h-100 lg:mx-auto lg:w-130 mb-10`}>
+        <motion.div
+        initial={{y:-20, opacity:0}}
+        whileInView={{y:0, opacity: 1}}
+        transition={{duration: 1.2}}
+        className={`flex flex-col mb-5 ${containerClass} px-7 lg:px-12 pb-8 sm:mx-25 md:mx-2 md:h-100 lg:mx-auto lg:w-130 mb-10`}>
             <h1 className="text-white">Send me a message</h1>
 
             <form action="https://formspree.io/f/xredrbgq" method="POST">
@@ -11,7 +17,7 @@ const ContactForm = ({containerClass}) => {
                     <button type="submit" className="mt-4 px-3 py-2 w-full  bg-linear-to-r hover:from-blue-700 from-blue-800 hover:to-purple-700 to-purple-800 text-white text-sm rounded cursor-pointer">Send Message</button>
                 </div>
             </form>
-        </div>
+        </motion.div>
     )
 }
 

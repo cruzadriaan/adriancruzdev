@@ -15,12 +15,14 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7 }}>
 
-                <SectionDivider section="ABOUT ME" />
+                <div className='lg:flex lg:items-center lg:justify-center lg:mb-5'>
+                    <SectionDivider section="ABOUT ME" />
+                </div>
 
                 <div className="flex flex-col md:flex-row lg:gap-10 items-center justify-center">
 
                     {/* Code Snippet */}
-                    <div className="flex flex-col bg-gray-800 backdrop-blur-lg w-75 sm:w-100 h-33 sm:h-43 mb-10 rounded-2xl border border-gray-700 cursor-pointer">
+                    <div className="flex flex-col bg-gray-800 backdrop-blur-lg w-75 sm:w-100 h-33 sm:h-43 lg:h-50 mb-10 rounded-2xl border border-gray-700 cursor-pointer">
 
                         {/* Snippet navbar */}
                         <div>
@@ -35,8 +37,8 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                         </div>
 
                         {/* Syntax */}
-                        <div className="py-1.5 sm:py-3.5 px-4 sm:px-6 flex flex-col text-[11px] sm:text-[13px] text-white font-mono">
-
+                        <div className="py-1.5 sm:py-3.5 lg:py-5 px-4 sm:px-6 flex flex-col text-[11px] sm:text-[13px] text-white font-mono">
+                            <p className='hidden lg:flex text-gray-400 '>//ABOUT ME</p>
                             <p className='text-white'><span className="text-red-400">const</span><span className="text-blue-300"> developer </span>
                                 = <span className="text-yellow-300">{`{`}</span></p>
 
@@ -78,19 +80,19 @@ const AboutMe = ({ containerClass, mediumTextGradient }) => {
                             </h1>
 
                             <div className="flex flex-col gap-2 mt-5">
-                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                <div className="flex flex-row items-center text-gray-300 text-sm lg:text-[13px] leading-relaxed">
                                     <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] sm:text-[18px] mr-2" />
                                     <p>Clean and maintanable code</p>
                                 </div>
-                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                <div className="flex flex-row items-center text-gray-300 text-sm lg:text-[13px]  leading-relaxed">
                                     <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] sm:text-[18px] mr-2" />
                                     <p>Mobile-first development</p>
                                 </div>
-                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                <div className="flex flex-row items-center text-gray-300 text-sm lg:text-[13px]  leading-relaxed">
                                     <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] sm:text-[18px] mr-2" />
                                     <p>Performance focused interfaces</p>
                                 </div>
-                                <div className="flex flex-row items-center text-gray-300 text-[14px] leading-relaxed">
+                                <div className="flex flex-row items-center text-gray-300 text-sm lg:text-[13px]  leading-relaxed">
                                     <FontAwesomeIcon icon={faCheck} className="text-green-400 text-[11px] sm:text-[18px] mr-2" />
                                     <p>Accessible user experiences</p>
                                 </div>
