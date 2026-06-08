@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <>
             {/* Navbar */}
-            <div className="fixed left-1/2 -translate-x-1/2 w-full flex flex-row items-center justify-between bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 px-3.5 sm:px-6 md:px-7 lg:px-10 py-1.5 sm:py-2 gap-2 z-40">
+            <div className="fixed left-1/2 -translate-x-1/2 w-full flex flex-row items-center justify-between border-b border-gray-800/50 bg-linear-to-r from-slate-900 via-gray-900 to-zinc-900 px-3.5 sm:px-6 md:px-7 lg:px-10 py-1.5 sm:py-2 gap-2 z-40">
 
                 <div className="flex flex-row items-center gap-2 ">
                     <Link to="hero" smooth={true} duration={800} offset={-90} className="cursor-pointer">

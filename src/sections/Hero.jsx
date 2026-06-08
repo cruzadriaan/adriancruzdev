@@ -54,12 +54,15 @@ const Hero = ({ hardTextGradient }) => {
                 style={{ backgroundImage: "url('/assets/gridBg.svg')" }}
                 className="absolute inset-0 bg-cover opacity-1 -z-20" />
 
-            {/* Content */}
-            <div className="relative pt-13 sm:pt-14 pb-14 flex flex-col justify-center items-center w-full px-5 z-10">
 
-                {/* Availability Status */}
-                <div className='lg:flex lg:justify-end lg:items-end'>
-                    <div className="flex flex-row items-center justify-center text-green-400 text-[11px] sm:text-[12px] lg:text-[14px] font-normal mb-4 lg:mb-0 border border-gray-600 w-fit px-3 lg:px-4 py-1.5 rounded-full
+
+
+            {/* Content */}
+            <div className="relative pt-18 lg:pt-20 pb-14 flex flex-col justify-center items-center w-full px-5 z-10">
+
+                {/* Availability Status - smaller screen */}
+                <div className=' lg:hidden flex-row items-center justify-center lg:justify-start'>
+                    <div className="flex flex-row items-center justify-center text-green-400 text-[11px] sm:text-[12px] font-normal mb-4 lg:mb-0 border border-gray-600 w-fit px-3 lg:px-4 py-1.5 rounded-full
                     ">
                         <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
                         <span>Open to Frontend Opportunities</span>
@@ -71,24 +74,34 @@ const Hero = ({ hardTextGradient }) => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 1 }}
-                    className="flex flex-col lg:flex-row lg:items-start lg:justify-start lg:mt-10 lg:gap-5 items-center justify-center">
+                    className="flex flex-col lg:flex-row-reverse lg:items-start lg:justify-start lg:gap-22 items-center justify-center">
 
                     {/* My Avatar */}
-                    <div className="flex items-center justify-center mb-4 bg-linear-to-r from-blue-300 to-purple-400 p-px rounded-full">
-                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 sm:w-50 lg:w-60 h-45 sm:h-50 lg:h-60 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
+                    <div className="flex items-center justify-center lg:mt-8 mb-4 bg-linear-to-r from-blue-300 to-purple-400 p-px lg:p-1 rounded-full">
+                        <img src={AdrianDevAvatar} alt="Adrian Cruz" className="w-45 sm:w-50 lg:w-80 h-45 sm:h-50 lg:h-80 bg-cover rounded-full shadow-[0px_10px_62px_1px_rgba(147,19,187,0.75)]" />
                     </div>
 
                     {/* Name introduction */}
-                    <div className="flex flex-col lg:flex lg:flex-col items-center lg:items-start  lg:ml-5">
+                    <div className="flex flex-col lg:flex lg:flex-col items-center lg:items-start lg:mt-6 lg:ml-5">
+
+                        {/* Availability Status */}
+                        <div className='hidden lg:w-full lg:mb-5 lg:flex flex-row items-center justify-center lg:justify-start'>
+                            <div className="flex flex-row items-center justify-center text-green-400 text-[11px] sm:text-[12px] font-normal mb-4 lg:mb-0 border border-gray-600 w-fit px-3 lg:px-4 py-1.5 rounded-full
+                    ">
+                                <FontAwesomeIcon icon={faCircle} className="text-green-500 text-[5px] mr-2" />
+                                <span>Open to Frontend Opportunities</span>
+                            </div>
+                        </div>
+
                         <div className="flex flex-col">
-                            <h1 className="flex flex-col items-center lg:items-start  w-80 text-center text-gray-300 tracking-tight sm:text-3xl text-2xl font-bold">Hello, I'm
-                                <h1 className={`${hardTextGradient} block sm:text-[44px] text-[38px]`}> Adrian Cruz</h1>
+                            <h1 className="flex flex-col items-center lg:items-start  w-80 lg:w-full text-center text-gray-300 tracking-tight text-2xl sm:text-3xl lg:text-5xl  font-bold">Hello, I'm
+                                <h1 className={`${hardTextGradient} block sm:text-[44px] text-[38px] lg:text-7xl`}> Adrian Cruz</h1>
                             </h1>
                         </div>
 
                         {/* Role */}
                         <div>
-                            <h1 className={`text-gray-400 sm:text-xl text-lg text-center mt-2 font-semibold`}>Frontend Developer</h1>
+                            <h1 className={`text-gray-400 lg:text-blue-300/50 sm:text-xl text-lg text-center mt-2 font-semibold`}>Frontend Developer</h1>
                         </div>
 
                         <div>
@@ -122,38 +135,39 @@ const Hero = ({ hardTextGradient }) => {
 
                         {/* BUTTONS */}
                         <div className="mt-5 mb-5 flex flex-row justify-center items-center lg:items-start lg:justify-start flex-wrap w-full gap-5 text-sm mx-auto">
-                            <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl cursor-pointer">
+                            <Link to='project' smooth={true} duration={800} offset={-100} className="bg-linear-to-r hover:shadow-[0_0_7px_1px_rgba(96,165,250,0.5)] from-blue-500 to-purple-500 text-white text-center font-semibold lg:py-3 lg:px-5  py-3 px-5 rounded-xl lg:rounded-lg cursor-pointer">
                                 <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-1" />
                                 View Projects
                             </Link>
-                            <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-400  shadow-md backdrop-blur-md text-gray-300 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3.5  rounded-xl cursor-pointer">
+                            <a href="/files/CruzAdrianCV.pdf" target="_blank" rel="noopener noreferrer" className="hover:bg-zinc-800/50 border border-gray-400  shadow-md backdrop-blur-md text-gray-300 text-center font-semibold lg:py-3 lg:px-5 py-3 px-3.5  rounded-xl lg:rounded-lg cursor-pointer">
                                 <FontAwesomeIcon icon={faFileLines} className="mr-1" />
                                 Resume PDF
                             </a>
+                        </div>
 
+                        <div className="flex flex-col items-center lg:items-start justify-center ">
+                            {/* Social Icons */}
+                            <h1 className="hidden lg:block lg:text-[11px] lg:text-gray-400">Find me on</h1>
+                            <motion.div
+                                initial={{ y: 30, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 2 }}
+                                className=" flex flex-row gap-4 lg:mt-3">
+                                <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                                </a>
+                                <a href="https://github.com/cruzadriaan" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faSquareGithub} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                                </a>
+                                <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faEnvelope} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
+                                </a>
+                            </motion.div>
                         </div>
                     </div>
+
+
                 </motion.div>
-
-
-                <div>
-                    {/* Social Icons */}
-                    <motion.div
-                        initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 2 }}
-                        className=" flex flex-row gap-4 lg:mt-3">
-                        <a href="https://www.linkedin.com/in/adrian-cruzdev/" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faSquareLinkedin} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                        </a>
-                        <a href="https://github.com/cruzadriaan" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faSquareGithub} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                        </a>
-                        <a href="mailto:adriancruzemail@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faEnvelope} className="text-gray-100 text-2xl hover:shadow-[0_0_7px_2px_rgba(96,165,250,0.5)] bg-gray-800/80 backdrop-blur-lg shadow-md p-2 rounded-lg hover:scale-110 cursor-pointer" />
-                        </a>
-                    </motion.div>
-                </div>
 
             </div>
 
