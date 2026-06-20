@@ -4,6 +4,10 @@ export const HeroData = [
         logo: "devicon-javascript-plain colored"
     },
     {
+        name: "Typescript",
+        logo: "devicon-typescript-plain colored"
+    },
+    {
         name: "React",
         logo: "devicon-react-original colored",
     },

@@ -23,6 +23,11 @@ export const TechStackData = [
                 logo: "devicon-javascript-plain colored",
             },
             {
+                name: "Typescript",
+                percentage: 65,
+                logo: "devicon-typescript-plain colored",
+            },
+            {
                 name: "React",
                 percentage: 80,
                 logo: "devicon-react-original colored",
